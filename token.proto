@@ -1,0 +1,10 @@
+package stance;
+
+message Token {
+	required string token = 1;
+	optional int32 count = 2;
+}
+
+message Tokens {
+	repeated Token tokens = 1;
+}

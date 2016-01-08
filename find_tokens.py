@@ -55,5 +55,5 @@ def findTokensOfficial():
 
 
 if __name__ == '__main__':
-    #findTokensJson()
-    findTokensOfficial()
+    #findTokensJson() #this is to tokenise the unlabelled tweets, needs to be run first. OUTPUT = './tokens
+    findTokensOfficial() #this is to tokenise the labelled tweets, needs to be run first. OUTPUT = './tokensOfficialDev, ./tokensOfficialTrain, ./tokensOfficialTrump

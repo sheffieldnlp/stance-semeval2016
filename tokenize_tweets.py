@@ -69,7 +69,6 @@ def readTweetsOfficial(topic, tweetfile, encoding, tab):
     return tweets,labels
 
 
-
 def writeToksToFile():
 
     tokens,tweets_on_topic,tweets = readToks()
