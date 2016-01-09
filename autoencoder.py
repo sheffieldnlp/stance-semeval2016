@@ -141,9 +141,9 @@ def deep_test():
 
 def deep():
     sess = tf.Session()
-    start_dim = 5000  # the starting example was 5. full: 93988. Dimensionality of input. keep as big as possible, but throw singletons away.
+    start_dim = 50000  # the starting example was 5. full: 128530. Dimensionality of input. keep as big as possible, but throw singletons away.
     x = tf.placeholder("float", [None, start_dim])
-    autoencoder = create(x, [2500, 1000, 500])  #4, 3, 2  Dimensionality of the hidden layers
+    autoencoder = create(x, [5])  # Dimensionality of the hidden layers. To start with, only use 1 hidden layer.
     init = tf.initialize_all_variables()
     sess.run(init)
     train_step = tf.train.GradientDescentOptimizer(0.5).minimize(autoencoder['cost'])
@@ -157,11 +157,9 @@ def deep():
     for v in vects_dev:
         devbatch.append(v)
 
-    #c1 = np.array([0, 0, 1, 0, 1])
-
-    #print c1
-    print "\noriginal", labels_dev[12], norm_tweets_dev[12]    # print "\noriginal", norm_tweets[2]
-    print vects[12]
+    sampnr = 12  # which ones of the dev samples to display for sanity check
+    print "\noriginal", labels_dev[sampnr], norm_tweets_dev[sampnr]    # print "\noriginal", norm_tweets[2]
+    print vects[sampnr]
 
 
     # do 1000 training steps
@@ -173,21 +171,21 @@ def deep():
             batch.append(vects[num])
         sess.run(train_step, feed_dict={x: np.array(batch)})
         if i % 100 == 0:
-            res = sess.run(autoencoder['decoded'], feed_dict={x: devbatch})  # apply to dev
+            decoded = sess.run(autoencoder['decoded'], feed_dict={x: devbatch})  # apply to dev
+            encoded = sess.run(autoencoder['encoded'], feed_dict={x: devbatch})  # apply to dev
 
             dec_tweet = []
             n = 0
-            for r in res[12]:  # display first result
+            for r in decoded[sampnr]:  # display first result
                 if r > 0.1:
                     dec_tweet.append(tokens[n])
                 n+=1
 
             print i, " cost", sess.run(autoencoder['cost'], feed_dict={x: devbatch})
             #print i, " original", batch[0]
-            print i, " encoded", sess.run(autoencoder['encoded'], feed_dict={x: batch}) # latent representation of input, feed this to SVM(s)
-            print i, " decoded", sess.run(autoencoder['decoded'], feed_dict={x: batch})
-            print i, " decoded", dec_tweet
-            print res[12]
+            print i, " encoded", encoded[sampnr] # latent representation of input, feed this to SVM(s)
+            print i, " decoded", decoded[sampnr]
+            print i, " decoded bow", dec_tweet
 
 
 if __name__ == '__main__':

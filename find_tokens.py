@@ -8,9 +8,10 @@ import io
 
 
 #INPUT = '/home/isabelle/additionalTweetsStanceDetection.json'
+INPUT = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/stanceDetection.json'
 #INPUT = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/additionalTweetsStanceDetection_small.json'
-INPUT = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/downloaded_Donald_Trump.txt'
-OUTPUT = './tokensOfficialTrump'
+#INPUT = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/downloaded_Donald_Trump.txt'
+OUTPUT = './tokensFinal'
 
 # tokenise the collected tweets
 def findTokensJson():
@@ -55,5 +56,5 @@ def findTokensOfficial():
 
 
 if __name__ == '__main__':
-    #findTokensJson() #this is to tokenise the unlabelled tweets, needs to be run first. OUTPUT = './tokens
-    findTokensOfficial() #this is to tokenise the labelled tweets, needs to be run first. OUTPUT = './tokensOfficialDev, ./tokensOfficialTrain, ./tokensOfficialTrump
+    findTokensJson() #this is to tokenise the unlabelled tweets, needs to be run first. OUTPUT = './tokens
+    #findTokensOfficial() #this is to tokenise the labelled tweets, needs to be run first. OUTPUT = './tokensOfficialDev, ./tokensOfficialTrain, ./tokensOfficialTrump

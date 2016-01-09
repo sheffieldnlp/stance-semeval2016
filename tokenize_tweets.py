@@ -15,17 +15,26 @@ FILETRAIN = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-Stan
 FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata.txt'
 FILETRUMP = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/downloaded_Donald_Trump.txt'
 
-TOKENS = './tokens'
+TOKENS = './tokensFinal'
 
-keywords = {'clinton': ['hillary', 'clinton'],
-            'obama' : ['barack', 'obama'],
-            'climate': ['climate'],
+KEYWORDS = {'clinton': ['hillary', 'clinton'],
+            'trump' : ['donald trump', 'trump'],
+            'climate': 'climate',
             'feminism': ['feminism', 'feminist'],
             'abortion': ['abortion', 'aborting'],
             'atheism': ['atheism', 'atheist']
 }
 
-topics = keywords.keys()
+TOPICS_LONG = {'clinton': 'Hillary Clinton',
+            'trump' : 'Donald Trump',
+            'climate': 'Climate Change is a Real Concern',
+            'feminism': 'Feminist Movement',
+            'abortion': 'Legalization of Abortion',
+            'atheism': 'Atheism'
+}
+
+
+TOPICS = KEYWORDS.keys()
 
 # read tweets from json, get numbers corresponding to tokens from file
 def readToks():
@@ -34,9 +43,9 @@ def readToks():
         tweets.append(json.loads(line))
 
     tweets_on_topic = defaultdict(list)
-    for topic in topics:
+    for topic in TOPICS:
         for index, tweet in enumerate(tweets):
-            for keyword in keywords[topic]:
+            for keyword in KEYWORDS[topic]:
                 if keyword in tweet['text'].lower():
                     tweets_on_topic[topic].append(index)
                     break
@@ -64,7 +73,7 @@ def readTweetsOfficial(topic, tweetfile, encoding, tab):
             continue
         if topic in line.split("\t")[tab-1].lower():
             tweets.append(line.split("\t")[tab])
-            labels.append(line.split("\t")[tab+1])
+            labels.append(line.split("\t")[tab+1].strip("\n"))
 
     return tweets,labels
 
@@ -74,7 +83,7 @@ def writeToksToFile():
     tokens,tweets_on_topic,tweets = readToks()
 
 
-    for topic in topics:
+    for topic in TOPICS:
 
         tokenized_tweets = Tweets()
 
@@ -108,7 +117,7 @@ def convertTweetsToVec(topic, numtoks):
     norm_tweets = []
 
     if topic=='all':
-        for topic in topics:
+        for topic in TOPICS:
             for index in tweets_on_topic[topic]:
 
                 tweet = tweets[index]
@@ -195,5 +204,6 @@ def convertTweetsOfficialToVec(numtoks, tokens, tweets):
 
 if __name__ == '__main__':
     #writeToksToFile()
-    convertTweetsToVec('climate', 5000)
-    readTweetsOfficial()
+    #convertTweetsToVec('climate', 5000)
+    #readTweetsOfficial()
+    readToks()
