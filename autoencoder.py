@@ -150,7 +150,7 @@ def deep():
 
     tokens,vects,norm_tweets = convertTweetsToVec('clinton', start_dim)
 
-    tweets_dev, labels_dev = readTweetsOfficial('clinton', tokenize_tweets.FILEDEV, 'windows-1252', 2)
+    tweets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2, 'clinton')
 
     vects_dev,norm_tweets_dev = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_dev)
     devbatch = []
