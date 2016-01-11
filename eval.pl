@@ -48,7 +48,7 @@ if(@guessLns != @goldLns){
 	die "\n";
 }
 
-my @cats = ("FAVOR", "AGAINST", "NONE");
+my @cats = ("FAVOR", "AGAINST", "NONE", "UNKNOWN");
 my %catsHash = map{$_ => 1}@cats;
 my %numOfTruePosOfEachCat = ();
 my %numOfGuessOfEachCat = ();
@@ -84,13 +84,13 @@ for (my $i = 0; $i < @guessLns; $i+=1) {
 
 	if(!defined($catsHash{$goldLbl})){
 		print STDERR sprintf("\nError: the stance label \"%s\" in the following line of the gold-standard file is invalid:\n\n%s\n\n",$goldLbl, $goldLn);
-		print STDERR "Correct labels in gold-standard file can be: FAVOR, AGAINST, or NONE (case sensitive). \n";
+		print STDERR "Correct labels in gold-standard file can be: FAVOR, AGAINST, NONE, or UNKNOWN (case sensitive). \n";
 		die "\n";
 	}
 
 	if(!defined($catsHash{$guessLbl})){
 		print STDERR sprintf("\nError: the stance label \"%s\" in the following line of the prediction file is invalid:\n\n%s\n\n",$guessLbl, $guessLn);
-		print STDERR "Correct labels in predication file can be: FAVOR, AGAINST, or NONE (case sensitive). \n";
+		print STDERR "Correct labels in predication file can be: FAVOR, AGAINST, NONE, or UNKNOWN (case sensitive). \n";
 		die "\n";
 	}
 
@@ -123,7 +123,7 @@ foreach my $cat (@cats) {
 
 	$p = $nTp/$nGuess if($nGuess != 0);
 	$r = $nTp/$nGold if($nGold != 0);
-	$f = 2*$p*$r/($p+$r) if($p + $f != 0);
+	$f = 2*$p*$r/($p+$r) if($p + $r != 0);
 
 	$precByCat{$cat} = $p;
 	$recallByCat{$cat} = $r;

@@ -9,7 +9,7 @@ import random
 import tokenize_tweets
 from tokenize_tweets import convertTweetsToVec, readTweetsOfficial, getTokens
 from autoencoder import create
-from bow_baseline import train_classifiers, eval
+from bow_baseline import train_classifiers, eval, extractFeatures, extractFeatureVocab
 
 # extract autoencoder features based on trained autoencoder model
 def extractFeaturesAutoencoder(autoencodermodel, cross_features='false'):
@@ -79,8 +79,28 @@ def extractFeaturesAutoencoder(autoencodermodel, cross_features='false'):
     return features_train, labels_train, features_dev, labels_dev
 
 
+# extract features autoencoder plus n-gram bow
+def extractFeaturesAutoencoderBOW(automodel, cross_features):
+    tweets_train, targets_dev, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN, 'windows-1252', 2)
+    features_final = extractFeatureVocab(tweets_train)
+    features_train = extractFeatures(tweets_train, features_final)
+    tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
+    features_dev = extractFeatures(tweets_dev, features_final)
+
+    features_train_auto, labels_train, features_dev_auto, labels_dev = extractFeaturesAutoencoder(automodel, cross_features)
+
+    # combine features
+    for i, featvec in enumerate(features_train_auto):
+        features_train[i] = np.append(features_train[i], featvec)  # numpy append works as extend works for python lists
+    for i, featvec in enumerate(features_dev_auto):
+        features_dev[i] = np.append(features_dev[i], featvec)
+
+    return features_train, labels_train, features_dev, labels_dev
+
 
 if __name__ == '__main__':
-    features_train, labels_train, features_dev, labels_dev = extractFeaturesAutoencoder("model.ckpt", "false")
+    #features_train, labels_train, features_dev, labels_dev = extractFeaturesAutoencoder("model.ckpt", "false")
+    features_train, labels_train, features_dev, labels_dev = extractFeaturesAutoencoderBOW("model.ckpt", "false")
+
     train_classifiers(features_train, labels_train, features_dev, labels_dev, "out_auto.txt")
     eval(tokenize_tweets.FILEDEV, "out_auto.txt")
