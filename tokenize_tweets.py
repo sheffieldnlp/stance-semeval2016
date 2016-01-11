@@ -69,20 +69,23 @@ def readToks():
 
 
 # read tweets from official files. Change later for unlabelled tweets. Topic=="all" is for all topics
-def readTweetsOfficial(tweetfile, encoding, tab, topic="all"):
+def readTweetsOfficial(tweetfile, encoding='windows-1252', tab=2, topic="all"):
     tweets = []
+    targets = []
     labels = []
     for line in io.open(tweetfile, encoding=encoding, mode='r'):
         if line.startswith('ID\t'):
             continue
         if topic == "all":
             tweets.append(line.split("\t")[tab])
+            targets.append(line.split("\t")[tab-1])
             labels.append(line.split("\t")[tab+1].strip("\n"))
         elif topic in line.split("\t")[tab-1].lower():
             tweets.append(line.split("\t")[tab])
+            targets.append(line.split("\t")[tab-1])
             labels.append(line.split("\t")[tab+1].strip("\n"))
 
-    return tweets,labels
+    return tweets,targets,labels
 
 
 def writeToksToFile():
@@ -112,6 +115,11 @@ def writeToksToFile():
             f.write(tokenized_tweets.SerializeToString())
             f.close()
 
+
+def getTokens(numtoks):
+    tokens,tweets_on_topic,tweets = readToks()
+    tokens_sub = tokens[:numtoks]
+    return tokens_sub
 
 def convertTweetsToVec(topic, numtoks):
 
@@ -200,7 +208,7 @@ def convertTweetsOfficialToVec(numtoks, tokens, tweets):
             else:
                 norm_tweet.append('NULL')
 
-        print(norm_tweet)
+        #print(norm_tweet)
         norm_tweets.append(norm_tweet)
         vects.append(vect)
 

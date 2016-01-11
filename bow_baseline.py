@@ -1,8 +1,7 @@
-from sklearn.linear_model import LogisticRegression
-
-__author__ = 'Isabelle'
-
 #!/usr/bin/env python
+
+__author__ = 'Isabelle Augenstein'
+
 
 import numpy as np
 from collections import Counter
@@ -13,6 +12,7 @@ from twokenize_wrapper import tokenize
 from sklearn import svm
 import subprocess
 import sys
+from sklearn.linear_model import LogisticRegression
 
 
 # select features, compile feature vocab
@@ -79,7 +79,7 @@ def insertIntoVect(feats, vect, expr):
     return vect
 
 
-def train_classifiers(feats_train, labels_train, feats_dev, labels_dev):
+def train_classifiers(feats_train, labels_train, feats_dev, labels_dev, outfilepath):
     labels_1 = []  # this is for the topic classifier, will distinguish on/off topic
     labels_2 = []  # this is for the pos/neg classifier
     labels_dev_tr_1 = [] #transformed from "NONE" etc to 0,1 for topic classifier
@@ -109,28 +109,24 @@ def train_classifiers(feats_train, labels_train, feats_dev, labels_dev):
             labels_dev_tr_1.append(1)
             labels_dev_tr_2.append(0)
 
-    if labels_1[0] == 1:
-        weight_1 = (labels_1.count(1)+labels_1.count(0)+0.0)/labels_1.count(0)
-    else:
-        weight_1 = (labels_1.count(0)/labels_1.count(1)+labels_1.count(0)+0.0)
-    if labels_2[0] == 1:
-        weight_2 = (labels_2.count(1)+labels_2.count(0)+0.0)/labels_2.count(0)
-    else:
-        weight_2 = (labels_2.count(0)/labels_2.count(1)+labels_2.count(0)+0.0)
+    #weight_1 = (labels_1.count(1)+0.0)/labels_1.count(0)
+    #weight_2 = (labels_2.count(1)+0.0)/labels_2.count(0)
 
-    model_1 = LogisticRegression(penalty='l1', class_weight={1: weight_1}) #svm.SVC(class_weight={1: weight})
+    print("Training classifier...")
+
+    model_1 = LogisticRegression(penalty='l1', class_weight='balanced') #svm.SVC(class_weight={1: weight})
     model_1.fit(feats_train, labels_1)
     preds_1 = model_1.predict(feats_dev)
     print("Labels topic", labels_dev_tr_1)
     print("Predictions topic", preds_1)
 
-    model_2 = LogisticRegression(penalty='l1', class_weight={1: weight_2}) #svm.SVC(class_weight={1: weight})
+    model_2 = LogisticRegression(penalty='l1', class_weight='balanced') #, class_weight={1: weight_2} #svm.SVC(class_weight={1: weight})
     model_2.fit(feats_train_2, labels_2)
     preds_2 = model_2.predict(feats_dev)
     print("Labels favour/against", labels_dev_tr_2)
     print("Predictions favour/against", preds_2)
 
-    printPredsToFile(tokenize_tweets.FILEDEV, "out.txt", preds_1, preds_2)
+    printPredsToFile(tokenize_tweets.FILEDEV, outfilepath, preds_1, preds_2)
 
 
 # evaluate using the original script, needs to be in same format as train/dev data
@@ -162,13 +158,13 @@ def printPredsToFile(infile, outfile, res_1, res_2):
 
 if __name__ == '__main__':
 
-    tweets_train, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN, 'windows-1252', 2)
+    tweets_train, targets_dev, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN, 'windows-1252', 2)
     features_final = extractFeatureVocab(tweets_train)
     features_train = extractFeatures(tweets_train, features_final)
 
-    tweets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
+    tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
     features_dev = extractFeatures(tweets_dev, features_final)
 
-    train_classifiers(features_train, labels_train, features_dev, labels_dev)
+    train_classifiers(features_train, labels_train, features_dev, labels_dev, "out.txt")
 
     eval(tokenize_tweets.FILEDEV, "out.txt")

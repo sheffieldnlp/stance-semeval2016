@@ -23,7 +23,7 @@ import numpy as np
 import math
 import random
 import tokenize_tweets
-from tokenize_tweets import convertTweetsToVec, readTweetsOfficial
+from tokenize_tweets import convertTweetsToVec, readTweetsOfficial, getTokens
 
 
 def create(x, layer_sizes):
@@ -150,9 +150,9 @@ def deep():
     sess.run(init)
     train_step = tf.train.GradientDescentOptimizer(0.5).minimize(autoencoder['cost'])
 
-    tokens,vects,norm_tweets = convertTweetsToVec('clinton', start_dim)
+    tokens,vects,norm_tweets = convertTweetsToVec('all', start_dim) #load and convert unlabelled tweets
 
-    tweets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2, 'clinton')
+    tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV)
 
     vects_dev,norm_tweets_dev = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_dev)
     devbatch = []
@@ -167,7 +167,7 @@ def deep():
     saver = tf.train.Saver()
 
     # do 1000 training steps
-    for i in range(1000):
+    for i in range(5000):
         # make a batch of 100:
         batch = []
         for j in range(100):
@@ -187,7 +187,7 @@ def deep():
 
             print i, " cost", sess.run(autoencoder['cost'], feed_dict={x: devbatch})
             #print i, " original", batch[0]
-            print i, " encoded", encoded[sampnr] # latent representation of input, feed this to SVM(s)
+            #print i, " encoded", encoded[sampnr] # latent representation of input, feed this to SVM(s)
             print i, " decoded", decoded[sampnr]
             print i, " decoded bow", dec_tweet
 
@@ -204,8 +204,8 @@ def deep_test():
     autoencoder = create(x, [500])  # Dimensionality of the hidden layers. To start with, only use 1 hidden layer.
 
 
-    tokens,vects,norm_tweets = convertTweetsToVec('clinton', start_dim)
-    tweets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2, 'clinton')
+    tokens,vects,norm_tweets = convertTweetsToVec('all', start_dim)
+    tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
     vects_dev,norm_tweets_dev = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_dev)
     devbatch = []
     for v in vects_dev:
@@ -224,7 +224,52 @@ def deep_test():
 
     sampnr = 12  # which ones of the dev samples to display for sanity check
     print "\noriginal", labels_dev[sampnr], norm_tweets_dev[sampnr]    # print "\noriginal", norm_tweets[2]
-    print vects[sampnr]
+    print vects_dev[sampnr]
+
+    dec_tweet = []
+    n = 0
+    for r in decoded[sampnr]:  # display first result
+        if r > 0.1:
+            dec_tweet.append(tokens[n])
+        n+=1
+
+    print " cost", sess.run(autoencoder['cost'], feed_dict={x: devbatch})
+    #print i, " original", batch[0]
+    print " encoded", encoded[sampnr] # latent representation of input, feed this to SVM(s)
+    print " decoded", decoded[sampnr]
+    print " decoded bow", dec_tweet
+
+
+def deep_test():
+    sess = tf.Session()
+
+    start_dim = 50000
+
+    x = tf.placeholder("float", [None, start_dim])
+    autoencoder = create(x, [500])  # Dimensionality of the hidden layers. To start with, only use 1 hidden layer.
+
+    tokens = getTokens(start_dim)
+
+    tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
+    vects_dev,norm_tweets_dev = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_dev)
+    devbatch = []
+    for v in vects_dev:
+        devbatch.append(v)
+
+    # Add ops to save and restore all the variables.
+    saver = tf.train.Saver()
+
+    # Restore variables from disk.
+    saver.restore(sess, "model.ckpt")
+    print("Model restored.")
+
+
+    decoded = sess.run(autoencoder['decoded'], feed_dict={x: devbatch})  # apply to dev
+    encoded = sess.run(autoencoder['encoded'], feed_dict={x: devbatch})  # apply to dev
+
+    sampnr = 12  # which ones of the dev samples to display for sanity check
+    print "\noriginal", labels_dev[sampnr], norm_tweets_dev[sampnr]    # print "\noriginal", norm_tweets[2]
+    print vects_dev[sampnr]
 
     dec_tweet = []
     n = 0
