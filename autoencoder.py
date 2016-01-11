@@ -139,11 +139,13 @@ def deep_test():
             print i, " decoded", sess.run(autoencoder['decoded'], feed_dict={x: batch}) # decoded input
 
 
+# train autoencoder, save model
 def deep():
     sess = tf.Session()
+
     start_dim = 50000  # the starting example was 5. full: 128530. Dimensionality of input. keep as big as possible, but throw singletons away.
     x = tf.placeholder("float", [None, start_dim])
-    autoencoder = create(x, [5])  # Dimensionality of the hidden layers. To start with, only use 1 hidden layer.
+    autoencoder = create(x, [500])  # Dimensionality of the hidden layers. To start with, only use 1 hidden layer.
     init = tf.initialize_all_variables()
     sess.run(init)
     train_step = tf.train.GradientDescentOptimizer(0.5).minimize(autoencoder['cost'])
@@ -161,6 +163,8 @@ def deep():
     print "\noriginal", labels_dev[sampnr], norm_tweets_dev[sampnr]    # print "\noriginal", norm_tweets[2]
     print vects[sampnr]
 
+    # Add ops to save and restore all the variables.
+    saver = tf.train.Saver()
 
     # do 1000 training steps
     for i in range(1000):
@@ -187,8 +191,57 @@ def deep():
             print i, " decoded", decoded[sampnr]
             print i, " decoded bow", dec_tweet
 
+            save_path = saver.save(sess, "model.ckpt")
+            print("Model saved in file: %s" % save_path)
+
+
+def deep_test():
+    sess = tf.Session()
+
+    start_dim = 50000
+
+    x = tf.placeholder("float", [None, start_dim])
+    autoencoder = create(x, [500])  # Dimensionality of the hidden layers. To start with, only use 1 hidden layer.
+
+
+    tokens,vects,norm_tweets = convertTweetsToVec('clinton', start_dim)
+    tweets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2, 'clinton')
+    vects_dev,norm_tweets_dev = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_dev)
+    devbatch = []
+    for v in vects_dev:
+        devbatch.append(v)
+
+    # Add ops to save and restore all the variables.
+    saver = tf.train.Saver()
+
+    # Restore variables from disk.
+    saver.restore(sess, "model.ckpt")
+    print("Model restored.")
+
+
+    decoded = sess.run(autoencoder['decoded'], feed_dict={x: devbatch})  # apply to dev
+    encoded = sess.run(autoencoder['encoded'], feed_dict={x: devbatch})  # apply to dev
+
+    sampnr = 12  # which ones of the dev samples to display for sanity check
+    print "\noriginal", labels_dev[sampnr], norm_tweets_dev[sampnr]    # print "\noriginal", norm_tweets[2]
+    print vects[sampnr]
+
+    dec_tweet = []
+    n = 0
+    for r in decoded[sampnr]:  # display first result
+        if r > 0.1:
+            dec_tweet.append(tokens[n])
+        n+=1
+
+    print " cost", sess.run(autoencoder['cost'], feed_dict={x: devbatch})
+    #print i, " original", batch[0]
+    print " encoded", encoded[sampnr] # latent representation of input, feed this to SVM(s)
+    print " decoded", decoded[sampnr]
+    print " decoded bow", dec_tweet
+
 
 if __name__ == '__main__':
-    deep()
+    #deep()
+    deep_test()
 
 
