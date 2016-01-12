@@ -12,7 +12,12 @@ bow_baseline.py runs a bow baseline, extracting 1-gram and 2-gram bow features, 
 The method deep() in autoencoder.py trains the autoencoder.
 After the autoencoder is trained, autoencoder_eval.py contains methods for training methods which use the autoencoder for feature extraction, also with end-to-end evaluation:
 
-- extractFeaturesAutoencoder() extracts features by applying the autoencoder to the tweets. If the parameter "cross_features" is set to "true", features are also extracted from the targets (setting "cross_features" to "true" is currently discouraged)
+- extractFeaturesAutoencoder() extracts features by applying the autoencoder to the tweets. If the parameter "cross_features" is set to "true", features are also extracted from the targets (setting "cross_features" to "true" is currently discouraged). If the parameter is set to "added", target features are added to tweet features.
 - extractFeaturesAutoencoderBOW() extract features using the autoencoder and bow
 
+After training, model(s) can be trained with:
 
+- train_classifiers() in bow_baseline.py for training two 2-way classifiers (on topic vs. off topic, positive vs. negative)
+- train_classifier() in bow_baseline.py for training one 3-way classifier (neutral vs. pos vs. neg)
+
+The folder "output" contains output of different methods, _results.txt contains a summary of the results with explanation.

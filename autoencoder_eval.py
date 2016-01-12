@@ -9,7 +9,7 @@ import random
 import tokenize_tweets
 from tokenize_tweets import convertTweetsToVec, readTweetsOfficial, getTokens
 from autoencoder import create
-from bow_baseline import train_classifiers, eval, extractFeatures, extractFeatureVocab
+from bow_baseline import train_classifiers, train_classifier, eval, extractFeatures, extractFeatureVocab
 
 # extract autoencoder features based on trained autoencoder model
 def extractFeaturesAutoencoder(autoencodermodel, cross_features='false'):
@@ -70,6 +70,11 @@ def extractFeaturesAutoencoder(autoencodermodel, cross_features='false'):
             for v in np.outer(encoded_dev[i], encoded_dev_target[i]):
                 features_dev_i.extend(v)
             features_dev.append(features_dev_i)
+    elif cross_features == "added":
+        for i, enc in enumerate(encoded_train_target):
+            features_train.append(np.append(encoded_train[i], enc))
+        for i, enc in enumerate(encoded_dev_target):
+            features_dev.append(np.append(encoded_dev[i], enc))
     else:
         features_train = encoded_train
         features_dev = encoded_dev
@@ -99,8 +104,10 @@ def extractFeaturesAutoencoderBOW(automodel, cross_features):
 
 
 if __name__ == '__main__':
-    #features_train, labels_train, features_dev, labels_dev = extractFeaturesAutoencoder("model.ckpt", "false")
-    features_train, labels_train, features_dev, labels_dev = extractFeaturesAutoencoderBOW("model.ckpt", "false")
+    features_train, labels_train, features_dev, labels_dev = extractFeaturesAutoencoder("model.ckpt", "false")
+    #features_train, labels_train, features_dev, labels_dev = extractFeaturesAutoencoderBOW("model.ckpt", "false")
 
-    train_classifiers(features_train, labels_train, features_dev, labels_dev, "out_auto.txt")
-    eval(tokenize_tweets.FILEDEV, "out_auto.txt")
+    #train_classifiers(features_train, labels_train, features_dev, labels_dev, "out_auto_added.txt") # train and predict two 2-way models
+    train_classifier(features_train, labels_train, features_dev, labels_dev, "out_auto.txt") # train and predict one 3-way model
+
+    eval(tokenize_tweets.FILEDEV, "out_auto.txt") # evaluate with official script
