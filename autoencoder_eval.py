@@ -108,6 +108,6 @@ if __name__ == '__main__':
     #features_train, labels_train, features_dev, labels_dev = extractFeaturesAutoencoderBOW("model.ckpt", "false")
 
     #train_classifiers(features_train, labels_train, features_dev, labels_dev, "out_auto_added.txt") # train and predict two 2-way models
-    train_classifier(features_train, labels_train, features_dev, labels_dev, "out_auto.txt") # train and predict one 3-way model
+    train_classifier(features_train, labels_train, features_dev, labels_dev, "out_auto.txt", "true") # train and predict one 3-way model
 
     eval(tokenize_tweets.FILEDEV, "out_auto.txt") # evaluate with official script

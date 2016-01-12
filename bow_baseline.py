@@ -135,7 +135,7 @@ def train_classifiers(feats_train, labels_train, feats_dev, labels_dev, outfilep
 
 
 # train one three-way classifier
-def train_classifier(feats_train, labels_train, feats_dev, labels_dev, outfilepath):
+def train_classifier(feats_train, labels_train, feats_dev, labels_dev, outfilepath, debug='false'):
     labels = []  # -1 for NONE, 0 for AGAINST, 1 for FAVOR
     labels_dev_tr = [] #transformed from "NONE" etc to -1,0,1
 
@@ -158,7 +158,7 @@ def train_classifier(feats_train, labels_train, feats_dev, labels_dev, outfilepa
 
     print("Training classifier...")
 
-    model = LogisticRegression(penalty='l1', class_weight='balanced') #svm.SVC(class_weight={1: weight})
+    model = LogisticRegression(penalty='l1')#, class_weight='balanced') #svm.SVC(class_weight={1: weight})
     model.fit(feats_train, labels)
     preds = model.predict(feats_dev)
     preds_prob = model.predict_proba(feats_dev)
@@ -169,12 +169,39 @@ def train_classifier(feats_train, labels_train, feats_dev, labels_dev, outfilepa
 
     printPredsToFileOneModel(tokenize_tweets.FILEDEV, outfilepath, preds)
 
+    if debug == "true":
+        printProbsToFileOneModel(tokenize_tweets.FILEDEV, outfilepath.replace(".txt", ".debug.txt"), preds_prob, preds)
+
 
 
 # evaluate using the original script, needs to be in same format as train/dev data
 def eval(file_gold, file_pred):
     pipe = subprocess.Popen(["perl", "eval.pl", file_gold, file_pred], stdout=sys.stdout) #stdout=subprocess.PIPE)
     pipe.communicate()
+
+
+
+# print predictions to file in SemEval format so the official eval script can be applied
+def printProbsToFileOneModel(infile, outfile, probs, res):
+    outf = open(outfile, 'wb')
+    cntr = 0
+    for line in io.open(infile, encoding='windows-1252', mode='r'): #for the Trump file it's utf-8
+        if line.strip("\n").startswith('ID\t'):
+            outf.write(line.strip("\n") + "\tPred\tNONE/AGAINST/FAVOR probs")
+        else:
+            outl = line.strip("\n").split("\t")
+            if res[cntr] == -1:
+                outl.append('NONE')
+            elif res[cntr] == 0:
+                outl.append('AGAINST')
+            elif res[cntr] == 1:
+                outl.append('FAVOR')
+            for p in probs[cntr]:
+                outl.append(str(p))
+            outf.write("\n" + "\t".join(outl))
+            cntr += 1
+
+    outf.close()
 
 
 # print predictions to file in SemEval format so the official eval script can be applied
@@ -229,6 +256,6 @@ if __name__ == '__main__':
     features_dev = extractFeatures(tweets_dev, features_final)
 
     #train_classifiers(features_train, labels_train, features_dev, labels_dev, "out.txt")
-    train_classifier(features_train, labels_train, features_dev, labels_dev, "out_bow.txt")
+    train_classifier(features_train, labels_train, features_dev, labels_dev, "out_bow_3way.txt", "true")
 
-    eval(tokenize_tweets.FILEDEV, "out_bow.txt")
+    eval(tokenize_tweets.FILEDEV, "out_bow_3way.txt")

@@ -1,0 +1,689 @@
+ID	Target	Tweet	Stance	Pred	NONE/AGAINST/FAVOR probs
+1	Hillary Clinton	@tedcruz And, #HandOverTheServer she wiped clean + 30k deleted emails, explains dereliction of duty/lies re #Benghazi,etc #tcot #SemST	AGAINST	AGAINST	0.33980615045	0.40441290292	0.25578094663
+2	Hillary Clinton	Hillary is our best choice if we truly want to continue being a progressive nation. #Ohio #SemST	FAVOR	AGAINST	0.250439877032	0.439629368026	0.309930754941
+3	Hillary Clinton	@TheView I think our country is ready for a female pres, it can't ever be Hillary #SemST	AGAINST	AGAINST	0.227098420781	0.493668155717	0.279233423503
+4	Hillary Clinton	I just gave an unhealthy amount of my hard-earned money away to the big gov't & untrustworthy IRS. #WhyImNotVotingForHillary #SemST	AGAINST	AGAINST	0.244867894708	0.497555083712	0.25757702158
+5	Hillary Clinton	@PortiaABoulger Thank you for adding me to your list #SemST	NONE	AGAINST	0.346526281971	0.351073408399	0.30240030963
+6	Hillary Clinton	Hillary can not win. Here's hoping the Dems offer a real candidate like Warren. #Warren2016 #SemST	AGAINST	AGAINST	0.24544978278	0.458218271938	0.296331945282
+7	Hillary Clinton	Respect FOR the law and respect BY the law Yes, needed desperately.  #BaltimoreRiots #SemST	NONE	AGAINST	0.265076054021	0.469435432727	0.265488513252
+8	Hillary Clinton	I don't want to be appointed to an Ambassador post. #SemST	NONE	AGAINST	0.236188196619	0.455957321217	0.307854482164
+9	Hillary Clinton	#StopHillary2016 @HillaryClinton if there was a woman with integrity and honesty I would vote for such as woman president, NO #SemST	AGAINST	AGAINST	0.213544245125	0.438826894638	0.347628860237
+10	Hillary Clinton	@HillaryClinton End lawless #ClintonFoundation. Jail Butcher of #Benghazi. #Arrest rapist #BillClinton. #HillaryClinton #SemST	AGAINST	AGAINST	0.30205811423	0.428248904079	0.269692981692
+11	Hillary Clinton	Use your brain, keep Hillary out of the White House.Clinton2016 #SemST	AGAINST	AGAINST	0.267697313949	0.533724954247	0.198577731804
+12	Hillary Clinton	@HillaryClinton Hillary pandering with her logo. #ClintonFoundationscandal #ClintonCash #SemST	AGAINST	AGAINST	0.326724354135	0.37072738615	0.302548259715
+13	Hillary Clinton	@readyforHRC @HillaryClinton #HillaryClinton, the US presidency is a testament to the success of #women their role in the world #SemST	FAVOR	AGAINST	0.196529171081	0.569607160982	0.233863667937
+14	Hillary Clinton	@CiaraAntaya cuz you know I'm such a feminist #SemST 	NONE	AGAINST	0.300921148634	0.363174882581	0.335903968786
+15	Hillary Clinton	2 million bogus followers on Twitter @HillaryClinton #WhyImNotVotingForHillary #SemST	AGAINST	NONE	0.420766876737	0.283508858788	0.295724264476
+16	Hillary Clinton	@lindasuhler : My name is Rebecca and my grandmother immigrated to Sunnybrook Farm. @twitchyteam #SemST	NONE	AGAINST	0.194597067035	0.478963640923	0.326439292041
+17	Hillary Clinton	Where's the campaign store is the real question? I am ready to buy some Hillary gear #SemST	FAVOR	AGAINST	0.325643599876	0.422228359719	0.252128040405
+18	Hillary Clinton	It's a miracle, suddenly #Democrats don't mind having someone who voted for war. #SemST	AGAINST	AGAINST	0.182491998778	0.5281966119	0.289311389322
+19	Hillary Clinton	@smileitsalicia @greekgummybear2 now i can live in peace #SemST	NONE	NONE	0.367789413513	0.326092625206	0.306117961281
+20	Hillary Clinton	Hillary doesn't want to put anyone in prison anymore. Obviously worried about her own future. #SemST	AGAINST	AGAINST	0.282924628879	0.401467597478	0.315607773643
+21	Hillary Clinton	The only way I support Hillary was if Elizabeth Warren ran or Karl Marx was running #2016 #Clinton2016 #SemST	AGAINST	NONE	0.431608763512	0.282883071256	0.285508165232
+22	Hillary Clinton	@HomeOfUncleSam @ScotsFyre @RWNutjob1 @SA_Hartdegen She's too old to understand the internet...that she can be fact checked. #SemST	AGAINST	AGAINST	0.2407499591	0.512920085601	0.246329955299
+23	Hillary Clinton	Because Communist Breadlines are not my thing! #NoHillary #WhyImNotVotingForHillary #SemST	AGAINST	NONE	0.364346093963	0.305276729315	0.330377176721
+24	Hillary Clinton	@HillaryClinton bad wife, bad role model for women, bad lawyer, bad First Lady, bad Senator, horrible Secretary of State. #SemST	AGAINST	AGAINST	0.226956218514	0.518201972468	0.254841809019
+25	Hillary Clinton	Everything Hillary touches ends up being a scam, a lie, a cover-up, or a failure. William L. Just who we want as president. #SemST	AGAINST	AGAINST	0.248324564757	0.432937990795	0.318737444449
+26	Hillary Clinton	Yes HRC subject 2 dbl standard Smh Come on @billclinton @HillaryClinton U Knew @ClintonFdn Donations Would b Scrutinized; Spun! #SemST	AGAINST	NONE	0.398374367012	0.293222777022	0.308402855966
+27	Hillary Clinton	#Hillary to stop for #pizza today to garner the #Italian vote. #MSM is worthless. #libertynothillary #HillNo #SemST	AGAINST	AGAINST	0.286979319873	0.468189142477	0.24483153765
+28	Hillary Clinton	I want America to great again #WhyImNotVotingForHillary #SemST	AGAINST	NONE	0.373324044741	0.313184191548	0.313491763711
+29	Hillary Clinton	March 8, 2016 Ohio is holding our Primaries! The date is subject to change. #Ohio #OurChampion #SemST	NONE	AGAINST	0.276415443197	0.440879219371	0.282705337432
+30	Hillary Clinton	@RIGHTZONE @WethePeoplePets Let's hope the VOTERS remember! #HillNo #SemST	AGAINST	AGAINST	0.342052698964	0.352499195918	0.305448105118
+31	Hillary Clinton	Hillary Clinton has not driven a car since 1996. #clintonfakerealityshow #SemST	AGAINST	AGAINST	0.293524897305	0.381326208318	0.325148894377
+32	Hillary Clinton	@NaughtyBeyotch @TheRealMadman23  Don't care for #Fiorina, but it seems she taking the #sexist gut punches by the #media. #MSM #SemST	NONE	AGAINST	0.254448245928	0.508129756967	0.237421997105
+33	Hillary Clinton	@FoxNews @marthamaccallum @BillHemmer whose the opportunist now, #NoHillary2016 #SemST	AGAINST	AGAINST	0.331081324768	0.395288600479	0.273630074753
+34	Hillary Clinton	@HillaryClinton @WomenintheWorld we need to re-establish a #global system dominated by love and affection have #moral_humane RT #SemST	FAVOR	AGAINST	0.205722024352	0.422109694055	0.372168281593
+35	Hillary Clinton	#Hillary is as transparent as a brick wall #LibertyNotHillary #SemST	AGAINST	AGAINST	0.324014331432	0.363479315528	0.31250635304
+36	Hillary Clinton	@WSJ . Clinton Foundation to keep accepting bribes from foreign governments #WhyImNotVotingForHillary #SemST	AGAINST	AGAINST	0.30786343579	0.384314081869	0.307822482341
+37	Hillary Clinton	@josephbenning I agree, these are better than what you had before, like a severe cold is better than pneumonia. Good luck. #SemST	NONE	AGAINST	0.169115321145	0.557524159454	0.273360519401
+38	Hillary Clinton	What are you afraid of @HillaryClinton? If you can't answer questions from the press, why do we want you as POTUS #SemST	AGAINST	AGAINST	0.225171117938	0.510619134423	0.264209747639
+39	Hillary Clinton	Sorry, Hillary's new normal folk image doesn't take away from Behgnazi & her 0 foreign policy successes as Secretary of State. #SemST	AGAINST	AGAINST	0.229275526679	0.498553459464	0.272171013857
+40	Hillary Clinton	CEO pay the target for 2016 election. From someone who makes more than most CEO's but you drank the Kool-Aid. #SemST	NONE	AGAINST	0.217434959983	0.511909205191	0.270655834826
+41	Hillary Clinton	@NBCNews including repealing the first amendment. Way to go #SemST	AGAINST	AGAINST	0.304031593151	0.429765882937	0.266202523911
+42	Hillary Clinton	@NBCNews Stop promoting @HillaryClinton. She is a liar. Just like her impeached husband. #WakeUpAmerica #SemST 	AGAINST	AGAINST	0.281146439416	0.428660553507	0.290193007077
+43	Hillary Clinton	Lets take back our country! Whos with me? No more Democrats!2016 #SemST	AGAINST	NONE	0.370169418437	0.310413740532	0.319416841031
+44	Hillary Clinton	RT @AnthonyCumia: If Hillary IS elected, I have my transition team together to smoothly move me from a racist to a sexist. #SemST	AGAINST	AGAINST	0.104261748355	0.5484435312	0.347294720444
+45	Hillary Clinton	I'm #ThatChampion who got kicked off the #Watergate team due to misconduct.  #tcot #SemST	NONE	AGAINST	0.290749396417	0.436011630213	0.27323897337
+46	Hillary Clinton	.@HillaryClinton is a droid & someone's programmed her to say things - thinks she doesn't have to WORK to win so she ISN'T! #SemST	AGAINST	AGAINST	0.170580845838	0.50744216978	0.321976984382
+47	Hillary Clinton	@JVollmer08 @HillaryforIA #freedom_justice_equality_education for innovation and development to make #happy_life i Utopia #SemST	FAVOR	NONE	0.357562058333	0.322957646746	0.319480294921
+48	Hillary Clinton	Probably not perfect for everyone--which I think is great. But this is the beginning of a conversation. #SemST	NONE	AGAINST	0.210400989969	0.558493968212	0.231105041819
+49	Hillary Clinton	I'm on the edge of my seat to start volunteering for @HillaryClinton 's presidential campaign!  So excited!!  #cantwait #SemST	FAVOR	AGAINST	0.301458348476	0.417269142585	0.281272508939
+50	Hillary Clinton	RT @FutureTXLeader: Is everyone in #ElPaso #Texas ready for president #MarcoRubio #UTEP #NewAmericanCentury #2016 #Future #Rub... #SemST	AGAINST	AGAINST	0.204232778425	0.454774103024	0.340993118551
+1673	Hillary Clinton	RT @GunnJessica: Because I want young American women to be able to be proud of the 1st woman president #SemST	FAVOR	AGAINST	0.13201696114	0.56873295129	0.29925008757
+1674	Hillary Clinton	@Chris_1791 @newsbusters 2 years ago #Hillary never answered whether she used private email #Liberal media passed on reporting #SemST	AGAINST	NONE	0.402856582318	0.294620651561	0.302522766121
+1675	Hillary Clinton	@dnewhauser take that, Marco Rubio. @GOP cannot pander to the Latino vote while pushing policies that hurt the community most. #SemST	NONE	AGAINST	0.258236337899	0.496967276522	0.244796385579
+1676	Hillary Clinton	@StateDept @AmbCathyRussell @AdamSmith_USA @HillaryClinton @HillaryforIA @BarackObama The whole #world is supporting you. #SemST	FAVOR	AGAINST	0.326597758747	0.404125752308	0.269276488946
+1677	Hillary Clinton	Lets remember #dickcheney is an unindicted war criminal b4 we start yelling #Benghazi day after day. Will we ever see justice? #SemST	NONE	AGAINST	0.295574511972	0.45607331516	0.248352172868
+1678	Hillary Clinton	Although I certainly have disagreements, after reading about @GovernorOMalley I much rather have him than @HillaryClinton. #SemST	AGAINST	AGAINST	0.254551333524	0.46973902101	0.275709645465
+1679	Hillary Clinton	Human rights are women's rights and women's rights are human rights. - Hillary Clinton #SemST	FAVOR	AGAINST	0.261649078728	0.406184478641	0.332166442631
+1680	Hillary Clinton	Would you wanna be in a long term relationship with some bitch that hides her emails, & lies to your face? Then #Dontvote #SemST	AGAINST	AGAINST	0.178430952221	0.502175612833	0.319393434945
+1681	Hillary Clinton	Bill Clinton just wants to be the first dude to be President and bang one. #SemST	NONE	AGAINST	0.251232756776	0.463127587234	0.285639655989
+1682	Hillary Clinton	@HuffPostPol If @HillaryClinton can do half of what he did then she would be doing is a favor #SemST	FAVOR	AGAINST	0.266820934136	0.456257445186	0.276921620678
+1683	Hillary Clinton	I've made my decision, to the shock of no one probably, who I'm supporting  #SemST	NONE	AGAINST	0.26027556005	0.500842208159	0.238882231792
+1684	Hillary Clinton	Didn't realize Bob Dole was mentioned in Tupac's "How do u want it" #YesterdaysLeaders #SemST	NONE	AGAINST	0.267501543908	0.408052620059	0.324445836034
+1685	Hillary Clinton	If I run for office this will be my original logo:          M   #libertynothillary  #HillNo #tcot #UniteBlue #SemST	AGAINST	AGAINST	0.271770823041	0.398467031461	0.329762145498
+1686	Hillary Clinton	I will be there when your little tree has run out of smell. #ThatChampion #SemST	NONE	AGAINST	0.264924733956	0.484811176339	0.250264089705
+1687	Hillary Clinton	crazy to think next up for the Oval Office is either going to be Hillary or a Republican #SemST	AGAINST	AGAINST	0.270224401497	0.448447075461	0.281328523042
+1688	Hillary Clinton	@NACLA @BrasilWire SOS OBAMA Who?? @BarackObama ?? :-))))  Are you joking? #StopDilma #StopLula #StopForodeSaoPaulo #SemST	NONE	NONE	0.392410590558	0.309474026083	0.298115383359
+1689	Hillary Clinton	@CheekyGent @ChuckCJohnson Hey Hillary is on her to way to buy votes too! #HillarySoOld #SemST	AGAINST	NONE	0.419455229637	0.300808476968	0.279736293395
+1690	Hillary Clinton	RT @NicolaSturgeon: "It's official: Hillary's running for president," says her campaign chief. Excellent! #SemST	FAVOR	AGAINST	0.167758019489	0.493117319489	0.339124661022
+1691	Hillary Clinton	Only in a SEXIST AS FUK world would we question the "qualifications" of a former SECRETARY OF STATE. #SemST	FAVOR	AGAINST	0.217799052791	0.525768198613	0.256432748596
+1692	Hillary Clinton	@ChrisChristie couldn't run his way out of a paper bag let alone beat #HillaryClinton. Go home Chris u r drunk. #ChrisChristie #SemST	FAVOR	AGAINST	0.22267361114	0.497665470883	0.279660917977
+1693	Hillary Clinton	@ReformedBroker "to da honies gittin money playing #bleep words like dummies" #POPPA #SemST	NONE	NONE	0.369546231234	0.321743965761	0.308709803005
+1694	Hillary Clinton	Forgive #CherylRios of her stupid comments about women being president. She will blame it on that time of the month anyways. #SemST	NONE	AGAINST	0.228736363832	0.533155348798	0.23810828737
+1695	Hillary Clinton	Low key it would be interesting to have a female president. #SemST	FAVOR	AGAINST	0.228143536278	0.442905302758	0.328951160964
+1696	Hillary Clinton	@seanhannity we lost 4,000 of our Military boys when your President pulled out of Iraq.  #LiberalConsequences  #SemST	AGAINST	AGAINST	0.288708376577	0.463428612595	0.247863010828
+1697	Hillary Clinton	.@EthanObama I know - it's just going to be a long year! #SemST	NONE	AGAINST	0.185649666992	0.489673691636	0.324676641371
+1698	Hillary Clinton	Technically, a president with raging hormones could refer to estrogen, testosterone or anabolic steroids #IBlamePublicSchools #SemST	AGAINST	AGAINST	0.241278370041	0.421466584708	0.337255045251
+1699	Hillary Clinton	Does Hillary really need to run this country? Could we just make her president of the Bingo club at Shady Pines?  #tcot #p2 #SemST	AGAINST	AGAINST	0.343240724099	0.422746719115	0.234012556786
+1700	Hillary Clinton	Lol why do so many people around here hate Hillary?  #SemST	FAVOR	NONE	0.402759943486	0.308606281785	0.288633774729
+1701	Hillary Clinton	@HillaryClinton is at the top, and has spent her whole career growing government, keeping the deck stacked. #LibertyNotHillary #SemST	AGAINST	AGAINST	0.241683884129	0.524810687019	0.233505428852
+1702	Hillary Clinton	Problem with #libertarian is it's not even a decreed party. A house devided against itself, will not stand. think this news to #SemST	NONE	AGAINST	0.130241756286	0.592727111245	0.277031132469
+1703	Hillary Clinton	@HillaryClinton i am portuguese and i support your campaign! Best luck! The world need a person and a women like you! #USA #SemST	FAVOR	FAVOR	0.26978291627	0.352691455912	0.377525627818
+1704	Hillary Clinton	Hillary Clinton for Ambassador to ISIS. #SemST	AGAINST	AGAINST	0.334933922498	0.353897114384	0.311168963119
+1705	Hillary Clinton	So when all you brave patriots stop Hillary, who you going to replace her with, Jeb Bush? LOL. #losers #SemST	FAVOR	AGAINST	0.239963341631	0.460808046753	0.299228611616
+1706	Hillary Clinton	I'm a woman. Can I be President? @StopHillaryPAC #SemST	AGAINST	AGAINST	0.261016831858	0.429585392625	0.309397775517
+1707	Hillary Clinton	This is not her first time at the rodeo!  @HillaryClinton doesn't care who likes her or not This woman is on a mission #Tough #SemST	FAVOR	AGAINST	0.283092172906	0.431413185951	0.285494641143
+1708	Hillary Clinton	@lajouetreine @KarrattiPaul I'm not a Genitalian #SemST	NONE	AGAINST	0.319449475961	0.349382575177	0.331167948862
+1709	Hillary Clinton	Wondering what the NEXT idiotic GOP smear against @HillaryClinton will be. It's coming for sure. Just don't know details yet. #SemST	FAVOR	AGAINST	0.223006431454	0.517169507724	0.259824060823
+1710	Hillary Clinton	Hillary is killing it so far on the trail. She's finally showing her personal side and I think it will benefit her profoundly. #SemST	FAVOR	AGAINST	0.257705324829	0.48806035156	0.254234323611
+1711	Hillary Clinton	Do we call Bill Mr President...the first 1st man of Or mr president the 1st man? Lol #imreadyforhillary #SemST	FAVOR	AGAINST	0.361028558946	0.395120861017	0.243850580037
+1712	Hillary Clinton	.@gailtalk @trscoop Of course it was. She'll be handled every step of the way. They can't risk her unscripted. #SemST	AGAINST	AGAINST	0.228675595889	0.542319921481	0.22900448263
+1713	Hillary Clinton	I just want my dog to stop eating the trash #SemST	NONE	AGAINST	0.347205029608	0.358621654588	0.294173315804
+1714	Hillary Clinton	@thehill @evanperez are you kidding me...leave her to focus on issues...the next prez #SemST	FAVOR	AGAINST	0.349755234823	0.350122380938	0.30012238424
+1715	Hillary Clinton	Congratulations @HillaryClinton on entering the 2016 race for President! You have the support of Jews all over the world! #SemST	FAVOR	AGAINST	0.335187782836	0.414958526974	0.24985369019
+1716	Hillary Clinton	@HillaryClinton had more twitter followers then all four major Republican candidates (Bush, Rubio, Paul, Cruz) COMBINED. #SemST	FAVOR	AGAINST	0.294140338606	0.44685525077	0.259004410624
+1717	Hillary Clinton	#HillaryClinton has yet to release @ClintonFdn donors... Public deserves disclosure. #Scandals #lies #Clintons #SemST	AGAINST	AGAINST	0.333504185309	0.366553998888	0.299941815803
+1718	Hillary Clinton	I want to go back in time to when men and women couldn't appear in the same yearbook as each other #old school #SemST	NONE	AGAINST	0.245579134998	0.460877774467	0.293543090536
+1719	Hillary Clinton	RT @hale_razor:#HillaryAccomplishments 1 of select few people fired 4 being 2 unethical 2 investigate Watergate #SemST	AGAINST	AGAINST	0.175380530446	0.492084715931	0.332534753623
+1720	Hillary Clinton	How can she live with herself? #Benghazi #SemST	AGAINST	NONE	0.373554907985	0.319493421374	0.306951670642
+1721	Hillary Clinton	Marriage equality a constitutional right! Woot #HRC2016 #hillaryclinton #readyforhillary #vote #hillaryfor2016 ##mpotus #SemST	FAVOR	FAVOR	0.323782815205	0.317769486902	0.358447697893
+1722	Hillary Clinton	Hillary needs to go to a Sheetz gas station after 10 pm to see the real America. #SemST	AGAINST	AGAINST	0.284896827646	0.433820462661	0.281282709693
+1723	Hillary Clinton	Hillary's campaign events are scripted dog & pony shows designed to shelter her from vetting b4 the coronation #SemST	AGAINST	AGAINST	0.322092463193	0.378755469247	0.29915206756
+1724	Hillary Clinton	Yes, do tell US, name one of her accomplishments #SemST	AGAINST	AGAINST	0.308147123239	0.422748013124	0.269104863636
+1725	Hillary Clinton	Apparently, putting cocaine in someone's butthole and then waiting for them to fart in your face is the wrong way to get high. #SemST	NONE	AGAINST	0.167427754651	0.604632323732	0.227939921617
+1726	Hillary Clinton	Why is Hillary lying AGAIN about something news worthy? What's news worthy is if she doesn't lie about something #SemST	AGAINST	AGAINST	0.333194224886	0.384858522088	0.281947253026
+1727	Hillary Clinton	Chipotle employees shouldn't complain Hillary left nothing in the tip jar. They're lucky she didn't dip in and help herself #SemST	AGAINST	AGAINST	0.252625416581	0.44622527205	0.301149311369
+1728	Hillary Clinton	@Bluesaloon Women are not a demographic, we are at least 50% of the nation. So a woman is no more symbolic than a man #SemST	NONE	AGAINST	0.148241628629	0.623098531682	0.228659839689
+1729	Hillary Clinton	Sending u gay bear love from Chicago @HillaryClinton #HillaryMyPresident #SemST	FAVOR	NONE	0.390619248191	0.317651084542	0.291729667267
+1730	Hillary Clinton	I love the smell of Hillary in the morning. It smells like Republican Victory. #TedCruz2016 #MarcoRubio #SemST	AGAINST	AGAINST	0.279778407607	0.473218826814	0.247002765579
+1731	Hillary Clinton	@ProBirdRights: I do a stump speech. It on the stump in the park. attendance mandatory. #SemST	NONE	AGAINST	0.188906469583	0.482135368122	0.328958162294
+1732	Hillary Clinton	I'd still rather have Aaron Hernandez as President than Hillary.  #SemST	AGAINST	AGAINST	0.337233093117	0.37100653578	0.291760371103
+1733	Hillary Clinton	@JSavoly @tedcruz Here ya go teddy boy..the world is getting HOTTER!! It's called GLOBAL WARMING!!  You're such a PUTZ!! #SemST	NONE	AGAINST	0.270236308689	0.460028570487	0.269735120824
+1734	Hillary Clinton	@JusticeWillett at least he has a platform #SemST	NONE	NONE	0.351728210223	0.331385253355	0.316886536422
+1735	Hillary Clinton	Because I'm against common core, common crooks and common lies! #NoHillary2016 #StopHillaryClinton2016 #WhyImNotVotingForHillary #SemST	AGAINST	AGAINST	0.327040230799	0.359788417356	0.313171351844
+1736	Hillary Clinton	I would LMAO if some negro Democrat decides to run for President. #HillaryClinton2016 #HillarysBigAnnouncement #HillarysDonors #SemST	AGAINST	AGAINST	0.317071082892	0.371066642124	0.311862274984
+1737	Hillary Clinton	@senna1 @KirillWasHere how many men are getting their dicks sucked daily in congress, etc and no one gives a shit... #SemST	NONE	AGAINST	0.217391582087	0.456332616488	0.326275801424
+1738	Hillary Clinton	You can't grow an economy from the bottom up. If she gets in, we're ALL in trouble #SemST	AGAINST	AGAINST	0.223212039855	0.544810951225	0.23197700892
+1739	Hillary Clinton	@HillaryClinton Stop raising taxes and let people keep more of their wages! #LibertyNotHillary #StandWithRand #SemST	AGAINST	AGAINST	0.309242870325	0.38550447177	0.305252657905
+1740	Hillary Clinton	@theblaze If you think Hillary isn't taking foreign money from Muslim brotherhood, you probably favor Obama as chief justice #SemST	AGAINST	AGAINST	0.329357983116	0.393659843255	0.276982173629
+1741	Hillary Clinton	3. Fixing America's political system by getting rid of "unaccountable" money, and 4. Protecting the country. #SemST	NONE	AGAINST	0.176234128234	0.602400153586	0.22136571818
+1742	Hillary Clinton	marijuana? marijuaage equality?? coincidence i think nOT!!11! #SemST	NONE	NONE	0.384076059208	0.305665500313	0.310258440479
+1743	Hillary Clinton	@KoriWasinger @JButtawipo she also voted for the Iraq war and was responsible for gathering @TheDemocrats votes to support it. #SemST	AGAINST	AGAINST	0.251915856479	0.462806853556	0.285277289964
+1744	Hillary Clinton	Ding Dong ____ _____ __ ____ #SemST	NONE	NONE	0.402240226261	0.3020737436	0.29568603014
+1745	Hillary Clinton	RT @MaxTollensJr: One-percenter lied about being #DeadBroke No more lies. NO to #SemST	NONE	AGAINST	0.16863830764	0.475811216733	0.355550475627
+1746	Hillary Clinton	@SLessard 100% agree. We need a woman like Hillary that can help this country get nursed back together! #SemST	FAVOR	AGAINST	0.300365342862	0.379362818899	0.320271838239
+1747	Hillary Clinton	Much like you good people I forgot about my #livetweetingbladerunner a couple weeks ago #callback #potroast #cartography #blue #SemST	NONE	FAVOR	0.307419152323	0.331776855637	0.360803992041
+1748	Hillary Clinton	@RandPaul @HillaryClinton you could never dream to be as intelligent as she is #SemST	FAVOR	AGAINST	0.333259190826	0.380075863013	0.286664946161
+1749	Hillary Clinton	If Hillary will lock Americans in classrooms during her campaign, she'll have no problems locking us all up whenever she wants. #SemST	AGAINST	AGAINST	0.274053795492	0.449245940691	0.276700263817
+1750	Hillary Clinton	#WhyImNotVotingForHillary she calls education a "non-family enterprise" #ImCommitted2DefeatHillary Are you? #ncpol @GOP #SemST	AGAINST	AGAINST	0.319573311536	0.360872976572	0.319553711891
+1751	Hillary Clinton	@bristola48 @AlciniaH @Mahogany1992 @stphil @MzDivah67 @Progress4Ohio @graceslick77 @AuntLulie @deejayedee He cool, but NO #SemST	NONE	AGAINST	0.356057827791	0.362556839399	0.28138533281
+1752	Hillary Clinton	@Jeff_Nichols_82 @HillaryforIA #freedom_justice_equality_education for innovation and development to make #happy_life in Utopia #SemST	FAVOR	AGAINST	0.33646786903	0.338994503105	0.324537627865
+1753	Hillary Clinton	@WhiteHouse @BarackObama @HillaryforIA @BarackObama The whole #world is supporting you. #SemST	FAVOR	AGAINST	0.327106895573	0.403974260512	0.268918843915
+1754	Hillary Clinton	@HillaryClinton Especially the paid union lackies who have no idea why their there. Propaganda machine spinning overtime. #SemST	AGAINST	AGAINST	0.286164477182	0.449253479578	0.26458204324
+1755	Hillary Clinton	@HillaryClinton The deceit hand? Thats a hand you know well. Right? #SemST	AGAINST	AGAINST	0.285110288519	0.414546500422	0.300343211059
+1756	Hillary Clinton	@AlyssSmithh There she is pant suite Hillary to hide those thighs #HillarysDonors #HillarysBigAnnouncement #Benghazi #Obama #SemST	AGAINST	NONE	0.405897699167	0.320994000563	0.273108300271
+1757	Hillary Clinton	@HillaryClinton will pick @SenWarren for VP -Mark my tweet. #UnstoppableTicket #ElizabethWarren #SemST	FAVOR	AGAINST	0.306168263063	0.382138446729	0.311693290208
+1758	Hillary Clinton	I'm going to apply for the Intern job #SemST	NONE	AGAINST	0.354752618252	0.36491073607	0.280336645678
+1759	Hillary Clinton	@TX_1 @politicalmath Then you know how slippery snakes slither over shards of glass! #SemST	NONE	AGAINST	0.329138469191	0.382195949209	0.2886655816
+1760	Hillary Clinton	@46drhouse - Be interesting to see how Hillary defends same when questioned.  She will eventually have to answer questions. #SemST	AGAINST	AGAINST	0.317425296928	0.378369232932	0.30420547014
+1761	Hillary Clinton	.@HillaryClinton What's the ambient temperature in #Hell today? Use that as a guide!  #SemST	AGAINST	AGAINST	0.208602008823	0.503358742406	0.288039248771
+1762	Hillary Clinton	Gov. Chafee, why are you trying to make fetch happen. It's not going to happen. #SemST	NONE	AGAINST	0.186111171639	0.511344702785	0.302544125575
+1763	Hillary Clinton	#everydaysexism Only > @ATikSalt < may say what sexism is. The rest of y'all shut up. #SemST	NONE	AGAINST	0.297848351714	0.45904199379	0.243109654496
+1764	Hillary Clinton	@tjhansen @owillis serious, if trump runs you'll get a trump tattoo? Calling the Donald!! #SemST	NONE	AGAINST	0.292447324855	0.420518413331	0.287034261813
+1765	Hillary Clinton	Everything abt @HillaryClinton is BOGUS. Her issues, her history, her #Iowa trip, her #Twitter followers, her campaigning #SemST	AGAINST	AGAINST	0.308813917337	0.452934330104	0.238251752559
+1766	Hillary Clinton	#hillaryclinton is a champion of data removal. #SemST	AGAINST	AGAINST	0.246027679819	0.490185553394	0.263786766787
+1767	Hillary Clinton	@FoundersGirl @Artist_Angie I want the first female to be competent. #SemST	AGAINST	AGAINST	0.277209759054	0.450962125093	0.271828115853
+1768	Hillary Clinton	Saudi Arabia imprisons & flogs rape victims. "Women's champion" @HillaryClinton has accepted MILLIONS $$$ from Saudi govt #tcot #SemST	AGAINST	AGAINST	0.281917737766	0.428009436644	0.29007282559
+1769	Hillary Clinton	How much was Monica getting paid when Bill's burrito squirted sauce all over her pretty blue dress? @MauraReynolds @politico #SemST	AGAINST	AGAINST	0.336814205936	0.353841419389	0.309344374675
+1770	Hillary Clinton	Go watch America: Imagine A World Without Her. It'll make you realize how lucky we are to live in the best country on Earth #SemST	NONE	AGAINST	0.186689719139	0.502284773134	0.311025507727
+1771	Hillary Clinton	I suspect Hillary's Scooby Doo tour is being used as a distraction from ServerGate et al.  #NoObamaThirdTerm #SemST	AGAINST	AGAINST	0.247243731545	0.458863138332	0.293893130123
+1772	Hillary Clinton	Breaking News: #Hillary trades campaign bus for a broomstick. #SemST	AGAINST	AGAINST	0.203131239468	0.441342208626	0.355526551906
+1773	Hillary Clinton	@SoCaliMilitia1 @CzarofFreedom  That God for global warming melting icebergs, never gets prosecuted for her crimes #Liberals #SemST	AGAINST	AGAINST	0.355248189985	0.35963146825	0.285120341765
+1774	Hillary Clinton	Nothing says "I'm Every Woman" like 10 Democrat staffers in a machine shop in #Iowa right @HillaryClinton? #NotReadyForHillary #SemST	AGAINST	AGAINST	0.285443301242	0.398574098533	0.315982600225
+1775	Hillary Clinton	I'd love for some reporter to ask, "Sec Clinton, will u b returning the White House china, if elected? Or did u already hock it? #SemST	AGAINST	AGAINST	0.257918673645	0.485297420013	0.256783906342
+1776	Hillary Clinton	Very simple: the Clinton's are corrupt. #SemST	AGAINST	AGAINST	0.188186173907	0.504127619373	0.30768620672
+1777	Hillary Clinton	.@CaptYonah @thehill Fine; unethical or illegal quid pro quo uranium deal works for me. #SemST	NONE	AGAINST	0.328362992124	0.369729886794	0.301907121081
+1778	Hillary Clinton	@ConservatveGurl those of us that also have a brain will be voting against Hillary... #SemST	AGAINST	AGAINST	0.289803347865	0.420868902324	0.289327749811
+1779	Hillary Clinton	@LifeNewsHQ tolerance at its best! Do as I say not as I do #SemST	NONE	NONE	0.361371786025	0.288717119961	0.349911094014
+1780	Hillary Clinton	@Chris_1791 @TruthRevolt That doesn't leave much to talk about, then, does it? #SemST	NONE	AGAINST	0.286613860282	0.418531525451	0.294854614267
+1781	Hillary Clinton	I'm thinking #Hillary throws #Chelsea under the bus to end #Foundation firestorm.  #ClintonCash #TheGreaterGood #election2016 #SemST	AGAINST	AGAINST	0.277899522225	0.441794812559	0.280305665216
+1782	Hillary Clinton	@FoxNews #HappeningNow optics problem? No the real Hillary Clinton has stood up #ClintonCash #IaVotes #SemST	AGAINST	NONE	0.405824944275	0.319234737767	0.274940317959
+1783	Hillary Clinton	@HillaryClinton You can run but you ca't hide. #ClintonFoundationscandal #ClintonCash #emailgate #SemST	AGAINST	AGAINST	0.317809396733	0.401420064353	0.280770538915
+1784	Hillary Clinton	In case of Emergency, Push THIS BUTTON to scrub server..... #SemST	NONE	AGAINST	0.291332269011	0.435619896677	0.273047834312
+1785	Hillary Clinton	Great to see my mentor @RepSusanDavis at #DCinSD. And she's right we have the most qualified candidate ever running for POTUS. #SemST	FAVOR	AGAINST	0.212683117416	0.487020126315	0.300296756268
+1786	Hillary Clinton	@BarackObama #Love_peace and peaceful coexistence of all no to violence and #terrorism #SemST	NONE	AGAINST	0.312413456306	0.408023468002	0.279563075692
+1787	Hillary Clinton	@readyforHRC @HillaryClinton  Support encourage #HillaryClinton president #UnitedStates world is success of women in  world #SemST	FAVOR	AGAINST	0.320570092623	0.429334130365	0.250095777012
+1788	Hillary Clinton	I bet Leslie Knope would be so happy about #SemST	FAVOR	NONE	0.353904805207	0.335338564771	0.310756630022
+1789	Hillary Clinton	Also the $400,000 "speaking fees" #Hillary took from Goldman Sachs for two "speeches." @Joan_Vennochi #SemST	AGAINST	NONE	0.370004942539	0.363770158614	0.266224898847
+1790	Hillary Clinton	@readyforHRC   Support encourage #HillaryClinton president #UnitedStates world is success of women in  world #SemST	FAVOR	AGAINST	0.324604813328	0.423039408746	0.252355777926
+1791	Hillary Clinton	@NatureGuy101 @MaryMorientes   Support encourage #HillaryClinton president #UnitedStates world is success of women in  world #SemST	FAVOR	AGAINST	0.324604813328	0.423039408746	0.252355777926
+1792	Hillary Clinton	@rebeccalipson  #freedom_justice_equality_education for innovation and development to make #happy_life i Utopia #SemST	NONE	NONE	0.353045207764	0.323812047189	0.323142745047
+1793	Hillary Clinton	Before leaving my dad's I took the liberty in framing and put up the pictures he has meeting Hillary and Bill Clinton in '92 #SemST	FAVOR	AGAINST	0.284546505687	0.414828805823	0.30062468849
+1794	Hillary Clinton	#HillarysAccomplishments Being a total clusterfuck at anything she does. #ReadyForHillary #UniteBlue #TopProg #TPOT #LibCrib #SemST	AGAINST	AGAINST	0.281195652575	0.395269375817	0.323534971608
+1795	Hillary Clinton	RT .@ChuckNellis  .@HillaryClinton name change; it's no longer HRC it's now Hillary Uranium #Benghazi Clinton. Take note. #SemST	AGAINST	AGAINST	0.207041740101	0.465907011566	0.327051248333
+1796	Hillary Clinton	Hillary is on her way to #Baltimore to be their champion. #BaltimoreRiots #SemST	FAVOR	AGAINST	0.317342799476	0.40899865932	0.273658541204
+1797	Hillary Clinton	take faith that almost every political entity around you, whether dissident or not, serves no good purpose #Dempublicans #SemST	AGAINST	AGAINST	0.298670283355	0.40302511475	0.298304601895
+1798	Hillary Clinton	You don't have to be a lawyer to know the Clintons violated ethics rules. #SemST	AGAINST	AGAINST	0.174498628428	0.524621451052	0.30087992052
+1799	Hillary Clinton	@Xxoax @HillaryClinton @MaryMorientes   @BarackObama The whole #world is supporting you. #SemST	FAVOR	AGAINST	0.321604106953	0.407665952869	0.270729940178
+1800	Hillary Clinton	@HillaryClinton #freedom_justice_equality_education for innovation and development to make #happy_life i Utopia #SemST	FAVOR	NONE	0.349174387196	0.330026570717	0.320799042087
+1801	Hillary Clinton	So @ClintonFdn, I believe Andrew Fastow beat you to the "we made mistakes, as many organizations of our size do" excuse #SemST	AGAINST	AGAINST	0.22294352126	0.509196473535	0.267860005205
+1802	Hillary Clinton	I'm 19 years old and care about politics and elections.... I feel like I'm 67 years old #SemST	NONE	NONE	0.37355053729	0.307807124135	0.318642338575
+1803	Hillary Clinton	@HillaryClinton I notice that you didn't condemn the lawless actions of the rioters. #SemST	AGAINST	AGAINST	0.238815169743	0.513676881672	0.247507948584
+1804	Hillary Clinton	Obama:  climate change or bush?  Who to blame...?  Hillary:  right wing conspiracy in Baltimore. #BalitmoreRiots #SemST	AGAINST	AGAINST	0.20846663213	0.43561543933	0.355917928539
+1805	Hillary Clinton	Wasn't the original #ScoobyVan also full of unemployed hippies & a stupid dog, who lived to meddle in other people's business? #SemST	AGAINST	AGAINST	0.141871414211	0.606588168836	0.251540416953
+1806	Hillary Clinton	In 2013 Clinton Foundation collected $140M and spent $9M on direct aid, in 2014 they raised $500M and spent $100M on direct aid!  #SemST	AGAINST	AGAINST	0.313060333582	0.347908406031	0.339031260386
+1807	Hillary Clinton	Students of #BaylorUniversity are y'all ready for #MarcoRubio in #2016 #BU #Baylor #Bears #BaylorBears #NewAmericanCentury #GOP #SemST	AGAINST	AGAINST	0.318716289681	0.393838858445	0.287444851873
+1808	Hillary Clinton	@ChelseaClinton @HRC Do you stand for #BillClinton assaulting teen girls too? #ReadyForHillary #HillaryClinton #Clinton2016 #SemST	AGAINST	NONE	0.362054854076	0.332745798611	0.305199347313
+1809	Hillary Clinton	Hey #TexasState #Bobcats I hope y'all are ready for #MarcoRubio #2016 #TexasStateUniversity #NewAmericanCentury #Texas #TCOT #SemST	NONE	NONE	0.381783331768	0.312487823699	0.305728844532
+1810	Hillary Clinton	The only thing that I would pay money for is to hear Hillary Clinton say "I QUIT and I'm GUILTY" that would be worth millions. #SemST	AGAINST	AGAINST	0.234995228546	0.477472456927	0.287532314527
+1811	Hillary Clinton	Hillary Clinton keeps sending me emails, and when I try to unsubscribe, I get an error message. THIS IS CANCER #SemST	AGAINST	AGAINST	0.24195919725	0.456711302435	0.301329500315
+1812	Hillary Clinton	@HillaryClinton @BarackObama The whole #world is supporting you. #SemST	FAVOR	AGAINST	0.321604106953	0.407665952869	0.270729940178
+1813	Hillary Clinton	Denial. It works for Hillary, why not the Mayor of #Baltimore. #DemocratLiesMatter #SemST	AGAINST	AGAINST	0.236506649555	0.537297534729	0.226195815716
+1814	Hillary Clinton	Join the Twitter movement! RT or fav for a mention or follow back! #SemST	NONE	AGAINST	0.254188265628	0.417929601869	0.327882132503
+1815	Hillary Clinton	Wow RT "@greta Baltimore Orioles to play tomorrow but no public allowed" #BaltimoreRiots #FreddieGray #ThanksObama #WakeUpAmerica #SemST	NONE	AGAINST	0.283015997041	0.407891800246	0.309092202712
+1816	Hillary Clinton	Spoke to @HillaryClinton today in NYC. Wow! So smart and impressive!!! #SemST	FAVOR	AGAINST	0.266770739259	0.403271659576	0.329957601164
+1817	Hillary Clinton	@HillaryClinton Says the millionaire politician who accepts $$$ from countries that execute gays. #Hypocrite #WakeUpAmerica #SemST	AGAINST	AGAINST	0.332261020863	0.402026567052	0.265712412086
+1818	Hillary Clinton	#BernieSanders is running for president, don't the #democrats already have one really old guy running?? #SemST	AGAINST	AGAINST	0.278188812913	0.480122301562	0.241688885525
+1819	Hillary Clinton	297 days until I can register to vote!!1 year 193 days until Election Day #RockTheVote #democrats #everyvotecounts #SemST	FAVOR	NONE	0.363358246382	0.336776916269	0.29986483735
+1820	Hillary Clinton	THEYRE NOT "THUGS"  YOU #TEAPARTY RACISTS THEY ARE "COMMUNITY REORGANIZERS" !! #TCOT #baltimoreriots #SemST	NONE	NONE	0.387031670853	0.322102437524	0.290865891623
+1821	Hillary Clinton	Hillary will get past the primaries cause Dem voters don't think she can do any wrong. But she will be beat in November #SemST	AGAINST	AGAINST	0.283736324817	0.453227098123	0.263036577061
+1822	Hillary Clinton	@HillaryClinton loving the new colorful profile pic! #loveit #SemST	FAVOR	NONE	0.408286317928	0.308603831063	0.283109851009
+1823	Hillary Clinton	@HillaryClinton Did your rich Saudi donors, who execute gays, join the team? #Hypocrite #WakeUpAmerica  #SemST	AGAINST	AGAINST	0.334717312115	0.415355151477	0.249927536408
+1824	Hillary Clinton	Also, I finally moved to @FDCITY today! Will be much easier to get around going forward! #moving #SemST	NONE	AGAINST	0.292004384006	0.394549689427	0.313445926567
+1825	Hillary Clinton	I think I am going to vote for Monica Lewinsky's Ex- boyfriends Wife #SemST	FAVOR	AGAINST	0.313039247536	0.378445184301	0.308515568164
+1826	Hillary Clinton	And the working american tax payer keeps on paying for the unethical liberals who want to destroy this great country of ours. #SemST	AGAINST	AGAINST	0.2688664254	0.475743482487	0.255390092113
+1827	Hillary Clinton	Hillary Clinton vs. Bernie Sanders primary will be like the brawl over applesauce at the retirement home. #ReadyForHillary #SemST	FAVOR	AGAINST	0.32561886671	0.392192870265	0.282188263025
+1829	Hillary Clinton	Too many women in too many countries speak the same language  of silence. HILLARY CLINTON #HillaryCliton #Hillary4Women #SemST	FAVOR	AGAINST	0.249609434447	0.512383268137	0.238007297416
+1830	Hillary Clinton	Always aim high,work hard, & care deeply about what U believe in...when U stumble, keep faith. HILLARY CLINTON @Faith4Hillary #SemST	FAVOR	AGAINST	0.276796317596	0.451106990843	0.272096691562
+1831	Hillary Clinton	It's time that we move from good words 2 good works, from sound bites 2 sound solutions HILLARY CLINTON #HillaryClinton #SemST	FAVOR	AGAINST	0.307286011157	0.404186476345	0.288527512498
+1832	Hillary Clinton	@TheDemocrats @DNCWomen I'm down to help for 2016 election. #SemST	FAVOR	AGAINST	0.310528583846	0.399933525965	0.289537890189
+1833	Hillary Clinton	How many poor kids could $2.5 billion feed? #SemST	NONE	NONE	0.394169014029	0.307486901388	0.298344084583
+1834	Hillary Clinton	@Norsu2 secret Clinton docs? gee WHAT a surprise! #SemST	AGAINST	FAVOR	0.333453237587	0.319690223452	0.346856538961
+1835	Hillary Clinton	Too far @realDonaldTrump. That's just too fucking far. #BaltimoreUprising #Obama #SemST	NONE	AGAINST	0.298172195929	0.422005164622	0.279822639449
+1836	Hillary Clinton	Hillary Clinton makes Nixon look like an amateur schoolboy #ClintonCash #ClintonFoundation #Clinton #SemST	AGAINST	NONE	0.395599660598	0.301853123164	0.302547216239
+1837	Hillary Clinton	@thehill #MamaHillary is making the case here & just exclusively how to deal with complex social issues. #cnn #bbc #Mamaclinton #SemST	FAVOR	AGAINST	0.2570013367	0.482767071739	0.26023159156
+1838	Hillary Clinton	.@GoldenTalon @johnmanko @CassandraRules  On the contrary, I am happy she will win. I enjoy seeing Liberal cities burn GO #SemST	FAVOR	AGAINST	0.294374457836	0.458584257856	0.247041284308
+1839	Hillary Clinton	Whoever is up now let it be known that support for #MarcoRubio never sleeps! We promote the #NewAmericanCentury 24/7 #Texas #TX #SemST	AGAINST	AGAINST	0.307574474393	0.439013609859	0.253411915749
+1840	Hillary Clinton	@Slate This is why Rand Paul will never be POTUS. #BaltimoreUprising #SemST	NONE	AGAINST	0.304939898775	0.432988973354	0.262071127871
+1841	Hillary Clinton	@_Poli_Ana_ No, she's got the #BlackLivesMatter vote w/o even talking to them.  Most blacks are brainwashed by @TheDemocrats #SemST	AGAINST	AGAINST	0.210073956295	0.543392573642	0.246533470063
+1842	Hillary Clinton	If you're not watching @HillaryClinton's speech right now you're missing her drop tons of wisdom. #SemST	FAVOR	AGAINST	0.205600852536	0.509114417959	0.285284729505
+1843	Hillary Clinton	A proper introduction of Hillary Clinton should begin with five words: Will the defendant please rise #WhyImNotVotingForHillary #SemST	AGAINST	AGAINST	0.244709114933	0.459508039147	0.295782845919
+1844	Hillary Clinton	YES! Community policing is answer to rebuilding trust in our communities between law enforcement and the people they serve. #SemST	NONE	AGAINST	0.228687507214	0.490116006407	0.281196486379
+1845	Hillary Clinton	Don't get it twisted. A major presidential candidate using her first policy speech to talk about mass incarcertaion. #SemST	AGAINST	AGAINST	0.265935873393	0.400847362082	0.333216764524
+1846	Hillary Clinton	'Hillary-speak' campaign rhetoric is going to be the death of me. @jmarkwalk #SemST	AGAINST	AGAINST	0.20611700269	0.567178715579	0.226704281731
+1847	Hillary Clinton	@HillaryClinton  A Rainbow logo? Did u know only 4% of the US is gay? (2010 Census). #WhyImNotVotingForHillary #SemST	AGAINST	AGAINST	0.258052185208	0.544464099685	0.197483715107
+1848	Hillary Clinton	Saw a bit of @HillaryClinton 's speech & I was proud to hear her plans for policy improvements in our justice system. Thanks! #SemST	FAVOR	AGAINST	0.183829418446	0.480405880419	0.335764701135
+1849	Hillary Clinton	@Anomaly100 I'm confident that will piss off a few white Anglo-Saxon Protestants!  Keep talking Jeb. #SemST	NONE	AGAINST	0.280487315075	0.399318993658	0.320193691267
+1850	Hillary Clinton	@Upworthy @HillaryClinton It should be illegal for an employer to discriminate against their workers. #EqualityForAll #SemST	FAVOR	AGAINST	0.265808671802	0.446184915576	0.288006412622
+1851	Hillary Clinton	A body-cam on every cop, private servers for Cabinet Secretaries. #SemST	NONE	AGAINST	0.315579319049	0.397503181273	0.286917499679
+1852	Hillary Clinton	@JohnKerry @BALWANIKAPIL @HillaryClinton @StateDept @tomperriello  I didn't realize #PayToPlayDiplomacy was such a big hit!  #SemST	AGAINST	FAVOR	0.312129136141	0.341841655539	0.346029208321
+1853	Hillary Clinton	@VRWCTexan WOW, she's one to talk #SemST	AGAINST	AGAINST	0.288264668616	0.419305312083	0.2924300193
+1854	Hillary Clinton	RT @FutureTXLeader: Are y'all at #UTEP ready for #MarcoRubio in #2016 #Miners #LadyMiners #UniversityOfTexasElPaso #Rubio #New... #SemST	NONE	AGAINST	0.218997086095	0.427134575942	0.353868337963
+1855	Hillary Clinton	RT @FutureTXLeader: Are y'all #TexasTech #RedRaiders ready for #MarcoRubio in #2016 #TTU #TexasTechUniversity #Rubio #Texas #N... #SemST	AGAINST	AGAINST	0.215828486059	0.434976692651	0.34919482129
+1856	Hillary Clinton	RT @FutureTXLeader: Who in #CorpusChristi is ready for #MarcoRubio in #2016 #Hooks #CC #Texas #TX #361 #KeepTexasRed #GOP #Tea... #SemST	AGAINST	AGAINST	0.206270725742	0.466299809546	0.327429464712
+1857	Hillary Clinton	I've been doing my reading and I do have to to say, I'm wildly impressed by Hillary Clinton #SemST	FAVOR	AGAINST	0.290961597849	0.372969126116	0.336069276036
+1858	Hillary Clinton	@zacharyebell Thank you 4the follow. God bless you and those you love! God bless America, may she always be the land of the free! #SemST	NONE	AGAINST	0.188400885411	0.55738562361	0.254213490979
+1859	Hillary Clinton	@BarackObama thanks for selling out all the workers who voted for you for pushing FastTrack #sellout #SemST	NONE	NONE	0.365686261026	0.354996261261	0.279317477713
+1860	Hillary Clinton	As late as 2013 #HillaryClinton opposed marriage equality. #SemST	AGAINST	AGAINST	0.330977499826	0.371120292392	0.297902207782
+1861	Hillary Clinton	@thehill all the more reason to vote #Democrat in 2016. #ACAworks #GetMoneyOut #RestoreTheVRA #Bernie2016 #waronpoverty #SemST	FAVOR	AGAINST	0.292343617679	0.441776598301	0.265879784021
+1862	Hillary Clinton	RT @Glenn_Hegar: Follow if you stand against Hillary in 2016! #SemST	AGAINST	AGAINST	0.208466449748	0.420682324478	0.370851225774
+1863	Hillary Clinton	I can vote in 2016 after all ayyyyyyyyyy #SemST	NONE	NONE	0.37757680885	0.343208251771	0.279214939379
+1864	Hillary Clinton	@jstines3 @WoodenThreat Open mouth, reveal heart-Margaret Sanger,architect for black genocide @larryelder @TheFive #HillarySoWhite #SemST	AGAINST	NONE	0.379852853127	0.3429696192	0.277177527672
+1865	Hillary Clinton	I'm still so happy my voter ID came in the mail  #SemST	NONE	AGAINST	0.332739294167	0.388042051855	0.279218653978
+1866	Hillary Clinton	Great convo last night w/ @schoolbus_soul & @zaksteib Great connections in #Waverly & on my #turf! #FellowsIA #CommitToCaucus #SemST	NONE	NONE	0.366675128254	0.303632668588	0.329692203158
+1867	Hillary Clinton	#HillaryClinton is hiring #Monsanto lawyers to help her become President. The next president shouldn't be aided by Monsanto #SemST	AGAINST	AGAINST	0.251221440488	0.468602519365	0.280176040147
+1868	Hillary Clinton	@marymorientes Love it. It happens in my world too! #SemST	NONE	AGAINST	0.304800673893	0.390445094923	0.304754231183
+1869	Hillary Clinton	@Froquesha u get me that book yea?  #SemST	NONE	NONE	0.384772749185	0.322472786497	0.292754464318
+1870	Hillary Clinton	RT @putterrod: @IngrahamAngle Republicans everywhere are looking for someone to lead. A leader not a liar. #SemST	AGAINST	AGAINST	0.104431650134	0.532059940247	0.363508409619
+1871	Hillary Clinton	This weekend is the Hillary For America Weekend of Action & I hope you'll participate. -L #California #SemST	FAVOR	AGAINST	0.308504779354	0.481493538404	0.210001682242
+1872	Hillary Clinton	It's good that after 30 years in public service (with zero accomplishments), Hillary is finally ready 2 serve the public! Lolol #SemST	AGAINST	AGAINST	0.243728304281	0.487194950151	0.269076745568
+1873	Hillary Clinton	We're out here in G-town, and where are you  #sctweets #SemST	NONE	AGAINST	0.282527864701	0.397665409102	0.319806726196
+1874	Hillary Clinton	@jstines3 @bcwilliams92 #Stephens begged for his life & @HillaryClinton @Madam_President is begging for ur vote #NotAChanceInHell #SemST	AGAINST	NONE	0.376503578734	0.366829900071	0.256666521195
+1875	Hillary Clinton	RT @spanglishpop: Thanks @GOP keep sending in the clowns! It makes this upcoming election very entertaining #latinos2016 #Rock... #SemST	NONE	AGAINST	0.204098427782	0.470211550458	0.32569002176
+1876	Hillary Clinton	#ThingsYouDontSayAsAPolitician  I don't feel no ways tired. Go to the back of the line. What difference does it make?  #SemST	NONE	AGAINST	0.21898119821	0.531995241813	0.249023559976
+1877	Hillary Clinton	Laughing at the Republican Party. The BEST they can offer is #DonaldTrump and #JebBush?   #HillaryClinton has got this! #SemST	FAVOR	AGAINST	0.308523644714	0.448502944791	0.242973410495
+1878	Hillary Clinton	@Temp15544 @icedecay @BrooklynJuggler @classic_mouth In this context, to all practical extents and purposes? It means #SemST	NONE	AGAINST	0.30897810205	0.410970072635	0.280051825315
+1879	Hillary Clinton	Just met an awesome supporter on the CX bus! He said "Hillary is one strong woman and we need that for our country." #FellowsNV #SemST	FAVOR	AGAINST	0.329495746643	0.408292812248	0.262211441109
+1880	Hillary Clinton	Hilary has lied, deleted Benghazi emails, and betrayed the trust of Americans scandal after scandal. #SemST	AGAINST	AGAINST	0.220597563948	0.546883914315	0.232518521737
+1881	Hillary Clinton	Hillary has lied, deleted Benghazi emails, and betrayed the trust of Americans scandal after scandal. #SemST	AGAINST	AGAINST	0.244951981534	0.52781704386	0.227230974605
+1882	Hillary Clinton	In high school, decided to be the first woman president in 2016, but I never got into politics & don't have Trump's money. #SemST	NONE	AGAINST	0.134022589617	0.601484134002	0.264493276381
+1883	Hillary Clinton	Thanks @izzybugatti for participating! WE are lucky to have YOU here in Iowa. #FellowsIA #SemST	NONE	AGAINST	0.261530254088	0.405576631814	0.332893114098
+1884	Hillary Clinton	@jilevin @strumpetcity Yes. You make me proud. Socialism is the answer, which leads to communism. We will succeed. #SemST	NONE	AGAINST	0.256302151312	0.515767622525	0.227930226164
+1885	Hillary Clinton	@GOP Obamacare stays and the Confederate flag goes. You guys have had quite the shitty week, haven't you? #SemST	NONE	AGAINST	0.190950514221	0.54307187209	0.265977613689
+1886	Hillary Clinton	Come visit me at the Jefferson County Fair! Representative Curt Hanson will tell a joke and I'll tell a story about why vote #SemST	NONE	AGAINST	0.319368960729	0.362812322914	0.317818716357
+1887	Hillary Clinton	I'm proud to announce I support #HillaryClinton!!!! #SemST	FAVOR	NONE	0.37666554409	0.315880165517	0.307454290393
+1888	Hillary Clinton	Excited to be working with some great #FellowsSC this summer. They're some pretty great people that are fired up for #LetsGo #SemST	NONE	AGAINST	0.223200773704	0.457795746998	0.319003479297
+1889	Hillary Clinton	Federal gov't social spending 61% of budget. Federal gov't defense spending 22% of budget. Something is definitely wrong here. #SemST	NONE	AGAINST	0.28286369726	0.475090225476	0.242046077265
+1890	Hillary Clinton	@HillaryClinton literally the greatest video I have ever seen. #SemST	FAVOR	AGAINST	0.320519398792	0.416194458741	0.263286142467
+1891	Hillary Clinton	@washingtonpost sir sory mae bi bharat mool ka hu par my hart is for democraet and #SemST	NONE	NONE	0.349848287779	0.348718330023	0.301433382198
+1892	Hillary Clinton	@ChelseaClinton's mom has got it going on! #POTUS #ChelseasMom #SemST	FAVOR	NONE	0.356625322474	0.323490903774	0.319883773752
+1893	Hillary Clinton	America needs a champion!-H  No thanks,@HillaryClinton we don't need a champion, especially if you're that "champion".   #SemST	AGAINST	AGAINST	0.258827835642	0.401155620759	0.3400165436
+1894	Hillary Clinton	Would that the rest of #us were able to escape from #Clinton as well #ClintonCorrectional #HillaryClinton #escapeClinton #SemST	AGAINST	AGAINST	0.301740564961	0.440147044787	0.258112390252
+1895	Hillary Clinton	@HillaryClinton Awesome video!  Vote for Chelsea's mom. #SemST	FAVOR	AGAINST	0.296724344315	0.402831638182	0.300444017503
+1896	Hillary Clinton	Hilliary: I provided all work related emails  State Dept: There are work related emails you didn't provide  #Hillaredacted #SemST	AGAINST	AGAINST	0.259869168075	0.402150980297	0.337979851628
+1897	Hillary Clinton	#CarlyFiorina on #hannity, very impressive. A serious presidential candidate vs. A bad actress. #SemST	AGAINST	AGAINST	0.30972816314	0.40595337243	0.28431846443
+1898	Hillary Clinton	@LeighStorz @jstines3 Totally agree, Hillary is an incompetent scandal ridden phony. #SemST	AGAINST	AGAINST	0.305812996571	0.449118844009	0.24506815942
+1899	Hillary Clinton	This Friday is, officially, Political Incorrectness day! All day say whatever you want and offend everyone! Yay! #tcot #2A #PC  #SemST	NONE	AGAINST	0.291348189937	0.395849948436	0.312801861627
+1900	Hillary Clinton	@FoxNews report shows U.S. State Department cannot locate 15 of Hillary Clinton's Private Emails.  Not so fast, Hillary! #SemST	AGAINST	AGAINST	0.231227838161	0.508172457135	0.260599704704
+1901	Hillary Clinton	@Callisto1947 @texasman2008 @AmyMek Hillary's new Campaign Slogan:  HILLARY - NOTHING TO HIDE EXCEPT THE TRUTH !!!  #TCOT #CCOT #SemST	AGAINST	AGAINST	0.31186240261	0.375310459753	0.312827137637
+1902	Hillary Clinton	I really need my new @HillaryClinton shirt to come in. Meeting some people at the brewery same night as a Bernie meetup there. #SemST	FAVOR	AGAINST	0.222280163068	0.460761213223	0.316958623708
+1903	Hillary Clinton	Donald Trump is a joke. His a simpleminded idiot, and I have nothing else to say about him. He can go FUCK him self. #SemST	NONE	AGAINST	0.177812500643	0.523852208399	0.298335290957
+1904	Hillary Clinton	@HillaryClinton @ca_hillary stand on the right side #SemST	FAVOR	NONE	0.374243477637	0.341976027827	0.283780494536
+1905	Hillary Clinton	@HillaryClinton said #AllLivesMatter just like she said marriage was between a man and a woman! Giver her a few more years #SemST	AGAINST	FAVOR	0.311609839897	0.315373874248	0.373016285854
+1906	Hillary Clinton	#HillaryDebateQuestion So you profess admiration for #MargaretSanger who wanted to rid the country of "negros". Explain please? #SemST	AGAINST	AGAINST	0.306696248294	0.454901394185	0.238402357521
+1907	Hillary Clinton	RT @mcirelli92: Hillary for the win #SemST	FAVOR	AGAINST	0.236275338027	0.444415551065	0.319309110908
+1908	Hillary Clinton	Y did #randpaul take donations from a #WhiteSupremacy group after shaking hands with black leaders? #BlackLivesMatter #gop #SemST	NONE	AGAINST	0.318907139293	0.36765224411	0.313440616597
+1909	Hillary Clinton	@clairecmc @RosieGray is that why she and @ClintonGlobal take that #Saudi money? #SaudiCables #SaudiCables #clinton2016 #SemST	AGAINST	NONE	0.370886259536	0.358236075764	0.2708776647
+1910	Hillary Clinton	@petefrt this is how GOP needs to be handling campaign not attacking each other but showing all hillary fails. #uniteright #SemST	AGAINST	AGAINST	0.256423560611	0.484431599407	0.259144839982
+1911	Hillary Clinton	@Molls30 @HillaryClinton I love it! One of our biggest donors is Saudi Arabia. They support women's rights completely! #GoTeam #SemST	AGAINST	AGAINST	0.20687064817	0.520212011096	0.272917340734
+1912	Hillary Clinton	@HillaryClinton Did you feel same about #BillClinton's latest assault of teen girl? #hypocrite #HillaryClinton #Hillary_2016_NO #SemST	AGAINST	AGAINST	0.305570923278	0.421329945267	0.273099131456
+1913	Hillary Clinton	My vote is definitely for Hillary. I don't want Bush's dumb ass. Don't want Trump either.  #HillaryClinton #SemST	FAVOR	AGAINST	0.274741950782	0.446546731103	0.278711318114
+1914	Hillary Clinton	I'm in a better place now that I got some coffee, now time to grow these grassroots   #sctweets #SemST	NONE	AGAINST	0.219643537007	0.470816510959	0.309539952033
+1915	Hillary Clinton	@SCOTUS_Scalia Right. Words no longer have meaning. Like Clintons,"It depends on what the meaning of 'is' is." More if we don't #SemST	AGAINST	AGAINST	0.219135005603	0.534378949316	0.246486045081
+1916	Hillary Clinton	@tedcruz won't be there. I'm supporting @HillaryClinton for President. #lgbtrights #ACAWorks #SemST	FAVOR	AGAINST	0.279060657142	0.433485558497	0.287453784361
+1917	Hillary Clinton	@GideonHenry First SCOTUS reaffirms Obamacare, then it legalize gay marriage. Your world is crumbling! #SemST	NONE	AGAINST	0.268356179961	0.469116302985	0.262527517054
+1918	Hillary Clinton	What a huge win for America! Today is absolutely historic. #EqualityWins #SCOTUSMarriage #SemST	NONE	AGAINST	0.287940834797	0.385990683809	0.326068481394
+1919	Hillary Clinton	My sexy daddy Obama had two wins this week. Happy for him & democrats   #SemST	NONE	AGAINST	0.331495104329	0.39976247396	0.268742421711
+1920	Hillary Clinton	@TODAYshow Hillary's emails missing and incomplete? Who'd of thunk it??  JUST TRUST ME!!! #SemST	AGAINST	AGAINST	0.289356240053	0.432917341239	0.277726418708
+1921	Hillary Clinton	@vacanti @samglover Maybe a woman should be President.  #SemST	FAVOR	AGAINST	0.25641606004	0.41659303757	0.32699090239
+1922	Hillary Clinton	Today LOVE won and Hate was defeated. #MorningJoe #UnitedBlue #SemST	NONE	AGAINST	0.313875078661	0.375323769798	0.310801151541
+1923	Hillary Clinton	#Obama is riding high!! #ObamaCare #LoveWins #Republicans tearing out their hair, whatever is left of it ..Next is #SCOTUS #SemST	NONE	AGAINST	0.292752511357	0.474718128875	0.232529359769
+1924	Hillary Clinton	Thank you @HillaryClinton for your support of the LGBT community. On this historic day I thank you for giving us hope. #SemST	FAVOR	AGAINST	0.268243750474	0.493903690026	0.2378525595
+1925	Hillary Clinton	A Black President,Healthcare 4 all, Marriage Equality...what's next?..a Woman President?!Damn RIGHT! #SCOTUS #MarriageEquality #SemST	FAVOR	AGAINST	0.237497238888	0.442233338053	0.320269423059
+1926	Hillary Clinton	RT @muradguderian: Democrats are Red, Obama is a Communist, I'm a true Patriot, So stop Hillary.  #tcot #SemST	AGAINST	AGAINST	0.120427663852	0.583442048555	0.296130287593
+1927	Hillary Clinton	@CBSThisMorning Emails missing and incomplete? Who'd of thunk it?  I'M ABOVE THE LAW and the rest of you peons! JUST TRUST ME! #SemST	AGAINST	AGAINST	0.286166290784	0.449494584685	0.26433912453
+1928	Hillary Clinton	Who's monica Lewinsky's favorite football player? Ha-Ha Clinton Dix  #SemST	AGAINST	NONE	0.359471423368	0.333586109868	0.306942466765
+1929	Hillary Clinton	SCOTUS dealt a blow to Hillary Clintons last campaign 'promise'... What is she running on now? Corruption, lies, and deceit. #SemST	AGAINST	AGAINST	0.214853455655	0.482288387332	0.302858157013
+1930	Hillary Clinton	Do America a favor, If you feel you must vote for a woman candidate, Vote for #Carly2016 who at least has integrity unlike #SemST	AGAINST	AGAINST	0.289420750596	0.37599352726	0.334585722144
+1931	Hillary Clinton	Getting another @HillaryClinton bumper sticker because #LoveWins and 2 just wasn't enough #SemST	FAVOR	NONE	0.353551695676	0.332350992951	0.314097311373
+1932	Hillary Clinton	@pamnsc @TRPhrophet @RamblingMother Thank you for RTs!!! #WakeUpAmerica #dumpboehner #ditchmitch #SemST	NONE	NONE	0.387808311953	0.304712899559	0.307478788488
+1933	Hillary Clinton	@gerfingerpoken2 he made a careless mistake, she deliberately broke many laws & still lies about it. #SemST	AGAINST	AGAINST	0.207113434309	0.479944053303	0.312942512388
+1934	Hillary Clinton	Very excited to hear Sen. Klobuchar speak today! #SemST	NONE	AGAINST	0.305198246699	0.378232228034	0.316569525266
+1935	Hillary Clinton	@PolitiBunny @Seja75 @hubbit @HillaryClinton I'm voting in the Democrat primary this year...to support @BernieSanders.  #SemST	AGAINST	AGAINST	0.270231686828	0.463382673004	0.266385640168
+1936	Hillary Clinton	My liberty depends on you being free too. President Obama #SemST	NONE	AGAINST	0.32057127801	0.372409869928	0.307018852062
+1937	Hillary Clinton	@NRO Does @johnpodesta have any grasp on reality? I need more than 140 characters to address someone as naive as this man. #SemST	NONE	AGAINST	0.304994996836	0.395625279046	0.299379724118
+1938	Hillary Clinton	@JewboyDonny oh I know he won't he effed himself over in the beginning  #SemST	NONE	AGAINST	0.302608985239	0.426816713219	0.270574301542
+1939	Hillary Clinton	I called everyone I knew and raised $17,000 from ex-boyfriends - Sen. Klobuchar #SemST	NONE	AGAINST	0.308368194205	0.373539096538	0.318092709256
+1940	Hillary Clinton	Great that @HillaryClinton attended #ClementaPinckney 's funeral today!! #SemST	FAVOR	NONE	0.369372895525	0.332180228097	0.298446876379
+1941	Hillary Clinton	#WonderWoman movie, #TheMuppets TV show, #StarWarsVII, #MarriageEquaility #Obama. I guess I can leave social media now. Oh wait #SemST	NONE	AGAINST	0.286297775453	0.429134836437	0.28456738811
+1942	Hillary Clinton	@politico Remember when millions of GWBush's emails went missing or deleted re Iraq War and nobody had a hearing? Yawn! #SemST	NONE	AGAINST	0.207425853453	0.483783951901	0.308790194646
+1943	Hillary Clinton	#LoveWins on the day I get my Hillary gear! #Yaaas #Pride #SemST	FAVOR	NONE	0.411869358429	0.290637283503	0.297493358067
+1944	Hillary Clinton	@thegirlwithfood though. But there are people saying they just aren't going to vote at all which is ridiculous so #SemST	NONE	AGAINST	0.264240141769	0.470033956396	0.265725901836
+1945	Hillary Clinton	RT @ZerlinaMaxwell: Huge cheer for universal child care and early childhood education. #SemST	NONE	AGAINST	0.17357565028	0.482474107336	0.343950242384
+1946	Hillary Clinton	Hillary: stop pretending you were supporting the LGBT people when you opposed them until 2013. You are a lying conniving human #SemST	AGAINST	AGAINST	0.168419861753	0.502645486883	0.328934651364
+1947	Hillary Clinton	@tedcruz @IamTheWindowMan  GET OUT OF MY STATE YOU BUM! #UniteBlue  #SemST	NONE	NONE	0.40892451055	0.268226367957	0.322849121494
+1948	Hillary Clinton	Whatever is the GOP going to do now with both marriage equality and the ACA? Going to be fun to watch! #SemST	NONE	AGAINST	0.248724204745	0.451902314002	0.299373481253
+1949	Hillary Clinton	@occupycorruptDC she ain't no ways tired of being a dumbass #SemST	NONE	AGAINST	0.265971220429	0.432935570674	0.301093208896
+1950	Hillary Clinton	I AM A CROOK...and I like it, like it, yes I do #HillaryCampaignSlogan  #WakeUpAmerica #StopHillary2016 #specialreport #SemST	AGAINST	AGAINST	0.327730918779	0.35139882739	0.320870253831
+1951	Hillary Clinton	@HillaryClinton Pretty sure you're gonna lose out on a lot of hypocritical #Christian votes by pretending to care about #LGBT #SemST	AGAINST	AGAINST	0.281772933528	0.417454281695	0.300772784777
+1952	Hillary Clinton	Moving forward, our next focus should be making higher education more attainable and eliminating the gender pay gap #SemST	NONE	AGAINST	0.301258217049	0.42283938262	0.275902400331
+1953	Hillary Clinton	Let's shatter the glass ceiling! - @GerryConnolly #VAdems #SemST	NONE	AGAINST	0.338428243213	0.370578933632	0.290992823155
+1954	Hillary Clinton	@JerseyKidPicks thank you sir. It's an honor to hear it. USA for life. Spread this for me. #RememberBenghazi2016 #SemST	NONE	AGAINST	0.211317691351	0.491089817294	0.297592491355
+1955	Hillary Clinton	Let's make Secretary Clinton, President Clinton - @AGMarkHerring @vademocrats #SemST	FAVOR	AGAINST	0.307882240807	0.38706846638	0.305049292813
+1956	Hillary Clinton	I think I'll take @JebBush over @BobbyJindal now.. and that is scary to say.  #badchristianvalues #SemST	NONE	AGAINST	0.284005614821	0.432913295068	0.283081090111
+1957	Hillary Clinton	@kimkennedy4 thats why they still have no voting rights. #SemST	NONE	AGAINST	0.32357603615	0.389970252522	0.286453711329
+1958	Hillary Clinton	@LaneLewis Thanks for the follow! #TheHRCSuperVols for #SemST	NONE	NONE	0.387876951925	0.325401980414	0.28672106766
+1959	Hillary Clinton	Sen. Kaine (D-VA) on #SCOTUSMarriage: "What a great victory! #SemST	NONE	AGAINST	0.209838081086	0.43128020006	0.358881718853
+1960	Hillary Clinton	I am having a really tough time seeing any leaders running for POTUS, quess I will have to wait and see what happens. #SemST	NONE	AGAINST	0.186994028947	0.519703665029	0.293302306023
+1961	Hillary Clinton	Hillary flew on private jet to speak to speak about Income & Equality. Dinner plates were $2700.00 ! #EqualityForAll #PJNET #CCOT #SemST	AGAINST	NONE	0.365506825706	0.321797726043	0.312695448251
+1962	Hillary Clinton	You're a idiot if you vote for Hillary, her and Obama are The Epitome  of what's wrong with this country #Benghazi #SemST	AGAINST	AGAINST	0.159493668541	0.548763125017	0.291743206442
+1963	Hillary Clinton	Despite today's ruling, our struggle to end LGBT discrimination is also far from finished - @HillaryClinton #VirginiaJJ #SemST	FAVOR	AGAINST	0.261449406514	0.466228902424	0.272321691062
+1964	Hillary Clinton	@Jeanelynn Thank you so much for the follow and the FAV, Jeane!!!  Gods' best to you! #WakeUpAmerica #SemST	NONE	AGAINST	0.252927805381	0.425780820874	0.321291373745
+1965	Hillary Clinton	My mom just told me she and my aunt want to volunteer on @HillaryClinton's campaign! I support it! #SemST	FAVOR	FAVOR	0.280985803454	0.359441812014	0.359572384532
+1966	Hillary Clinton	Let's bring prosperity to the line workers & to the kindergarten teachers!!!- @amyklobuchar #inspiredbyhillary #SemST	FAVOR	AGAINST	0.317142958621	0.3886177712	0.294239270179
+1967	Hillary Clinton	You cant fix stupid, might not be able to vote them out either. #SemST	NONE	AGAINST	0.22539140634	0.508677607443	0.265930986218
+1968	Hillary Clinton	If I get killed. Thank @realDonaldTrump . I was tweeting mad crap about him.  I don't take it back. #SemST	NONE	AGAINST	0.300489776186	0.388145169094	0.31136505472
+1969	Hillary Clinton	Amazing turnout @TheCenterLV . Emotional crowd. RT if agree love wins. #FellowsNV  #SemST	NONE	AGAINST	0.268578284261	0.418298403838	0.313123311901
+1970	Hillary Clinton	@megynkelly anytime a liberal throws around words like "truth is" or "reality is" you know they're about to LIE! #SemST	NONE	AGAINST	0.272990297899	0.394914666964	0.332095035137
+1971	Hillary Clinton	@BuffaloBill71 @AramisFraino @pamnsc  Thank you so much for FAVs and RTs!!! #WakeUpAmerica #SemST	NONE	NONE	0.341362311315	0.327979511289	0.330658177396
+1972	Hillary Clinton	@therealjenappel IM HIGH ON HASHTAGS RIGHT NOW I CANT HELP MYSELF #mypresident #SemST	NONE	NONE	0.403049676454	0.295976243589	0.300974079957
+1973	Hillary Clinton	@realDonaldTrump WHY IS IT THAT YOUR CLOTHING LINE IS MADE IN CHINA? Can U say Lier pants on fire? #morningjoe #unitedblue #SemST	NONE	NONE	0.421015998387	0.298966560969	0.280017440644
+1974	Hillary Clinton	SLOWLY SLOWLY THE DEBT CRISIS WILL IMPLODE NATIONS CURRENCY #AmericaDeadBrokeSAVE THE DOLLAR NOW #SemST	NONE	NONE	0.411078945182	0.294333109801	0.294587945017
+1975	Hillary Clinton	#AmericaDeadBrokeSLOWLY SLOWLY China wants the yuan to replace the U.S. dollar as the world's new global currency. #SemST	NONE	AGAINST	0.265275804174	0.453389046463	0.281335149363
+1976	Hillary Clinton	@HRCSnowShovel it must be hard work burying the @HillaryClinton anti-LGBT rights record #LoveWins #FeelTheBern #SemST	AGAINST	AGAINST	0.334654831947	0.386744713035	0.278600455018
+1977	Hillary Clinton	#HillaryClinton We've all been waiting for your rainbow-striped pantsuit  #fashionista #LoveWins #SemST	FAVOR	NONE	0.40765689453	0.318459959282	0.273883146188
+1978	Hillary Clinton	@JebBush you are set to lose if ur campaign is based on critics instead of proposing #bushfail #SemST	NONE	AGAINST	0.291689779736	0.447889199376	0.260421020888
+1979	Hillary Clinton	I always joke about anything political bc if I were serious I'd end up offending people and not realize it. #SemST	NONE	AGAINST	0.284354013226	0.411213805975	0.304432180799
+1980	Hillary Clinton	My dad told me he's voting for Hillary. I'm so proud. LOL #SemST	FAVOR	AGAINST	0.294259163977	0.421299200607	0.284441635416
+1981	Hillary Clinton	@dedicated_to_it i think the main problem is having your foot in your mouth in the first place. #SemST	NONE	AGAINST	0.288266282724	0.497668471567	0.214065245709
+1982	Hillary Clinton	Well Strung is what should happed the next time these Hillary-loving ass douches encounter some trees. #RedEye #SemST	AGAINST	AGAINST	0.301202637173	0.460915595841	0.237881766987
+1983	Hillary Clinton	I am just full of myself tonight  #tofunny #funny #funnier #hilarious #HilaryDuff #QuotesOfTheDay #quotestoliveby #quotes #SemST	NONE	AGAINST	0.352298802367	0.363597528179	0.284103669455
+1984	Hillary Clinton	If I ever meet Hillary Clinton I will have died and then come back to life b/c I will be so happy #idol #SemST	FAVOR	AGAINST	0.313886478204	0.357385591569	0.328727930227
+1985	Hillary Clinton	@ARForHillary @HillaryClinton @HillaryIn2016 So proud of you! Soon, we will show who we really are. Keep up the good work! #SemST	FAVOR	AGAINST	0.195235927598	0.547461801548	0.257302270854
+1986	Hillary Clinton	@HillaryClinton I'd ask #HillaryClinton to stop lying about #Benghazi & #ClintonFoundation ties to #terrorist #muslim #ISIS. #SemST	AGAINST	AGAINST	0.320295650779	0.381158772887	0.298545576335
+1987	Hillary Clinton	@HillaryClinton You Flip/Flopped on the Gay marriage issue; must be more votes available with your current view? #SemST	AGAINST	AGAINST	0.336579372891	0.41573001203	0.24769061508
+1988	Hillary Clinton	@HillaryClinton More lies and hypocrisy. As senator of NY, you clearly said you were opposed to gay marriage. #SemST	AGAINST	AGAINST	0.209120630656	0.52590609036	0.264973278984
+1989	Hillary Clinton	@HillaryClinton You have proven your dishonesty once again in flip flopping on this issue. People know you were opposed before. #SemST	AGAINST	AGAINST	0.269137449799	0.474585038779	0.256277511421
+1990	Hillary Clinton	@LaureneDiCillo @NBCNews @dl34l And why are major media outlets not exposing Hillary's blatant flip flopping on this issue. #SemST	AGAINST	AGAINST	0.290566960762	0.410085872153	0.299347167085
+1991	Hillary Clinton	WHO'S READY FOR A DAY OF ACTION?! I know I am! #FellowsSC #SemST	NONE	NONE	0.404828101127	0.289744883348	0.305427015525
+1992	Hillary Clinton	@DRUDGE_REPORT We haven't even had the elections yet. #SemST	NONE	AGAINST	0.269699748288	0.461175881652	0.26912437006
+1993	Hillary Clinton	96 commit cards collected for Hillary in Greenville, SC so far! #FellowsSC #SemST	FAVOR	NONE	0.359192505366	0.350734946307	0.290072548327
+1994	Hillary Clinton	Headed to Chester, SC for a big hillary canvass! Join me. Wylie park 11-3 #SemST	FAVOR	AGAINST	0.22984728409	0.444501471052	0.325651244858
+1995	Hillary Clinton	Save an intern.... Keep Bill & Hillary out of the White House.  #SemST	AGAINST	AGAINST	0.285851272939	0.475942757075	0.238205969986
+1996	Hillary Clinton	@HillaryClinton Where are the #LGBT pride condoms #BillClinton used when he assaulted #MonicaLewinsky? #HillaryClinton #tlot #SemST	AGAINST	AGAINST	0.367363695446	0.374374934008	0.258261370546
+1997	Hillary Clinton	Fox News predicting 3 way marriage-gee we have the Mormons for that!  #morningjoe #unitedblue #SemST	NONE	NONE	0.384413167099	0.338906632126	0.276680200775
+1998	Hillary Clinton	@philadper2014 @LouiseKatina Hillary's New Campaign slogan is:  HILLARY - NOTHING TO HIDE BUT THE TRUTH!  #tcot #WakeUpAmerica #SemST	AGAINST	AGAINST	0.278039307116	0.415723246291	0.306237446593
+1999	Hillary Clinton	Madam President Clinton; you have all the gays vote. #jarrid #SemST	FAVOR	AGAINST	0.295301679073	0.428481377239	0.276216943688
+2000	Hillary Clinton	@debaterlife took me a minute to realize where this came from #SemST	NONE	AGAINST	0.316602904777	0.357608747637	0.325788347585
+2001	Hillary Clinton	@gerfingerpoken @jjauthor one can only hope #SemST	NONE	NONE	0.388689841451	0.32370938304	0.287600775509
+2002	Hillary Clinton	@ReCorwin She didn't even answer with a complete sentence LOL. #Legend #SemST	NONE	AGAINST	0.241084838727	0.436964569034	0.321950592238
+2003	Hillary Clinton	Gay marriage is a minor setback for Fox News. Tune in for a full collapse on November 8, 2016. Lots of tears and broken hearts. #SemST	NONE	AGAINST	0.178974963663	0.566371968059	0.254653068278
+2004	Hillary Clinton	@HillaryClinton So what's your goal for setting up victims for #BillClinton to assault? #HillaryClinton #ChelseasMom #tlot #SemST	AGAINST	AGAINST	0.320847438124	0.384831061572	0.294321500303
+2005	Hillary Clinton	Thanks @Chefs4Hillary for amazing noms for canvassing #FITN #SemST	FAVOR	NONE	0.404241822345	0.298277593074	0.297480584581
+2006	Hillary Clinton	@LindaSuhler and the sheeple will still vote for her #SemST	AGAINST	AGAINST	0.357070720796	0.357104997346	0.285824281858
+2007	Hillary Clinton	One of Hillary Clinton's biggest idols is Margaret Sanger, who called for the extermination of colored people. #SemST	AGAINST	AGAINST	0.218725062141	0.570782229127	0.210492708732
+2008	Hillary Clinton	@foxnation That should have been done BEFORE she got rid of it!!! #NoHillary2016 #SemST	AGAINST	AGAINST	0.317700739566	0.392713338131	0.289585922303
+2009	Hillary Clinton	@GREG61032 @CarmineZozzora @Ash_Bell__  perfect definition of JIBBERISH  #UniteBlue #SemST	NONE	AGAINST	0.363591359488	0.364798742745	0.271609897767
+2010	Hillary Clinton	I need @JamesCarville & @HillaryClinton to stop emailing me. I love you, but I need my space. #stillvotingforyou #SemST	FAVOR	AGAINST	0.251357198767	0.459128072717	0.289514728516
+2011	Hillary Clinton	@nytimes this will cost them the 2016 election. #SemST	NONE	AGAINST	0.308623514299	0.435208111437	0.256168374264
+2012	Hillary Clinton	HillaryClinton Next up for legalization: Your pet goat, or your #pedophile neighbor 'dating' the 9 year old next door.. #SemST	AGAINST	AGAINST	0.223541047772	0.488706431579	0.287752520649
+2013	Hillary Clinton	@HillaryClinton Will #pervert #BillClinton be there if winner is teen girl? #HillaryClinton #Democrats #liberals #tlot #GOP #SemST	AGAINST	AGAINST	0.349914811007	0.390418259914	0.259666929078
+2014	Hillary Clinton	When you fav supports the wrong candidate  (@ladygaga)  #Bernie2016 #SemST	NONE	NONE	0.361425578786	0.354806586493	0.283767834721
+2015	Hillary Clinton	@koolkat14215 Haha, I LOVE your header! #SemST	NONE	AGAINST	0.352422446269	0.363260687355	0.284316866376
+2016	Hillary Clinton	I hate Hillary Clinton and Obama, please go die together  thrown into the ocean get ripped into prices by sharks. #SemST	AGAINST	AGAINST	0.258180966345	0.47431697162	0.267502062035
+2017	Hillary Clinton	@Raging_D_RTR @CrimsonHotMess I'm for CHANGE and EQUALITY #SemST	NONE	NONE	0.370840938862	0.325464084309	0.303694976829
+2018	Hillary Clinton	.@Theblacksphere #Hillary took a #HypocriticalOath with a vow to do harm to all that cross her. Are you #ReadyForHillary  #GOP2016 #SemST	AGAINST	AGAINST	0.206316478093	0.432839007338	0.360844514569
+2019	Hillary Clinton	@lbush34 @HillaryClinton just defending my girl Hillary! #SemST	FAVOR	NONE	0.419427910275	0.277790978731	0.302781110994
+2020	Hillary Clinton	@larryelder The more Republicans  talk about social policy the better....for #SemST	NONE	NONE	0.376576609323	0.340561149965	0.282862240713
+2021	Hillary Clinton	The only Intelligent Choice for USA is Hillary Clinton....You can not afford to stay HOME ...you must VOTE and VOTE #UniteBlue #SemST	FAVOR	AGAINST	0.303313094945	0.380209221908	0.316477683147
+2022	Hillary Clinton	@fuzislippers @KLSouth @gdebenedetti Yeah, she's a real forward thinker! Lol  #MakeAmericaGreatAgain #WhyImNotVotingForHillary #SemST	AGAINST	AGAINST	0.274072390584	0.408220716716	0.3177068927
+2023	Hillary Clinton	@LibtardLimbaugh @Mex38Tex @NRO Thanks so much for this article! #SemST	NONE	NONE	0.383043433652	0.310452716902	0.306503849446
+2024	Hillary Clinton	I got it! I got it!   A Hillary accomplishment!   She's managed to stay out of prison despite a 30-year crime spree. #tcot #ocra #SemST	AGAINST	AGAINST	0.179351693325	0.508694550658	0.311953756017
+2025	Hillary Clinton	@JebBush Here are my thoughts on the ruling: keep your archaic non-science based beliefs out of the laws of our secular nation #SemST	NONE	AGAINST	0.241196518317	0.473690482285	0.285112999398
+2026	Hillary Clinton	@Reince Facts confirm what we knew. Used server to prevent e-mails from becoming public records. Like Obama, no transparency. #SemST	AGAINST	AGAINST	0.284022874944	0.443414564571	0.272562560486
+2027	Hillary Clinton	Republican candidates continuing to spread hatred and alienating the voters. Hillary wins!  #LoveWins #MikeHuckabee #Rubio2016 #SemST	FAVOR	AGAINST	0.29505272713	0.406449322519	0.298497950351
+2028	Hillary Clinton	Hillary Clinton might end up having my vote. She's been tackling so many issues that America needs to face. #SemST	FAVOR	AGAINST	0.25924533265	0.450317401658	0.290437265692
+2029	Hillary Clinton	Apple and Walmart = MADE IN CHINA Why does our country continue to sell us out to China in every way possible? #AppleMusic  #SemST	NONE	AGAINST	0.343848788247	0.353144689849	0.303006521904
+2030	Hillary Clinton	if Hillary wins the election there's a chance we might move to Australia. #HILLARY4PRES #SemST	AGAINST	AGAINST	0.248142479612	0.453940674679	0.297916845709
+2031	Hillary Clinton	@ghostseven77 WE HAVE A TROLL ! #morningjoe #unitedblue #SemST	NONE	NONE	0.410112097402	0.283394565091	0.306493337507
+2032	Hillary Clinton	Dick Morris: @HillaryClinton is "fundamentally corrupt". He should know! #copolitics  #wcs15 #SemST	AGAINST	AGAINST	0.273223171662	0.419385324827	0.307391503511
+2033	Hillary Clinton	@WestonMartinez @crazytas62 Cruz needs to autograph bomb #SemST	NONE	NONE	0.392489120432	0.308372509761	0.299138369807
+2034	Hillary Clinton	@CidEloisa @DiggingLamb Thank you so much for RTs and FAVs, Eloisa and Thomas!!! #WakeUpAmerica #SemST	NONE	AGAINST	0.303453352492	0.38042640704	0.316120240468
+2035	Hillary Clinton	My how times have changed: @MartinOMalley has focused his attacks on @BernieSanders not @HillaryClinton #SemST	NONE	AGAINST	0.2841126378	0.383105716408	0.332781645792
+2036	Hillary Clinton	@moser_kristen  I love how you pay more attention to the democratic candidate than you own republican candidates #KnowTheEnemy #SemST	NONE	AGAINST	0.310451406095	0.394901582725	0.29464701118
+2037	Hillary Clinton	& I bet that @HillaryClinton is thee best choice for President in 2016she's the next best one for the people  #Vote #SemST	FAVOR	AGAINST	0.275477385334	0.474227826372	0.250294788293
+2038	Hillary Clinton	Can't wait to get my #YaaasHillary shirt!  @HillaryClinton #SemST	FAVOR	NONE	0.347709938612	0.319704691221	0.332585370167
+2039	Hillary Clinton	@realDonaldTrump @WhoopiGoldberg @Univision #VoteForHillary @HillaryClinton isn't racist. A leader who demands #EqualityForAll #SemST	FAVOR	AGAINST	0.304025582849	0.437673502853	0.258300914298
+2040	Hillary Clinton	@dhz26 I love a good sale. Money well spent. 2 birds with 1stone. #LoveWins #SemST	NONE	AGAINST	0.239076145859	0.430256576939	0.330667277202
+2041	Hillary Clinton	H stands for Holding Back e-mails belonging to #WeThePeople #obstructingjustice #WakeUpAmerica #HillaryLiesMatter #UniteBIue #SemST	AGAINST	NONE	0.381794394486	0.30834741173	0.309858193784
+2042	Hillary Clinton	Bernie or Hillary? Prefer Bernie but Hillary fine. Either way, Dems gotta stand together in 2016. #FeeltheBern #SemST	FAVOR	AGAINST	0.300782718079	0.439978850436	0.259238431485
+2043	Hillary Clinton	#HillaryClinton might want to book smaller venues for her rallies, if not many empty seats will be seen on TV, that's bad lol #SemST	AGAINST	AGAINST	0.239406972702	0.46532321626	0.295269811038
+2044	Hillary Clinton	@WNTonight i love bernie because he ain't #SemST	NONE	NONE	0.374120440403	0.337294285676	0.288585273921
+2045	Hillary Clinton	Night, sleep tight, don't let Hillary bite. says @Tony_Tickets   "Nightmares" is all I say.  #SemST	AGAINST	AGAINST	0.258901245998	0.498990818439	0.242107935563
+2046	Hillary Clinton	@foxandfriends How could we support it if it was secret??? #NoHillary2016 #SemST	AGAINST	NONE	0.381888962708	0.310098542105	0.308012495186
+2047	Hillary Clinton	Why is HRC so popular?  This deceptive socialist accomplished nothing. Is only wife of an impeached President, who enabled UBL.   #SemST	AGAINST	AGAINST	0.206553606587	0.575261341663	0.21818505175
+2048	Hillary Clinton	2016 is going to be a great year. Rush Limbaugh's contract is over and he will be dropped by so many. Liberal victory #stoprush #SemST	NONE	AGAINST	0.143878611066	0.574737332683	0.281384056251
+2049	Hillary Clinton	@HillaryClinton R U desperate or what? 3rd Hillary tweet on my timeline 2day. NOT gonna vote 4 U! #SemST	AGAINST	NONE	0.35939568312	0.355680885035	0.284923431845
+2050	Hillary Clinton	@awj9009 not at all I think the statute of limitations has expired plus I can always have a driver ala #SemST	NONE	AGAINST	0.259714381942	0.471056201214	0.269229416844
+2051	Hillary Clinton	Never vote for @RickSantorum "for the survival of our country" #LoveWins #SemST	NONE	AGAINST	0.322681102545	0.441357206123	0.235961691332
+2052	Hillary Clinton	@voxdotcom   #wgn #WGNTV - now mentions ROMNEY? #Hillary CARE = ROMNEY CARE = #Obamacare -- now PUBLIC OPTION for ALL #SemST	NONE	NONE	0.390764597679	0.319752841473	0.289482560847
+2053	Hillary Clinton	@BDabs888 let's go shoot your now today. #SemST	NONE	AGAINST	0.276620286089	0.451411789744	0.271967924167
+2054	Hillary Clinton	I guarantee Hillary could care less about black rights.  If Obama did, blacks wouldn't be in the same predicament still.  #SemST	AGAINST	AGAINST	0.272558879273	0.48943892873	0.238002191996
+2055	Hillary Clinton	Hillary LIES, yet people still desire her as the President of the United States. #sad #SemST	AGAINST	AGAINST	0.268552352821	0.497226460371	0.234221186808
+2056	Hillary Clinton	@17leete17 hahaha. He is some kind of special..  this is why Hillary's going to win! Hahaha. #SemST	FAVOR	AGAINST	0.253015373972	0.493976874142	0.253007751886
+2057	Hillary Clinton	@realDonaldTrump @MalachiNorris lol!!!!  That is one of the funniest things I've heard in a while!!!!  #SemST	NONE	AGAINST	0.231197027914	0.521606407137	0.247196564949
+2058	Hillary Clinton	Remember back when #CrackerBarrel gave in 2 #PoliticalCorrectness over #DuckDynasty ? #Wakeup #NASCAR  b4 it's to late  #tcot #SemST	NONE	AGAINST	0.265517525183	0.432957715338	0.301524759479
+2059	Hillary Clinton	Will the media ever get real with Hillary? #2016 #Benghazi #Clinton #SemST	AGAINST	AGAINST	0.357917280519	0.359126226661	0.28295649282
+2060	Hillary Clinton	Last week = Life (Obamacare, gay marriage)  Today = Death (air pollution, lethal injection)  Elections matter, y'all. #SCOTUS #SemST	NONE	NONE	0.361146622711	0.342809530943	0.296043846346
+2061	Hillary Clinton	Do you know what would REALLY PISS .@HillaryClinton OFF?  .@VP .@JoeBiden runs against her. LMAO!   #WakeUpAmerica No longer is #SemST	AGAINST	AGAINST	0.317271125557	0.405784837184	0.276944037259
+2062	Hillary Clinton	Is there a Govt restart button? Someone needs to push that thing. #RememberBenghazi2016 #PatriotsWillRise #SemST	NONE	AGAINST	0.269614066595	0.435989727892	0.294396205513
+2063	Hillary Clinton	Bad punning gets worse, not better, over time. Remember that, America #SemST	NONE	AGAINST	0.237975718401	0.501334196636	0.260690084963
+2064	Hillary Clinton	#Putin, the last thing the US needs right now is another #Clinton or #Bush in the White house. We're a dynasty now? #Jeb2016 #SemST	AGAINST	AGAINST	0.18498620098	0.566615916864	0.248397882156
+2065	Hillary Clinton	Hillary's New Campaign slogan is:  HILLARY - NOTHING TO HIDE BUT THE TRUTH!  #tcot #WakeUpAmerica #SemST	AGAINST	AGAINST	0.278039307116	0.415723246291	0.306237446593
+2066	Hillary Clinton	@GOP Of course @HillaryClinton is silent. That insures she doesn't have 2 stand 4 ANYTHING & less chance of offending voters #SemST	AGAINST	AGAINST	0.249456223125	0.50989998497	0.240643791905
+2067	Hillary Clinton	Don't you someday want to see a well qualified candidate by the president of the United States? #ReflectingHillary #SemST	FAVOR	AGAINST	0.227527375871	0.492576122399	0.27989650173
+2068	Hillary Clinton	It's Monday night,do you know where your Hillary supporters are? In Rock Hill at our Amazing Phone bank! Come join!HillaryforSC #SemST	FAVOR	AGAINST	0.291801772942	0.409876495026	0.298321732032
+2069	Hillary Clinton	Casually hangin' with @HillaryClinton on a conference call while taking a break at #ACUHOI. #SemST	FAVOR	AGAINST	0.253260951089	0.401117860064	0.345621188847
+2070	Hillary Clinton	Our Queen City is currently infested w/ out-of-state plate Priuses driven by millennials w/ Hillary bumper stickers. #MHT #SemST	AGAINST	AGAINST	0.322663812042	0.416154358956	0.261181829002
+2071	Hillary Clinton	Gwen being a good leader and training a new volunteer in rock hill.! #FellowsSC #HillaryForSC #SemST	FAVOR	FAVOR	0.303825541559	0.343506483786	0.352667974655
+2072	Hillary Clinton	#DemocRAT2014Slogans: "Why work? When you can VOTE DemocRAT - twice!" #tcot #SemST	AGAINST	AGAINST	0.282371432009	0.402443619179	0.315184948812
+2073	Hillary Clinton	@HillaryClinton Yes I can and will. #SemST	FAVOR	AGAINST	0.31964140738	0.37982005523	0.30053853739
+2074	Hillary Clinton	@HillaryClinton Yes! I am chipping in 5$ because we have faith in you. #SemST	FAVOR	AGAINST	0.300568134711	0.381046937815	0.318384927474
+2075	Hillary Clinton	@AndreaTantaros @3coffeesplez WTF? This just keeps getting crazier! #SemST	NONE	NONE	0.41303362434	0.296356984685	0.290609390975
+2076	Hillary Clinton	Apparently, @BernieSanders fans don't like to see Hillary's name even implied.  #SheWhoShallNotBeNamedBecauseShesWinning #SemST	FAVOR	AGAINST	0.244646427443	0.453982107207	0.30137146535
+2077	Hillary Clinton	Fantastic Emmet County Dem meeting tonight in Estherville. Glad to meet some @HillaryClinton supporters! #SemST	FAVOR	AGAINST	0.289090789744	0.390377967022	0.320531243235
+2078	Hillary Clinton	Gay Rights are Human Rights, and Human Rights are #GayRights - @HillaryClinton #HillaryForAmerica #SemST	FAVOR	AGAINST	0.319770687154	0.374845131535	0.305384181311
+2079	Hillary Clinton	I think it's funny people think Bernie can take on Hillary and Bill #SemST	FAVOR	NONE	0.359142332773	0.325944375889	0.314913291337
+2080	Hillary Clinton	As much as @BernieSanders's poll numbers have jumped I still have Hillary winning the Dem. nomination. #SemST	FAVOR	AGAINST	0.276136756707	0.451237412521	0.272625830772
+2081	Hillary Clinton	@PhilGlutting @megadreamin Thank you so much for RT and FAV!!! #WakeUpAmerica #Rubio2016 #Cruz2016 #SemST	AGAINST	AGAINST	0.256127333838	0.393069762126	0.350802904036
+2082	Hillary Clinton	@marcorubio will not let our enemies take advantage of us like Obama is doing & Hillary will do! @TeamMarco #NewAmericanCentury #SemST	AGAINST	AGAINST	0.313684216003	0.401959937535	0.284355846461
+2083	Hillary Clinton	Just think how many emails Hillary Clinton can delete with today's #leapsecond #SemST	AGAINST	NONE	0.345385336255	0.343755887505	0.310858776239
+2084	Hillary Clinton	The kind of Gov that Liberals promise you can only be achieved and sustained with a Conservative Government.   #HeatWave #tcot #SemST	AGAINST	AGAINST	0.171103290394	0.525176574833	0.303720134773
+2085	Hillary Clinton	@TIMENOUT Is there anything about the Clintons that is not fraudulent? #SemST	AGAINST	AGAINST	0.337215596095	0.429424824158	0.233359579747
+2086	Hillary Clinton	@HillaryClinton > since trickle down economics has failed when was the last time a poor person created jobs? #SemST	AGAINST	AGAINST	0.31692317937	0.409085032493	0.273991788137
+2087	Hillary Clinton	@petefrt That woman is so corrupt she can't even have a truthful thought. #SemST	AGAINST	AGAINST	0.230844631603	0.480157544529	0.288997823868
+2088	Hillary Clinton	It's official. Every single #GOP member is now a candidate for #POTUS. Who needs #leadership when you have a #soapbox? #SemST	AGAINST	AGAINST	0.20802071484	0.488035233111	0.303944052049
+2089	Hillary Clinton	So glad @ChrisChristie has announced his candidacy - fits right in with all the other "qualifies" republicans on the list. #SemST	AGAINST	AGAINST	0.279103975284	0.456868353611	0.264027671105
+2090	Hillary Clinton	Hillary claims to be a "champion" of the middle class, but @RandPaul tax plan cuts the FICA tax, benefiting the middle class. #SemST	AGAINST	AGAINST	0.186598633843	0.58510600686	0.228295359297
+2091	Hillary Clinton	It is offensive when the mexican flag flies on US soil. California state capital. #Lovewins #univision #foxnews #DonaldTrump #SemST	AGAINST	AGAINST	0.31750295353	0.441728039283	0.240769007186
+2092	Hillary Clinton	Can anyone name the jobs #HillaryClinton has been responsible for creating.. Even her security is an entitlement... #SemST	AGAINST	AGAINST	0.35169660569	0.39528575393	0.25301764038
+2093	Hillary Clinton	@LeahR77 @DrMartyFox > With continued #Obama's & @TheDemocrats Admin policymaking, #USA will become #Greece! #WakeUpAmerica #NJ #SemST	AGAINST	AGAINST	0.343086645821	0.363033987533	0.293879366646
+2094	Hillary Clinton	@johnpodesta @HillaryClinton awesome every true chef needs this.. Go Hillary #SemST	AGAINST	NONE	0.415636011128	0.3164100252	0.267953963673
+2095	Hillary Clinton	@CorrectRecord is quite obsessed with emails and transparency. Why did Hillary Clinton destroy her emails? #clintonemail #SemST	AGAINST	AGAINST	0.302920665411	0.397537141428	0.299542193161
+2096	Hillary Clinton	@Logan_RTW I agree with her previous stance; and I'm sure she still believes in what was said before. #SemST	AGAINST	AGAINST	0.261967518605	0.393395686564	0.34463679483
+2097	Hillary Clinton	@HillaryClinton Hahahaha how much are you going to charge them!!!! #NoHillary2016 #SemST	AGAINST	AGAINST	0.299651841188	0.372605168409	0.327742990403
+2098	Hillary Clinton	#AskBobby Do you think #HillaryClinton has turned over all of those emails on her private server she destroyed! #SemST	AGAINST	NONE	0.372695455222	0.335498297505	0.291806247273
+2099	Hillary Clinton	@FoxNews we just have to hang in there long enough that this idiot doesn't completely destroy the country #SemST	AGAINST	AGAINST	0.298671488481	0.430025316607	0.271303194912
+2100	Hillary Clinton	#AskBobby would you blame an obscure film maker for the death of #USAmbassador in #Benghazi like #SemST	AGAINST	AGAINST	0.289950338559	0.458913343451	0.25113631799
+2101	Hillary Clinton	I feel confident that @HillaryClinton will win  in 2016. #SemST	AGAINST	AGAINST	0.309197974592	0.402164261054	0.288637764353
+2102	Hillary Clinton	@asphaultangel13 Afterall, they're just a poor black family trying to pay the bills!  @crousselle #WhyImNotVotingForHillary #TCOT #SemST	AGAINST	AGAINST	0.254103007349	0.430191188338	0.315705804313
+2103	Hillary Clinton	Great day in Emmetsburg meeting with #HillaryClinton supporters and learning more about important issues in Palo Alto county #SemST	AGAINST	AGAINST	0.312601297275	0.344203391628	0.343195311097
+2104	Hillary Clinton	Is a Eric Holder making 7 figures in the financial industry he protected from prosecution, yet?  Why do Libs love 1%ers?  #SemST	AGAINST	AGAINST	0.267926684796	0.47200317912	0.260070136084
+2105	Hillary Clinton	Fashion News: Hillary has a new clothing line coming out called Flip Flops R US   #tcot #Benghazi #SemST	AGAINST	AGAINST	0.305631640917	0.35424990628	0.340118452803
+2106	Hillary Clinton	@Jami_USA I'm just hoping we don't have to resurrect the no H8 for Hillary's second term. #SemST	AGAINST	AGAINST	0.242748374622	0.474542383866	0.282709241512
+2107	Hillary Clinton	U Missouri at KC got Chelsea caus Hils cost too much. Chels could arrive w/ mom - no xtra charge. @HillaryClinton #SemST	AGAINST	AGAINST	0.304129074775	0.405031130826	0.290839794399
+2108	Hillary Clinton	@GovChristie can't even run NJ and wants to be president? I'd vote for him before @HillaryClinton #SemST	AGAINST	AGAINST	0.297032502511	0.404535295919	0.298432201569
+2109	Hillary Clinton	RT @HillaryHaikus: #Ready because one day girls will say: I want to be President, too.  #ReadyForHillary #haiku #SemST	AGAINST	AGAINST	0.105397038277	0.578076015778	0.316526945946
+2110	Hillary Clinton	@PhxKen Shocked she didn't burst into flames! #WakeUpAmerica #makeAmericaGreatAgain #SemST	AGAINST	NONE	0.370855536381	0.306669579489	0.32247488413
+2111	Hillary Clinton	so @AdamParkhomenko met @oliviawilde . there aren't enough words to describe my envy haha #SemST	AGAINST	AGAINST	0.273663118391	0.426608461392	0.299728420216
+2112	Hillary Clinton	@robin45208 @C4Constitution Thank you so much for RTs!!! #WakeUpAmerica  #SemST	AGAINST	NONE	0.368243194102	0.31738036686	0.314376439038
+2113	Hillary Clinton	Republican donors have numerous candidates to put their money on. Dems basically have one. We're gonna get killed financially. #SemST	AGAINST	AGAINST	0.316199761952	0.376349999497	0.30745023855
+2114	Hillary Clinton	Can @DavidCornDC help Cuckold Conservatives win in 2016!  More cuckoldry please!  #Christie2016 #DonaldTrump #UniteBlue #p2 #SemST	AGAINST	NONE	0.361001142029	0.298536059069	0.340462798902
+2115	Hillary Clinton	Chris Christie for President? HAHAHAHAHA!  I don't think so!  @HillaryClinton #Clinton #Hilary #SemST	AGAINST	NONE	0.348462335292	0.328601125864	0.322936538844
+2116	Hillary Clinton	@megynkelly Hahahaha combed through emails!!! Bunch of scumbags!!! #NoHillary2016 #SemST	AGAINST	AGAINST	0.348245789737	0.376354563453	0.275399646811
+2117	Hillary Clinton	Loved talking with Yvette today about education and women's voices in politics. Can't wait to see her on caucus day! #FellowsIA #SemST	AGAINST	AGAINST	0.177277650441	0.461899248682	0.360823100876
+2118	Hillary Clinton	#BENGHAZI WAIT DID I SAY "THANK GOD?" VOTERS? SRY!! MT!! I MEANT "THANK GOODNESS!" NO OFFENSE INTENDED! ##tcot #SemST	AGAINST	NONE	0.363677106406	0.336963739706	0.299359153887
+2119	Hillary Clinton	@pikester45 Exactly what I don't want to see happen in America. #SemST	AGAINST	AGAINST	0.271786312238	0.411984680702	0.316229007061
+2120	Hillary Clinton	@Lawrence @TheLastWord There is no enthusiasm gap, Mr. Lawrence!    -@TheHRCSuperVols   @JW4Hillary @kimfrederi #Hillarymen #SemST	AGAINST	AGAINST	0.308432811698	0.443484175647	0.248083012654
+2121	Hillary Clinton	@HlLLARY @ToniforAsm Hillary for Prez = Obama's third term and that's the last thing we need!! #SemST	AGAINST	AGAINST	0.328360900329	0.379101722324	0.292537377348
+2122	Hillary Clinton	@businessinsider One thing that's painful is the mindless minutiae her strap hanging cling-ons force her to endure. #huma #SemST	AGAINST	AGAINST	0.253446581842	0.490614334485	0.255939083673
+2123	Hillary Clinton	The guy in the multicolored shirt looks chi as fuck. #SemST	AGAINST	AGAINST	0.311412809736	0.416284962236	0.272302228029
+2124	Hillary Clinton	Insurgent. What will happen if Hillary becomes dictator in chief. #SemST	AGAINST	AGAINST	0.351251203397	0.356593442052	0.292155354551
+2125	Hillary Clinton	How can we expect u to make good financial decisions for the US if u can't manage ur own multimillion $ salary so ur not broke #SemST	AGAINST	AGAINST	0.274203670468	0.422922418574	0.302873910958
+2126	Hillary Clinton	@liars_never_win @HillaryClinton shhh, go get me an iced tea..... #SemST	AGAINST	AGAINST	0.318759891615	0.397966456343	0.283273652042
+2127	Hillary Clinton	@FoxNews @GovChristie @HillaryClinton Actually she should be disqualified from running!How many scams and ethics problems now? #SemST	AGAINST	AGAINST	0.307793705597	0.372699109139	0.319507185264
+2128	Hillary Clinton	#Christie2016 you can't claim #Bridgegate wasn't your fault when you were the man behind the wheel. #GOP  #TeaParty #TCOT #DEM #SemST	AGAINST	AGAINST	0.274867396323	0.453062250103	0.272070353574
+2129	Hillary Clinton	@Debber66 @andersonDrLJA She will be a  #CenterHitler. #SemST	AGAINST	AGAINST	0.270988027143	0.419220372091	0.309791600765
+2130	Hillary Clinton	@HillaryforNV @MissLynnetteH 2 hours left, let's chip in $5, Nevada! #raisethenewPOTUS #SemST	AGAINST	AGAINST	0.279031124237	0.416175483074	0.304793392689
+2131	Hillary Clinton	How anyone can believe a single word that comes out of that woman's mouth is beyond me... #SemST	AGAINST	AGAINST	0.243502628855	0.475483305887	0.281014065258
+2132	Hillary Clinton	RT @Waitingforahero: 2nd tweet-#POTUS2016 candidates #guncontrol Read article-esp #JebBush (make #GunViolence worse) & #GunSen... #SemST	AGAINST	AGAINST	0.240268763694	0.40201707766	0.357714158646
+2133	Hillary Clinton	@HillaryIn2016 hey I just checked your blog. Kudos! Keep it up! #SemST	AGAINST	AGAINST	0.313271955123	0.402325856345	0.284402188532
+2134	Hillary Clinton	The owner of Univisin, donated as much as $25 million to the Clinton Foundation, his wife sits on its board #Univision #Trump #SemST	AGAINST	AGAINST	0.273026653762	0.466174920294	0.260798425945
+2135	Hillary Clinton	Hillary had just enough time to doctor her email inbox to her advantage before releasing them.... hahaha #justkidding #SemST	AGAINST	NONE	0.366432015623	0.337975819166	0.295592165211
+2136	Hillary Clinton	.@davelevinthal Operating a shredder, now @hillaryclinton is WAY more adept at using THAT! #WakeUpAmerica #TCOT #OhHillNO! #SemST	AGAINST	AGAINST	0.249204722986	0.44865445509	0.302140821923
+2137	Hillary Clinton	@theblaze gee,  what a busy schedule she had. #SemST	AGAINST	AGAINST	0.22458971072	0.48483460735	0.29057568193
+2138	Hillary Clinton	So you're used to the @AP calling for your approval before running a story @davidaxelrod?   #LikeHillary #HillaryEmails #SemST	AGAINST	AGAINST	0.294006378616	0.428157906918	0.277835714466
+2139	Hillary Clinton	White, middle-aged men did a pretty good job leading this Country for 230 yrs. Racist? Sexist? No, I'm a realist. #SemST	AGAINST	AGAINST	0.252632539556	0.467502116491	0.279865343953
+2140	Hillary Clinton	It's more than mistakes...with #HillaryClinton lying and cover-ups are a way of life. @NormanSie @n2toom  #tcot #uniteblue #SemST	AGAINST	AGAINST	0.162250613171	0.535367705977	0.302381680852
+2141	Hillary Clinton	Hillary can't use a fucking fax machine but you idiots are going to vote for her to be President?  #SemST	AGAINST	AGAINST	0.262627981302	0.411699299958	0.325672718741
+2142	Hillary Clinton	@gerfingerpoken2 #hillary is most likely a felon many times over but has been protected by the political class. #SemST	AGAINST	AGAINST	0.246515959686	0.507167771665	0.246316268649
+2143	Hillary Clinton	@HillaryClinton you have my support. (Now lets see how many people unfollow me.) #2016election #SemST	AGAINST	AGAINST	0.291491320026	0.403451037847	0.305057642127
+2144	Hillary Clinton	#Hillary's still very weak among grassroots - as shown by how strong #BernieSanders got how fast on how little. @AaronBlakeWP #SemST	AGAINST	AGAINST	0.278496469512	0.416646239103	0.304857291385
+2145	Hillary Clinton	Now that #Hillary is raising money like an incumbent president, can we stop pretending that she won't be the nominee? #SemST	AGAINST	AGAINST	0.24484091111	0.538064567803	0.217094521087
+2146	Hillary Clinton	All Americans have value to our society, it's called a vote. #LiberalLogic    #InternationalJokeDay #SemST	AGAINST	AGAINST	0.165866681572	0.510049980898	0.324083337531
+2147	Hillary Clinton	Free market capitalism is America's best friend because of constant pressure to innovate & use resources efficiently. #SemST	AGAINST	AGAINST	0.237150509692	0.513160701321	0.249688788986
+2148	Hillary Clinton	Thank you for your kind RTs and FAVs @pamnsc !!! #WakeUpAmerica #todosmarchamos #Cuba #SemST	AGAINST	NONE	0.347447552207	0.3421831055	0.310369342294
+2149	Hillary Clinton	Hillary's campaign raised $45 million  91% of all donations were $100 or less  This is a record. Beating Obama's record in '11 #SemST	AGAINST	AGAINST	0.189079188545	0.554429251056	0.256491560399
+2150	Hillary Clinton	Win with the Blacks. Put some of your focus on the racial tension between Blacks and Whites. #SemST	AGAINST	AGAINST	0.26594809952	0.479856213131	0.254195687349
+2151	Hillary Clinton	.@NewtGingrich on @HillaryClinton: "She's very formidable... she's a very competent person. #SemST	AGAINST	AGAINST	0.17313030118	0.496458071857	0.330411626963
+2152	Hillary Clinton	@WashTimes @BretBaier Why is there no outrage about all the smoke & mirrors w/ this candidate? Are you hiding Hill! #SpillHill #SemST	AGAINST	AGAINST	0.354372530841	0.403689342654	0.241938126505
+2153	Hillary Clinton	I'm really excited for 2016 after finding out the amount @HillaryClinton raised. We got this. #SemST	AGAINST	AGAINST	0.317374003574	0.433782394547	0.248843601879
+2154	Hillary Clinton	@docdebags @awelab1956 @BuzzFeedAndrew @BuzzFeedNews  It will. Otherwise we're guaranteed GOP in control of all 3 branches. #SemST	AGAINST	AGAINST	0.268017918899	0.472759111145	0.259222969957
+2155	Hillary Clinton	.@DavidLimbaugh - agree put it back.. But I have a feeling it won't go away.. It will keep coming back! #SemST	AGAINST	AGAINST	0.242420762294	0.42254365573	0.335035581976
+2156	Hillary Clinton	of lear jets and fax machines...LOL @HillaryClinton "woman of the people" HA! #BestTheyveGot #SlushFund #UraniumDeal #SniperFire #SemST	AGAINST	AGAINST	0.296870353278	0.431747052892	0.27138259383
+2157	Hillary Clinton	.@FoxNews @brithume ok.. So where are these emails coming from? Didnt @HillaryClinton already say the server was erased? #LIES #SemST	AGAINST	AGAINST	0.305304741078	0.415875000415	0.278820258506
+2158	Hillary Clinton	I dreamt about Hilary Clinton last night. Does this mean her plans to control us and take over the world are coming true? #SemST	AGAINST	AGAINST	0.243333346539	0.468586336474	0.288080316987
+2159	Hillary Clinton	@CoachDLG515 @Retired36 I'm glad that you will now slice all round.  #SemST	AGAINST	AGAINST	0.320268705697	0.399601528997	0.280129765307
+2160	Hillary Clinton	#Obama administration lies again.. Knew of #HillaryEmails being private.. transparency???? #SemST	AGAINST	NONE	0.365882151978	0.361816119055	0.272301728967
+2161	Hillary Clinton	Dude, why can't Hillary run a fax machine?   #SemST	AGAINST	AGAINST	0.3109119911	0.399464571194	0.289623437706
+2162	Hillary Clinton	@jimlibertarian @peddoc63 @Callisto1947 @MaydnUSA @c5hardtop1999 @surfermom77 @SMolloyDVM That's right! #SemST	AGAINST	NONE	0.335351634404	0.332788217087	0.331860148509
+2163	Hillary Clinton	If a man demanded staff to get him an ice tea he'd be called a sexists elitist pig.. Oink oink #Hillary #SemST	AGAINST	AGAINST	0.273871825981	0.377828206741	0.348299967278
+2164	Hillary Clinton	@HillaryClinton will be the nominee for the Democratic Party. Period. And she's gonna win the Presidency too. #SorryBernie #SemST	AGAINST	AGAINST	0.26293167452	0.485025837334	0.252042488146
+2165	Hillary Clinton	@RNRNewYork in her #Emails @HillaryClinton said there were "a couple of Facebooks" on her :) #TotalIncompetence #RedNationRising #SemST	AGAINST	AGAINST	0.276203122721	0.424952570943	0.298844306337
+2166	Hillary Clinton	@DrMartyFox @BossHoggUSMC @JohnFromCranber @seanhannity @SheriffClarke Fine, they can leave USA & never come back. #OiP #Cruz2016 #SemST	AGAINST	AGAINST	0.301234374439	0.437971880401	0.26079374516
+2167	Hillary Clinton	My birthday is on July 24th, if anyone needs a gift idea #ChillaryClinton #SemST	AGAINST	AGAINST	0.293949034899	0.421813588314	0.284237376787
+2168	Hillary Clinton	LOOKING FORWARD TO #CUBA EXPANDING MAJOR EXPORTS OF PICK UP TRUCKS CONVERTED INTO RAFTS!! SO EXCITING! #tcot #SemST	AGAINST	NONE	0.411299243643	0.291179885314	0.297520871043
+2169	Hillary Clinton	@POTUS I want you to President for a 3rd term!!! Please make it happen LOL! I'm fine with #SemST	AGAINST	AGAINST	0.253842379271	0.373615927342	0.372541693387
+2170	Hillary Clinton	#AskPOTUS Would you fire the #GOP congress for not doing their job if you could? #GOPFail #SemST	AGAINST	AGAINST	0.324560130168	0.38725399574	0.288185874092
+2171	Hillary Clinton	@jhewitt1280 @SpeakerBoehner @HouseBenghazi @TGowdySC What her emails? They released the rest all very boring. #SemST	AGAINST	AGAINST	0.339374521805	0.409819215014	0.250806263182
+2172	Hillary Clinton	hey "transparent" @HillaryClinton so...who is "Santa"? #LibHack #Pay2Play #Corruptocrat #tcot #Benghazi #VinceFoster #Monica #SemST	AGAINST	AGAINST	0.362623095724	0.380520207105	0.256856697171
+2173	Hillary Clinton	Take it easy Ed, #BernieSanders is a side show. Democrats are having some fun before getting back to reality in Nov 2016.  #SemST	AGAINST	AGAINST	0.173422191409	0.545540191945	0.281037616647
+2174	Hillary Clinton	The Kool-Aid drinking leftanistas continue to close ranks with support for Madame Secretary. WTF? Hillary is a fraud full of lies. #SemST	AGAINST	AGAINST	0.214316184761	0.514463516953	0.271220298286
+2175	Hillary Clinton	Trump's inauguration speech (God Forbid)!!.....Me-me-me-me-China-me-me,"did i mention me yet!?..where's my hairspray China #SemST	AGAINST	AGAINST	0.336386500676	0.343111414872	0.320502084452
+2176	Hillary Clinton	#KCA #VoteJKT48ID RfWheels3015: davidjones720 rratkinson Right I mean what the heck is an #ArabDonorGroup ?? #HillaryEmails #D... #SemST	AGAINST	AGAINST	0.269944348637	0.462294524745	0.267761126618
+2177	Hillary Clinton	@HillaryClinton is opening 10 more offices in Iowa this week.  She's not playing around! #iacaucus #SemST	AGAINST	AGAINST	0.259154837148	0.461964467006	0.278880695846
+2178	Hillary Clinton	Obama give Americans OVERTIME Pay! Republicans give Americans Welfare Checks! #tcot #UniteBlue #SemST	AGAINST	NONE	0.38247302026	0.302828920104	0.314698059636
+2179	Hillary Clinton	Make sure to make it to the Brew House in Pella, IA tomorrow @ 3 to meet with @HillaryClinton supporters! #SemST	AGAINST	AGAINST	0.245573113818	0.459916320489	0.294510565693
+2180	Hillary Clinton	#Univision ignores Latino candidate Marco Rubio because he doesn't fit their narrative.They're invested with Hillary #rubio2016 #SemST	AGAINST	NONE	0.35231551559	0.338233856923	0.309450627488
+2181	Hillary Clinton	Overheard at the Davenport open house: "Oh, I know you from Facebook!" #DigitalOrganizing #SemST	AGAINST	AGAINST	0.21540131973	0.501391890838	0.283206789432
+2182	Hillary Clinton	@TODAYshow @ChrisChristie is not qualified b/c he eats $82,000 in snacks & b/c of D corruption of #Bridgegate  A BIG FAT BULLY! #SemST	AGAINST	AGAINST	0.303035148907	0.409108199178	0.287856651915
+2183	Hillary Clinton	@AutumnNAlston @JonathanDKF @_sarah_babb_ @McCollumMike @HillaryClinton @HillaryforSC Inaugural tweet from our new account! Go #SemST	AGAINST	NONE	0.381114303975	0.299216286359	0.319669409667
+2184	Hillary Clinton	@hughhewitt like I tweeted you way back when, #ACA software can be fixed , but GOP strategic mistake of 'repeal' can't be fixed #SemST	AGAINST	AGAINST	0.233726702483	0.500723267336	0.265550030181
+2185	Hillary Clinton	@msnbc @Lawrence @JoeBiden @SenSanders  we love Joe and Bernie--but they ARE too OLD--they would end up a #OneTerm President #SemST	AGAINST	AGAINST	0.316140205348	0.350622323642	0.33323747101
+2186	Hillary Clinton	HER NAME IS RIO AND SHE DANCES IN THE SANAAAAAND!!! WHOOOO!! #tcOT #SemST	AGAINST	NONE	0.396478514745	0.303501819793	0.300019665462
+2187	Hillary Clinton	@RobBently @JonahNRO @BernieSanders Hillary campaign  will shortly announce that Sanders was born in Canada. Yeah that's it. #SemST	AGAINST	AGAINST	0.272346089077	0.42656514921	0.301088761714
+2188	Hillary Clinton	Bill Clinton Decided against taking out Bin Laden.   And we Got September 11, 2001.  #SemST	AGAINST	AGAINST	0.305711741836	0.404015248928	0.290273009236
+2189	Hillary Clinton	@politico   YAWNzzzzzzzzzzzzzz could keep the z's going for the full amt of Tweet characters but you get the point. #SemST	AGAINST	AGAINST	0.218232481158	0.535414354594	0.246353164248
+2190	Hillary Clinton	The Democrats are not creating Al QAEDA, they are creating A NUCLEAR ISIS.  THINK ABOUT THAT.  #SemST	AGAINST	AGAINST	0.287365829986	0.411125420741	0.301508749273
+2191	Hillary Clinton	Kind of scares me that there are still thousands of emails that have not been released from Hillary's private emails.  #SemST	AGAINST	AGAINST	0.222652641866	0.49754594638	0.279801411754
+2192	Hillary Clinton	#TheDonald can't keep a beauty pageant afloat and wants to be the President?  Aw, hell no. #SemST	AGAINST	AGAINST	0.147390012472	0.584209027829	0.268400959698
+2193	Hillary Clinton	You know emailgate must be going nowhere when Fox News are hashing out the Bosnia 'sniper fire' story again. #SemST	AGAINST	AGAINST	0.280416567526	0.465499226154	0.25408420632
+2194	Hillary Clinton	BIG BOOTY BITCHES BIG BIG BOOTY BITCHES #SemST	AGAINST	NONE	0.403579533118	0.291907025637	0.304513441244
+2195	Hillary Clinton	@maddow I love Bern, but it's not his time! #SemST	AGAINST	AGAINST	0.267642668653	0.447512141976	0.284845189371
+2196	Hillary Clinton	It's what's best for business and presidential seat for #HillaryClinton  #SemST	AGAINST	AGAINST	0.326850696467	0.357773986207	0.315375317326
+2197	Hillary Clinton	It's great that @JebBush supports GMO crops. It's like the IT scepticism all over again. Science vs belief. #JebBush #SemST	AGAINST	AGAINST	0.289011609298	0.467474016197	0.243514374505
+2198	Hillary Clinton	Folks, this is what happens when Liberals are in control! All hell breaks loose! Had enough yet? #SemST	AGAINST	AGAINST	0.301848485123	0.427504483833	0.270647031044
+2199	Hillary Clinton	If you need me I'll be screaming like a little baby from now until about ten minutes after @HillaryClinton arrives in #PTown. #SemST	AGAINST	AGAINST	0.230850120265	0.443305842428	0.325844037308
+2200	Hillary Clinton	The biggest dumps of bad info is b4 a holiday weekend. What comes out of WH and state dept today? #HillaryEmails  #LiarLiar #SemST	AGAINST	AGAINST	0.210570590976	0.512071890776	0.277357518248
+2201	Hillary Clinton	Leader of free world. Global navigating. Interacting with the international community. Beyond big crowds. Learned lesson. #SemST	AGAINST	AGAINST	0.252842052013	0.491605646935	0.255552301052
+2202	Hillary Clinton	Those aren't pantsuits. They are camouflage outfits carefully tailored to minimize silhouette. Think stealthsuits.Very high tech. #SemST	AGAINST	AGAINST	0.285096328584	0.393678676221	0.321224995195
+2203	Hillary Clinton	Just ordered my Chillary Clinton Koozies. Gotta support the team. #SemST	AGAINST	AGAINST	0.313832288132	0.404310938004	0.281856773865
+2204	Hillary Clinton	We can't expect change if we continue to vote for the same people. You have to take a chance 4yrs is not that long #Bernie2016 #SemST	AGAINST	AGAINST	0.169916972044	0.564570780467	0.265512247488
+2205	Hillary Clinton	@realDonaldTrump not good when only @AnnCoulter defends you. Your big mouth & giant ego are your downfall #stupidisasstupiddoes #SemST	AGAINST	AGAINST	0.268863948837	0.439323373111	0.291812678052
+2206	Hillary Clinton	Hillary must have been at the Navy Yard, under sniper fire!  #SemST	AGAINST	AGAINST	0.362820168933	0.364134689926	0.273045141141
+2207	Hillary Clinton	@JW4Hillary @MrDane1982 I choose "it takes a village! #SemST	AGAINST	AGAINST	0.326267009178	0.345852506339	0.327880484483
+2208	Hillary Clinton	@mizerello @meetthepress at least he didn't lose an embassy, cover up a murder, or burn govt emails. #SemST	AGAINST	AGAINST	0.204022236181	0.492543766962	0.303433996857
+2209	Hillary Clinton	#HILLARY has been lying for so long that her first fib was in morse code #HillNo2016 #SemST	AGAINST	NONE	0.346678211497	0.336868171104	0.316453617399
+2210	Hillary Clinton	EVERYDAY AMERICANS AND THEIR FAMILIES NEED A CHAMPION AND HILLARY WILL BE THAT CHAMPION.   #SemST	FAVOR	AGAINST	0.35014351978	0.35944220394	0.29041427628
+2211	Hillary Clinton	#INeedMeninist because @HillaryClinton is running for president...do I need to say more? #SemST	AGAINST	NONE	0.355465452225	0.353452349784	0.291082197991
+2212	Hillary Clinton	Cruz-- Perry 2016 @tedcruz @GovernorPerry It's the only win-win choice #SemST	AGAINST	AGAINST	0.344500461192	0.386078952498	0.26942058631
+2213	Hillary Clinton	#CPC thinks they can run antisocial personal attack advertising on #socialmedia! LOL! #cdnpoli #StopHarper #FeelTheBern #fnpoli #SemST	NONE	NONE	0.416209805372	0.272957546088	0.31083264854
+2214	Hillary Clinton	@CBSThisMorning Bernie Sanders had record crowds in Madison wis why no mention from you guys you talked about trump #Trump #SemST	NONE	AGAINST	0.317505512272	0.362169993725	0.320324494003
+2215	Hillary Clinton	Was asked by @HillaryClinton to help with her campaign. Gladly (excitedly) accepted! #SemST	FAVOR	AGAINST	0.258775230562	0.408493804062	0.332730965376
+2216	Hillary Clinton	@HillaryforIA come on, Iowa! For better USA and the ROW #SemST	FAVOR	AGAINST	0.321806953171	0.400730391685	0.277462655144
+2217	Hillary Clinton	Pundits say Jim Webb facing uphill battle with Hillary.  Really, it's with Bernie for the anti-Hillary vote.  #JimWebb #SemST	AGAINST	AGAINST	0.230855740593	0.513327955932	0.255816303475
+2218	Hillary Clinton	Exciting to hear more about our Fellows all across the country on tonight's call. Special shout-out to the #FellowsIA. #SemST	NONE	AGAINST	0.26050969528	0.457238891941	0.28225141278
+2219	Hillary Clinton	@AnitaFinlay @politico Hillary's doing the right thing -- staying focus on her campaign. #SemST	FAVOR	AGAINST	0.302030513127	0.411799489729	0.286169997145
+2220	Hillary Clinton	@chicagotribune #ayyylmao do #Democrats & other #liberals realize no one wants #HillaryClinton which is #Obamanation 2.0? #SemST	AGAINST	NONE	0.380704480511	0.349489952442	0.269805567047
+2221	Hillary Clinton	@betheljd Thanks for the follow David, may God bless you and your family.  #freeallfour #SemST	NONE	AGAINST	0.231886065197	0.503862152682	0.264251782122
+2222	Hillary Clinton	@Network_Citizen @ProudInfidel33 @YoungBLKRepub "@HillaryClinton can't even manage @billclinton and she wants to be @POTUS" #lol #SemST	AGAINST	AGAINST	0.292439586885	0.405985858128	0.301574554987
+2223	Hillary Clinton	@sunbeltgirl @9975Ts @bobwilsonn "@HillaryClinton can't even manage @billclinton and she wants to be @POTUS" #lol #StopHillary2016 #SemST	AGAINST	AGAINST	0.291379541842	0.39856954789	0.310050910268
+2224	Hillary Clinton	@WoodenThreat @ProudInfidel33 "@HillaryClinton can't even manage @billclinton and she wants to be @POTUS" #lol #SemST	AGAINST	AGAINST	0.290737187741	0.405044328957	0.304218483302
+2225	Hillary Clinton	@kin2souls @sunbeltgirl @ChristiChat "@HillaryClinton can't even manage @billclinton and she wants to be @POTUS" #lol #SemST	AGAINST	AGAINST	0.289122473398	0.401808005957	0.309069520645
+2226	Hillary Clinton	@RedStateJake "@HillaryClinton can't even manage @billclinton and she wants to be @POTUS" #lol #WakeUpAmerica #StopHillary2016 #SemST	AGAINST	AGAINST	0.299212285198	0.390629242672	0.31015847213
+2227	Hillary Clinton	@gerfingerpoken Why is this woman like teflon?  She has committed enuf egregious crimes she should B superglued 2the dang wall! #SemST	AGAINST	NONE	0.388117659023	0.345562064936	0.266320276041
+2228	Hillary Clinton	@Babbsgirl2 "@HillaryClinton can't even manage @billclinton and she wants to be @POTUS" #lol #WakeUpAmerica #StopHillary2016 #SemST	AGAINST	AGAINST	0.297565821317	0.391937250634	0.310496928049
+2229	Hillary Clinton	@ResistTyranny "@HillaryClinton can't even manage @billclinton and she wants to be @POTUS" #lol #WakeUpAmerica #StopHillary2016 #SemST	AGAINST	AGAINST	0.296976249411	0.392598002802	0.310425747787
+2230	Hillary Clinton	@weknowwhatsbest "@HillaryClinton can't even manage @billclinton and she wants to be @POTUS" #lol #WakeUpAmerica #StopHillary2016 #SemST	AGAINST	AGAINST	0.291577920706	0.393633505281	0.314788574014
+2231	Hillary Clinton	@randyprine @fabiaceae They know they're going to lose to HRC so they keep trying! #SemST	FAVOR	NONE	0.350806397005	0.319122937375	0.33007066562
+2232	Hillary Clinton	@realDonaldTrump "@HillaryClinton can't even manage @billclinton and she wants to be @POTUS" #lol #WakeUpAmerica #StopHillary2016 #SemST	AGAINST	AGAINST	0.297038346189	0.397620492367	0.305341161444
+2233	Hillary Clinton	If you support @HillaryClinton you are supporting another term of the policies of George W Bush. #democrats #mepolitics #SemST	AGAINST	AGAINST	0.258036054393	0.479981191213	0.261982754395
+2234	Hillary Clinton	@Shy_Buffy welcome little sister! Love you! #SemST	NONE	NONE	0.388421021205	0.298057311203	0.313521667592
+2235	Hillary Clinton	@politico @anniekarni "@HillaryClinton can't even manage @billclinton & she wants to be @POTUS" #WakeUpAmerica #StopHillary2016 #SemST	AGAINST	AGAINST	0.32775606378	0.374191615037	0.298052321183
+2236	Hillary Clinton	@oreillyfactor "@HillaryClinton can't even manage @billclinton and she wants to be @POTUS" #lol #WakeUpAmerica #StopHillary2016 #SemST	AGAINST	AGAINST	0.297178683923	0.391077821915	0.311743494162
+2237	Hillary Clinton	@FoxNews  "@HillaryClinton can't even manage @billclinton and she wants to be @POTUS" #lol #WakeUpAmerica #StopHillary2016 #SemST	AGAINST	AGAINST	0.295870363084	0.390662943037	0.313466693879
+2238	Hillary Clinton	@politico  "@HillaryClinton can't even manage @billclinton and she wants to be @POTUS" #lol #WakeUpAmerica #StopHillary2016 #SemST	AGAINST	AGAINST	0.297607913369	0.390364200303	0.312027886328
+2239	Hillary Clinton	Another #Hillary supporter committed to caucus tonight! One more step on the way to winning the Iowa caucus. #SemST	FAVOR	AGAINST	0.320140580124	0.396223269232	0.283636150644
+2240	Hillary Clinton	@TIMENOUT  "@HillaryClinton can't even manage @billclinton and she wants to be @POTUS" #lol #WakeUpAmerica #StopHillary2016 #SemST	AGAINST	AGAINST	0.297187649467	0.393341567221	0.309470783312
+2241	Hillary Clinton	So thankful for all of the volunteers who joined us at Bliss Studio in Fairfield tonight! #Rockstars #SemST	NONE	AGAINST	0.312687563158	0.431414077118	0.255898359724
+2242	Hillary Clinton	The most revealing part about Hillary's released emails is that they're pretty much as boring as mine. #nofriends #SemST	AGAINST	AGAINST	0.27772455814	0.454745459472	0.267529982387
+2243	Hillary Clinton	@FrankCraig: @skzdalimit if you're the best your side has to offer, we have nothing to worry about, slick. #SemST	NONE	AGAINST	0.155010352872	0.56969103057	0.275298616558
+2244	Hillary Clinton	@RAM0018 @joanwalsh @Salon @BreeNewsome @chrislhayes Without the blacks and minority voters? NO, Won't happen! #SemST	NONE	AGAINST	0.288066763886	0.445458534991	0.266474701123
+2245	Hillary Clinton	@popcornreel @joanwalsh @SenSanders @BernieSanders He is what he is and it doesn't resonate with minority and black voters! #SemST	NONE	AGAINST	0.295021044963	0.400705623042	0.304273331995
+2246	Hillary Clinton	@awadgolf @Crossbearer1956 @ScottSaxman1 This is why I'm not voting for Hillary #SemST	AGAINST	NONE	0.377236171465	0.350781089225	0.27198273931
+2247	Hillary Clinton	@foxnewspolitics NOT EVEN A LITTLE BIT!!! #Nobama #WeMissYouGipper #SemST	NONE	NONE	0.383283636049	0.304760460853	0.311955903098
+2248	Hillary Clinton	#Putin, #NothingMoreAmericanThan voting based for a politician to lead the country when she can't even handle email. #think #SemST	AGAINST	AGAINST	0.18917381954	0.545278301146	0.265547879314
+2249	Hillary Clinton	#Putin, #NothingMoreAmericanThan voting for a politician to lead the country when she can't even handle email. #think #SemST	AGAINST	AGAINST	0.185668923689	0.546848169067	0.267482907244
+2250	Hillary Clinton	2 people that are surprising? Trump &Fiorina. Why? Cause they're being honest w/what they think.  Obama built that.  #SemST	NONE	AGAINST	0.293010098181	0.42941639003	0.277573511789
+2251	Hillary Clinton	So we're to believe that "Santa" is a hairstylist?   Um... okay. You often need code for that. #Lies #SemST	NONE	AGAINST	0.228092612964	0.492186677407	0.279720709629
+2252	Hillary Clinton	Jimmy Fallon music playing. Thank you .... #DonaldTrump  ... for driving Latinos and Gays out to vote by the millions.  Love,  #SemST	NONE	AGAINST	0.2276134044	0.506236169114	0.266150426486
+2253	Hillary Clinton	@oreillyfactor Who gives a rate ass what a Old Queen has to say about Clarence Thomas? #SemST	NONE	AGAINST	0.321197040718	0.34222999622	0.336572963062
+2254	Hillary Clinton	So excited to hear @HillaryClinton speak here at @dartmouth in #Hanover #HillaryinNH @HillaryforNH #SemST	FAVOR	NONE	0.345115242951	0.33762300509	0.317261751959
+2255	Hillary Clinton	#HillaryInNH is like Adolph Hitler in a Synagogue.   #tcot #uniteblue #ctot #SemST	AGAINST	AGAINST	0.262278083879	0.447384305997	0.290337610124
+2256	Hillary Clinton	@Ered604 welcome 2 Twitter~PROUD to be #UNITEBLUE~  #WarOnWomen  #worldpeace  #tngov #TN #socialjustice #AllLivesMatter #unity #SemST	NONE	NONE	0.347021019178	0.344868099641	0.308110881181
+2257	Hillary Clinton	Volunteer with  your local campaign this weekend! Help build Team Hillary - march w/ us in Bethesda! @AdamParkhomenko #MD #SemST	FAVOR	AGAINST	0.334266041473	0.367732516259	0.298001442268
+2258	Hillary Clinton	Didn't think about that. Don't think I'd ever vote for someone with dual citizenship. Can't believe it's legal. #Bernie #SemST	NONE	AGAINST	0.219310842465	0.484633233876	0.296055923659
+2259	Hillary Clinton	Clinton entitlement is the proverbial American hemorrhoid #tcot #Opinionated #SemST	AGAINST	NONE	0.370200406625	0.369872535301	0.259927058074
+2260	Hillary Clinton	Norman Hsu illegally donated $850,000 to @HillaryClinton, there is evidence he worked for China.  White House for sale.  #SemST	AGAINST	AGAINST	0.249456934042	0.508103510441	0.242439555517
+2261	Hillary Clinton	@kryptickaos_ I would have to agree, but I would be surprised if he gets the nom. Jeb bush has the money, and he's a moderate. #SemST	NONE	AGAINST	0.139543470573	0.585480476725	0.274976052701
+2262	Hillary Clinton	@HillaryClinton lied about the cost of the gala, she was fined for it, but if it were @GOP they'd be in jail  Unfit for office  #SemST	AGAINST	AGAINST	0.215962628284	0.561742311624	0.222295060092
+2263	Hillary Clinton	Fabulous @HillaryClinton ! You hit on every subject and I am proud of you ending on a note of kindness. #HillaryInNH #SemST	FAVOR	AGAINST	0.203170089443	0.469558713097	0.327271197459
+2264	Hillary Clinton	#SOCIALMEDIA is NOT for #sociopaths & #psychopaths. If you insult people u don't know, you are the above. Resign. #feelthebern #SemST	NONE	AGAINST	0.209012260098	0.552076803674	0.238910936228
+2265	Hillary Clinton	@ZekeJMiller @BretBaier @danmericaCNN  How could anyone vote for that woman?  #SemST	AGAINST	NONE	0.383334708052	0.332617365329	0.284047926619
+2266	Hillary Clinton	@RedHatGeek Hillary's nose from lying is now bigger than Bill's cigars. #SemST	AGAINST	AGAINST	0.28391158569	0.442140712838	0.273947701472
+2267	Hillary Clinton	@DemocratGuide @Reuters bur #Hlllary just raised 45 million! #SemST	AGAINST	NONE	0.414437650923	0.276230067603	0.309332281474
+2268	Hillary Clinton	Hopefully Hillary Clinton gets cancer and dies before she gets the opportunity to embarrass our country any further. #july4th #SemST	AGAINST	AGAINST	0.290667344264	0.424787746349	0.284544909387
+2269	Hillary Clinton	@JOEL5H @wonderfullone @Bipartisanism I hear the Peter Gunn theme. She's going to kick some serious GOP ass. #SemST	AGAINST	AGAINST	0.265926859128	0.461677641538	0.272395499334
+2270	Hillary Clinton	At least the few mistakes made by @GOP candidates on the campaign aren't felonies like the ones@HillaryClinton makes.#OhHillNo #SemST	AGAINST	AGAINST	0.284186403661	0.429807506125	0.286006090215
+2271	Hillary Clinton	Great comments by @MittRomney about pathological liar #HillaryClinton . #SemST	AGAINST	AGAINST	0.341301479879	0.378008224364	0.280690295757
+2272	Hillary Clinton	I wish Bernie's fans would stop screaming. #Bernie2016 #SemST	AGAINST	AGAINST	0.32752230476	0.375443756178	0.297033939062
+2273	Hillary Clinton	@realDonaldTrump is the only honest voice of the @GOP and that should scare the shit out of everyone! #SemST	AGAINST	AGAINST	0.278268534792	0.48272639031	0.239005074898
+2274	Hillary Clinton	@frodofied SO? THt will NEVER erase their support of DOMA & silence on #LGBT #LGBTQ rights until it is politically aventageous. #SemST	AGAINST	AGAINST	0.28315882696	0.48570318075	0.23113799229
+2275	Hillary Clinton	@roughcountry451 @vendettajane Fortunately Bryan he does not have a saying on that  #freeallfour #SemST	AGAINST	AGAINST	0.327560990275	0.342535334397	0.329903675328
+2276	Hillary Clinton	@anthonyweiner super out of touch and stupid.   Please go away. #NYCPride #NYC #SemST	AGAINST	AGAINST	0.276609631689	0.448279560368	0.275110807943
+2277	Hillary Clinton	@clantro @jjauthor @CarmineZozzora  Why not, they lie about everything else, even when confronted with the truth.  #freeallfour #SemST	AGAINST	AGAINST	0.219444726495	0.513116674835	0.26743859867
+2278	Hillary Clinton	over the river and through the woods, and UP WITH HILL WE GO! Yass #HillaryClinton  #Hillary   #SemST	AGAINST	AGAINST	0.318993119528	0.402855377865	0.278151502607
+2279	Hillary Clinton	I am a big HILLARY Clinton supporter. My plan is working, poor Donnie doesn't even know. #Trump2016 #SemST	AGAINST	AGAINST	0.209996501454	0.51999063933	0.270012859216
+2280	Hillary Clinton	@greta What #Bernie2016 has done is work for DECADES on behalf of the American people not the corporatocracy who own corrupted #SemST	AGAINST	AGAINST	0.319353998841	0.431495604557	0.249150396602
+2281	Hillary Clinton	@TrucksHorsesDog  #CommonCore , another brilliant idea supported by a #bush.  #nomorebushes  #SemST	AGAINST	AGAINST	0.243436617604	0.460624768294	0.295938614102
+2282	Hillary Clinton	Do we breathe & live or ignore & collectively succumb to toxins of political, ecological, unwanton oligards? #p2 #bernie2016 #SemST	AGAINST	AGAINST	0.30888363348	0.427659702146	0.263456664374
+2283	Hillary Clinton	She's NOT a WOMAN, she's a POLITICIAN. #WhyImNotVotingForHillary #StopHillaryClinton2016 #Benghazi #savetheUSA #SemST	AGAINST	AGAINST	0.213277997233	0.495339373978	0.291382628789
+2284	Hillary Clinton	@HillaryClinton I wish u were in Benghazi instead of those great people, chronic liar and power hungry animal #SemST	AGAINST	AGAINST	0.268401830589	0.456046864922	0.275551304489
+2285	Hillary Clinton	YAAAS, Hillary! @TsarRhys wins best dressed here at the #Merrimack 4th of July parade! #HillaryforNH #SemST	AGAINST	AGAINST	0.329509942346	0.432957233481	0.237532824173
+2286	Hillary Clinton	The Dukes of Hazzard has been on tv for 36 years, yet you weren't offended until the #liberals told you to be.  #unitedblue #SemST	AGAINST	AGAINST	0.190366811838	0.579599403003	0.230033785159
+2287	Hillary Clinton	.@HillaryClinton The spatula seems appropriate, given that it can be used to easily flip positions if the heat gets to high. #SemST	AGAINST	AGAINST	0.227321623731	0.541448668816	0.231229707452
+2288	Hillary Clinton	Why does the " shit barometer " always rise when Republicans speak? #USA #July4 #SemST	AGAINST	AGAINST	0.369541007247	0.376744495484	0.253714497269
+2289	Hillary Clinton	@Ba68scgal The guy w/ the #Benghazi sign has guts Loveit #NoHillary2016 #SemST	AGAINST	NONE	0.390962313117	0.339281983262	0.26975570362
+2290	Hillary Clinton	@vendettajane Thanks for the follow, may God bless you and your family !  #freeallfour #SemST	AGAINST	AGAINST	0.286501599067	0.425888122962	0.287610277972
+2291	Hillary Clinton	@MyOTRadventure Compassion the new frontier Hillary will go where she's never gone before She'll need a village & a committee #SemST	AGAINST	AGAINST	0.345269875109	0.361393229778	0.293336895112
+2292	Hillary Clinton	Since #SNL ain't that funny anymore please @JoeBiden run for president.. if even just for the hilarious debates between you & #SemST	AGAINST	AGAINST	0.339400084886	0.380908968855	0.27969094626
+2293	Hillary Clinton	I support Bernie on account USA needs a new direction but, if he loses in primary ,I'll support Hillary Clinton. #Sanders2016 #SemST	AGAINST	AGAINST	0.261988307947	0.448984750676	0.289026941377
+2294	Hillary Clinton	@HillaryClinton Your treatment of the press, Amb Stevens' fam, and the intel of the American ppl is enough to send you to jail #SemST	AGAINST	AGAINST	0.183704267461	0.567733616868	0.248562115671
+2295	Hillary Clinton	Hilly & Barry's Bloody Benghazi Bamboozle #HillaryIceCreamFlavors   #tcot #WakeUpAmerica #SemST	AGAINST	NONE	0.358741204068	0.336653852561	0.304604943371
+2296	Hillary Clinton	@NumbersMuncher @HillaryClinton She's the animal!! She's also a sellout!!! Ppl that vote for her are sellouts!! #NoHillary2016 #SemST	AGAINST	AGAINST	0.259312808282	0.436935402569	0.303751789148
+2297	Hillary Clinton	@redsteeze:  Broke, as in Dead broke" Elitist Nauseating Get behind the rope  Hateful Arrogant Z Ideologue  Someone else add Z. #SemST	AGAINST	AGAINST	0.179822371856	0.545051609742	0.275126018402
+2298	Hillary Clinton	@redsteeze @maggieNYT By that time the guy with #Benghazi sign will be arrested. #SemST	AGAINST	AGAINST	0.269265097226	0.47809160574	0.252643297034
+2299	Hillary Clinton	@adamplevy @maggieNYT @danmericaCNN The people came to see & hear Hillary not the Press obstructing their view #SemST	AGAINST	AGAINST	0.344028799483	0.370119187834	0.285852012683
+2300	Hillary Clinton	@PoliticalShort She would have to have a conscious to be haunted. @jlconnell66 #killary #Marxism  #SemST	AGAINST	AGAINST	0.234063115602	0.443273704886	0.322663179512
+2301	Hillary Clinton	@theblaze  Heaven forbid anyone invade the space of the Queen of Lies. -_- #SemST	AGAINST	AGAINST	0.304792659745	0.457324268715	0.23788307154
+2302	Hillary Clinton	@TarekFatah @anniekarni And Abedin's penumbra, the Muslim Brotherhood. Her connection is incontrovertible #HumaAbedin #SemST	AGAINST	AGAINST	0.258383792354	0.520103683556	0.22151252409
+2303	Hillary Clinton	/#Leftest #Hippocratic #Domecrats won't vote for #FineLady #MichellBachmann but will vote for #EmailScandal #Benghazi #Killary #SemST	AGAINST	NONE	0.359720574135	0.350585220806	0.289694205059
+2304	Hillary Clinton	Support #independent #BernieSanders because he's not a liar. #POTUS #libcrib #democrats #tlot #republicans #WakeUpAmerica #SemST	AGAINST	AGAINST	0.240508416859	0.445915700782	0.313575882359
+2305	Hillary Clinton	@Babbsgirl2 @DrMartyFox She is as bad or worse possibly than #Obama and she will continue to break laws as if she is invincible. #SemST	AGAINST	AGAINST	0.235160885019	0.466995002244	0.297844112737
+2306	Hillary Clinton	@nytimes was that "awkwardness" or "awfulness"? I think the latter #SemST	AGAINST	AGAINST	0.362418544301	0.381483230738	0.256098224961
+2307	Hillary Clinton	Today's number is 8! That's how many years old Jesus was when he learned to ride a bike!  Pretty cool dude! #USWNT #proudmom #SemST	AGAINST	AGAINST	0.254466696846	0.430563235623	0.314970067531
+2308	Hillary Clinton	@JessieJaneDuff Results matter. U may feel less safe, but that is ur mental health issues. No 9/11s on Obama's watch #SemST	AGAINST	AGAINST	0.2619362561	0.498336837066	0.239726906834
+2309	Hillary Clinton	Grateful for the chance to tell the world about my love of many flavors of ice cream! #WakeUpAmerica #SemST	AGAINST	AGAINST	0.301129334832	0.428230400609	0.270640264559
+2310	Hillary Clinton	If you cant dazzle them with brilliance, baffle them with bullshit. #HillaryClinton #libstardsareidiots #SemST	AGAINST	AGAINST	0.261798960304	0.439103341145	0.299097698552
+2311	Hillary Clinton	@akawhit1 ITS TIME TO ROPE OFF KILLARY @FoxNews DELETE HER OFF YOUR BALLOT SHE IS A CLONE OF SODOM  INSANE OBAMMAD #WakeUpAmerica #SemST	AGAINST	NONE	0.405619144384	0.2913505537	0.303030301915

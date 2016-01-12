@@ -18,6 +18,6 @@ After the autoencoder is trained, autoencoder_eval.py contains methods for train
 After training, model(s) can be trained with:
 
 - train_classifiers() in bow_baseline.py for training two 2-way classifiers (on topic vs. off topic, positive vs. negative)
-- train_classifier() in bow_baseline.py for training one 3-way classifier (neutral vs. pos vs. neg)
+- train_classifier() in bow_baseline.py for training one 3-way classifier (neutral vs. pos vs. neg). If parameter "debug" is set to "true", an additional file with probabilities is printed.
 
 The folder "output" contains output of different methods, _results.txt contains a summary of the results with explanation.
