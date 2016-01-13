@@ -17,7 +17,9 @@ FILE = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/additionalTwee
 # the ones with "_new" with Hillary Clinton for testing and all other topics for training to test how well our method works for unseen target scenario
 FILETRAIN = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trainingdata_new.txt'
 FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_new.txt'
+FILEDEV2 = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_dev2.txt'
 FILETRUMP = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/downloaded_Donald_Trump.txt'
+
 
 TOKENS = './tokensFinal'
 

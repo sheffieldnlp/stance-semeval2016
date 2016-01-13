@@ -9,7 +9,7 @@ import random
 import tokenize_tweets
 from tokenize_tweets import convertTweetsToVec, readTweetsOfficial, getTokens
 from autoencoder import create
-from bow_baseline import train_classifiers, train_classifier, eval, extractFeatures, extractFeatureVocab
+from bow_baseline import train_classifiers_TopicVOpinion, train_classifier_3way, eval, extractFeatures, extractFeatureVocab, train_classifiers_PosVNeg
 
 # extract autoencoder features based on trained autoencoder model
 def extractFeaturesAutoencoder(autoencodermodel, cross_features='false'):
@@ -104,10 +104,12 @@ def extractFeaturesAutoencoderBOW(automodel, cross_features):
 
 
 if __name__ == '__main__':
-    features_train, labels_train, features_dev, labels_dev = extractFeaturesAutoencoder("model.ckpt", "false")
-    #features_train, labels_train, features_dev, labels_dev = extractFeaturesAutoencoderBOW("model.ckpt", "false")
+    features_train, labels_train, features_dev, labels_dev = extractFeaturesAutoencoder("model.ckpt", "added")
+    #features_train, labels_train, features_dev, labels_dev = extractFeaturesAutoencoderBOW("model.ckpt", "true")
 
     #train_classifiers(features_train, labels_train, features_dev, labels_dev, "out_auto_added.txt") # train and predict two 2-way models
-    train_classifier(features_train, labels_train, features_dev, labels_dev, "out_auto.txt", "true") # train and predict one 3-way model
+    train_classifier_3way(features_train, labels_train, features_dev, labels_dev, "out_auto_bow.txt", "false", "true") # train and predict one 3-way model
+    #train_classifiers_PosVNeg(features_train, labels_train, features_dev, labels_dev, "out_auto.txt")
 
-    eval(tokenize_tweets.FILEDEV, "out_auto.txt") # evaluate with official script
+
+    eval(tokenize_tweets.FILEDEV2, "out_auto_bow.txt") # evaluate with official script
