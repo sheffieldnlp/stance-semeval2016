@@ -267,6 +267,11 @@ def optimiseThresh(labels_dev, preds_prob, howmany):
     retlabels, for_p, for_r, for_f1, against_p, against_r, against_f1, macro_f1, a_all, a_tp, a_as_f, a_as_n, f_all, f_tp, f_as_a, f_as_n, n_as_n, n_as_f, n_as_a = computeF1ForThresh(labels_dev[howmany:], preds_prob[howmany:], best_thres)
     print "F1 on dev 2", macro_f1, for_f1, against_f1
 
+    print "\n--------\nConfusion matrix\n--------\n\t\t\t\t\t  Predicted label\n\t\t\t\t\tNeutral\tagainst\tfor"
+    print "True label\tNeutral\t", n_as_n, "     ", n_as_a, "     ", n_as_f
+    print "True label\tAgainst\t", a_as_n, "     ", a_tp, "     ", a_as_f
+    print "True label\tFor\t\t", f_as_n, "     ", f_as_a, "     ", f_tp, "\n--------"
+
     return retlabels
 
 
