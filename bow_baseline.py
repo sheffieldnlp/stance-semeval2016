@@ -50,7 +50,7 @@ def extractFeatureVocab(tweets, keyword="all"):
 
 
 # extract BOW n-gram features, returns matrix of features
-def extractFeatures(tweets, features_final):
+def extractFeaturesBOW(tweets, features_final):
     matrix = [] # np.zeros((len(features_final), len(tweets)))
 
     for i, tweet in enumerate(tweets):
@@ -441,10 +441,10 @@ if __name__ == '__main__':
 
     tweets_train, targets_dev, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN, 'windows-1252', 2)
     features_final = extractFeatureVocab(tweets_train)
-    features_train = extractFeatures(tweets_train, features_final)
+    features_train = extractFeaturesBOW(tweets_train, features_final)
 
     tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
-    features_dev = extractFeatures(tweets_dev, features_final)
+    features_dev = extractFeaturesBOW(tweets_dev, features_final)
 
     #train_classifiers_TopicVOpinion(features_train, labels_train, features_dev, labels_dev, "out.txt")
     train_classifier_3way(features_train, labels_train, features_dev, labels_dev, "out_bow_3way.txt", "false", "true")
