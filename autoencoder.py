@@ -31,7 +31,7 @@ def create(x, layer_sizes):
     next_layer_input = x
 
     encoding_matrices = []
-    for dim in layer_sizes:
+    for i, dim in enumerate(layer_sizes):
         input_dim = int(next_layer_input.get_shape()[1])
 
         # Initialize W using random values in interval [-1/sqrt(n) , 1/sqrt(n)]
@@ -43,7 +43,11 @@ def create(x, layer_sizes):
         # We are going to use tied-weights so store the W matrix for later reference.
         encoding_matrices.append(W)
 
-        output = tf.nn.tanh(tf.matmul(next_layer_input, W) + b)
+        # if first dimension, add dropout, Tim's recommendation
+        if i == 0:
+            output = tf.nn.tanh(tf.nn.dropout(tf.matmul(next_layer_input, W), 0.1))
+        else:
+            output = tf.nn.tanh(tf.matmul(next_layer_input, W) + b)
 
         # the input into the next layer is the output of this layer
         next_layer_input = output
@@ -146,12 +150,13 @@ def deep():
     #load and convert tweets
     tokens,vects,norm_tweets = convertTweetsToVec('all')
 
-    start_dim = tokens.__sizeof__() #50000  # small: 1043536, full: 25166072 (?). Dimensionality of input. keep as big as possible, but throw singletons away.
+    start_dim = tokens.__sizeof__() # 129887 tokens without singletons. Dimensionality of input. keep as big as possible, but throw singletons away.
     x = tf.placeholder("float", [None, start_dim])
     autoencoder = create(x, [100])  # Dimensionality of the hidden layers. To start with, only use 1 hidden layer.
+    train_step = tf.train.AdamOptimizer(0.1).minimize(autoencoder['cost'])
+
     init = tf.initialize_all_variables()
     sess.run(init)
-    train_step = tf.train.GradientDescentOptimizer(0.5).minimize(autoencoder['cost'])
 
 
     tweets_train, targets_train, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN)
@@ -161,7 +166,7 @@ def deep():
     for v in vects_train:
         vects.append(v)
     for v in vects_trump:
-        vects_train.append(v)
+        vects.append(v)
 
     tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV)
     vects_dev,norm_tweets_dev = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_dev)
@@ -179,7 +184,7 @@ def deep():
     saver = tf.train.Saver()
 
     # do 1000 training steps
-    for i in range(5000):
+    for i in range(2000):
         # make a batch of 100:
         batch = []
         for j in range(100):

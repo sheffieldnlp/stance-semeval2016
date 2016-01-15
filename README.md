@@ -12,7 +12,7 @@ Current data sizes:
 - Unlabelled tweets: 395212
 - Donald Trump tweets: 16692  
 - Official labelled tweets: 44389  
-- Overall 25166072 tokens
+- Overall 129887 tokens (25166072 tokens including singletons)
 
 
 bow_baseline.py runs a bow baseline, extracting 1-gram and 2-gram bow features, with end-to-end evaluation using the official eval script.

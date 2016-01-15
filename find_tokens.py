@@ -61,15 +61,17 @@ def findTokensAll():
             trumpcntr += 1
             tokens[token] += 1
 
-    print "Saving token counts for ", tokens.__sizeof__(), ". ", twcntr, " unlabelled tweets, ", trumpcntr, " Donald Trump tweets, ", supercntr, " labelled tweets"
 
     output = open(OUTPUT, "wb")
     tokens_pb = Tokens()
 
     for token, count in tokens.most_common():
-        token_pb = tokens_pb.tokens.add()
-        token_pb.token = token
-        token_pb.count = count
+        if count > 1:  # not even worth saving singletons
+            token_pb = tokens_pb.tokens.add()
+            token_pb.token = token
+            token_pb.count = count
+
+    print "Saving token counts for ", tokens.__sizeof__(), ". ", twcntr, " unlabelled tweets, ", trumpcntr, " Donald Trump tweets, ", supercntr, " labelled tweets"
 
     output.write(tokens_pb.SerializeToString())
     output.close

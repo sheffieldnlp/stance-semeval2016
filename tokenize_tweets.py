@@ -66,7 +66,7 @@ def readToks():
             break
         tokens.append(token_pb.token)
 
-    print(str(len(tokens)))
+    print "Reading counts for ", str(len(tokens)), "tokens"
     return tokens,tweets_on_topic,tweets
 
 
