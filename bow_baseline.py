@@ -6,14 +6,13 @@ __author__ = 'Isabelle Augenstein'
 import numpy as np
 from collections import Counter
 import io
-from tokenize_tweets import convertTweetsToVec, readTweetsOfficial
 import tokenize_tweets
 from twokenize_wrapper import tokenize
-from sklearn import svm
 import subprocess
 import sys
 from sklearn.linear_model import LogisticRegression
 import itertools
+from tokenize_tweets import readTweetsOfficial
 
 
 # select features, compile feature vocab
@@ -211,7 +210,7 @@ def train_classifier_3way(feats_train, labels_train, feats_dev, labels_dev, outf
 
     print("Training classifier...")
 
-    model = LogisticRegression(penalty='l1')#, class_weight='balanced') #svm.SVC(class_weight={1: weight})
+    model = LogisticRegression(penalty='l2')#, class_weight='balanced') #svm.SVC(class_weight={1: weight})
     print "Label options", labels
     model.fit(feats_train, labels)
     preds = model.predict(feats_dev)
@@ -256,18 +255,32 @@ def optimiseThresh(labels_dev, preds_prob, howmany):
             if macro_f1 > best_f1:
                 best_f1 = macro_f1
                 best_thres = perm
+                print "\n--------\nConfusion matrix for dev 1 and thresh ", best_thres, "\n--------\n\t\t\t\t\t  Predicted label\n\t\t\t\t\tNeutral\tagainst\tfor"
+                print "True label\tNeutral\t", n_as_n, "     ", n_as_a, "     ", n_as_f
+                print "True label\tAgainst\t", a_as_n, "     ", a_tp, "     ", a_as_f
+                print "True label\tFor\t\t", f_as_n, "     ", f_as_a, "     ", f_tp, "\n--------\n"
 
 
     print "Best thresh", best_thres
     print "Best F1 on dev 1", best_f1
 
+    print "\nResults on dev 2 without threshold tuning"
 
-    print "Applying final threshold"
+    retlabels, for_p, for_r, for_f1, against_p, against_r, against_f1, macro_f1, a_all, a_tp, a_as_f, a_as_n, f_all, f_tp, f_as_a, f_as_n, n_as_n, n_as_f, n_as_a = computeF1ForThresh(labels_dev[howmany:], preds_prob[howmany:], [0.0, 0.0, 0.0])
+    print "F1 on dev 2", for_f1, against_f1, macro_f1
+
+    print "\n--------\nConfusion matrix for dev 2 without threshold tuning\n--------\n\t\t\t\t\t  Predicted label\n\t\t\t\t\tNeutral\tagainst\tfor"
+    print "True label\tNeutral\t", n_as_n, "     ", n_as_a, "     ", n_as_f
+    print "True label\tAgainst\t", a_as_n, "     ", a_tp, "     ", a_as_f
+    print "True label\tFor\t\t", f_as_n, "     ", f_as_a, "     ", f_tp, "\n--------\n"
+
+
+    print "\nApplying final threshold"
 
     retlabels, for_p, for_r, for_f1, against_p, against_r, against_f1, macro_f1, a_all, a_tp, a_as_f, a_as_n, f_all, f_tp, f_as_a, f_as_n, n_as_n, n_as_f, n_as_a = computeF1ForThresh(labels_dev[howmany:], preds_prob[howmany:], best_thres)
-    print "F1 on dev 2", macro_f1, for_f1, against_f1
+    print "F1 on dev 2", for_f1, against_f1, macro_f1
 
-    print "\n--------\nConfusion matrix\n--------\n\t\t\t\t\t  Predicted label\n\t\t\t\t\tNeutral\tagainst\tfor"
+    print "\n--------\nConfusion matrix for dev 2 with best thresh\n--------\n\t\t\t\t\t  Predicted label\n\t\t\t\t\tNeutral\tagainst\tfor"
     print "True label\tNeutral\t", n_as_n, "     ", n_as_a, "     ", n_as_f
     print "True label\tAgainst\t", a_as_n, "     ", a_tp, "     ", a_as_f
     print "True label\tFor\t\t", f_as_n, "     ", f_as_a, "     ", f_tp, "\n--------"
@@ -437,6 +450,9 @@ def printPredsToFile_PosVNeg(infile, outfile, res_1, res_2):
     outf.close()
 
 
+
+
+
 if __name__ == '__main__':
 
     tweets_train, targets_dev, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN, 'windows-1252', 2)
@@ -445,6 +461,8 @@ if __name__ == '__main__':
 
     tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
     features_dev = extractFeaturesBOW(tweets_dev, features_final)
+
+    #features_train, labels_train, features_dev, labels_dev = extractFeaturesMulti(["bow"])#, "targetInTweet"])
 
     #train_classifiers_TopicVOpinion(features_train, labels_train, features_dev, labels_dev, "out.txt")
     train_classifier_3way(features_train, labels_train, features_dev, labels_dev, "out_bow_3way.txt", "false", "true")

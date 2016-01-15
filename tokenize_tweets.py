@@ -9,8 +9,9 @@ from token_pb2 import Token, Tokens
 from tweet_pb2 import Tweet, Tweets
 
 #FILE = '/home/isabelle/additionalTweetsStanceDetection.json'
-FILE = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/additionalTweetsStanceDetection_small.json'
-#FILE = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/stanceDetection.json'  # change to this file for later training
+#FILE = 'stanceDetection.json'
+#FILE = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/additionalTweetsStanceDetection_small.json'
+FILE = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/stanceDetection.json'
 #FILETRAIN = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trainingdata.txt'
 #FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata.txt'
 
@@ -164,7 +165,7 @@ def convertTweetsToVec(topic, numtoks='all'):
                     else:
                         norm_tweet.append('NULL')
 
-                print(norm_tweet)
+                #print(norm_tweet)
                 norm_tweets.append(norm_tweet)
                 vects.append(vect)
     else:

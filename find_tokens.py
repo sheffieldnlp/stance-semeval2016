@@ -10,6 +10,7 @@ import io
 
 #INPUT = '/home/isabelle/additionalTweetsStanceDetection.json'
 INPUT = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/stanceDetection.json'
+#INPUT = 'stanceDetection.json'
 #INPUT = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/additionalTweetsStanceDetection_small.json'
 #INPUT = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/downloaded_Donald_Trump.txt'
 OUTPUT = './tokensFinal'  # redownload this, changed on 15 January

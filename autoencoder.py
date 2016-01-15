@@ -144,7 +144,7 @@ def deep_test():
 
 
 # train autoencoder, save model
-def deep():
+def deep(modelname, layers):
     sess = tf.Session()
 
     #load and convert tweets
@@ -152,7 +152,7 @@ def deep():
 
     start_dim = tokens.__sizeof__() # 129887 tokens without singletons. Dimensionality of input. keep as big as possible, but throw singletons away.
     x = tf.placeholder("float", [None, start_dim])
-    autoencoder = create(x, [100])  # Dimensionality of the hidden layers. To start with, only use 1 hidden layer.
+    autoencoder = create(x, layers)  # Dimensionality of the hidden layers. To start with, only use 1 hidden layer.
     train_step = tf.train.AdamOptimizer(0.1).minimize(autoencoder['cost'])
 
     init = tf.initialize_all_variables()
@@ -208,7 +208,7 @@ def deep():
             print i, " decoded", decoded[sampnr]
             print i, " decoded bow", dec_tweet
 
-            save_path = saver.save(sess, "model2.ckpt")
+            save_path = saver.save(sess, modelname)
             print("Model saved in file: %s" % save_path)
 
 
@@ -303,7 +303,7 @@ def deep_test():
 
 
 if __name__ == '__main__':
-    deep()
+    deep("model2.ckpt", [100])
     #deep_test()
 
 

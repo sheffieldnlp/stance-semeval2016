@@ -86,7 +86,7 @@ def extractFeaturesAutoencoder(autoencodermodel, cross_features='false'):
 
 
 # extract features autoencoder plus n-gram bow
-def extractFeaturesMulti(automodel, features=["auto_false", "bow", "targetInTweet"]):
+def extractFeaturesMulti(features=["auto_false", "bow", "targetInTweet"], automodel="model.ckpt"):
     tweets_train, targets_train, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN, 'windows-1252', 2)
     features_final = extractFeatureVocab(tweets_train)
     features_train = extractFeaturesBOW(tweets_train, features_final)
@@ -107,12 +107,16 @@ def extractFeaturesMulti(automodel, features=["auto_false", "bow", "targetInTwee
         targetInTweetDev = extractFeaturesCrossTweetTarget(tweets_dev, targets_dev)
 
     # combine features
-    for i, featvec in enumerate(features_train_auto):
-        features_train[i] = np.append(features_train[i], featvec)  # numpy append works as extend works for python lists
-        features_train[i] = np.append(features_train[i], targetInTweetTrain[i])  # numpy append works as extend works for python lists
-    for i, featvec in enumerate(features_dev_auto):
-        features_dev[i] = np.append(features_dev[i], featvec)
-        features_dev[i] = np.append(features_dev[i], targetInTweetDev[i])
+    for i, featvec in enumerate(features_train):#features_train_auto)
+        if features.__contains__("auto_added") or features.__contains__("auto_true") or features.__contains__("auto_false"):
+            features_train[i] = np.append(features_train[i], features_train_auto[i])  # numpy append works as extend works for python lists
+        if features.__contains__("targetInTweet"):
+            features_train[i] = np.append(features_train[i], targetInTweetTrain[i])  # numpy append works as extend works for python lists
+    for i, featvec in enumerate(features_train):#features_dev_auto):
+        if features.__contains__("auto_added") or features.__contains__("auto_true") or features.__contains__("auto_false"):
+            features_dev[i] = np.append(features_dev[i], features_dev_auto[i])
+        if features.__contains__("targetInTweet"):
+            features_dev[i] = np.append(features_dev[i], targetInTweetDev[i])
 
     return features_train, labels_train, features_dev, labels_dev
 
@@ -134,9 +138,47 @@ def extractFeaturesCrossTweetTarget(tweets, targets):
     return ret
 
 
+# extract features autoencoder plus n-gram bow
+def extractFeaturesMulti(features=["auto_false", "bow", "targetInTweet"], automodel="model.ckpt"):
+    tweets_train, targets_train, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN, 'windows-1252', 2)
+    features_final = extractFeatureVocab(tweets_train)
+    features_train = extractFeaturesBOW(tweets_train, features_final)
+    tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
+    features_dev = extractFeaturesBOW(tweets_dev, features_final)
+
+    if features.__contains__("auto_added"):
+        features_train_auto, labels_train, features_dev_auto, labels_dev = extractFeaturesAutoencoder(automodel, "added")
+    elif features.__contains__("auto_true"):
+        features_train_auto, labels_train, features_dev_auto, labels_dev = extractFeaturesAutoencoder(automodel, "true")
+    elif features.__contains__("auto_false"):
+        features_train_auto, labels_train, features_dev_auto, labels_dev = extractFeaturesAutoencoder(automodel, "false")
+
+    targetInTweetTrain = []
+    targetInTweetDev = []
+    if features.__contains__("targetInTweet"):
+        targetInTweetTrain = extractFeaturesCrossTweetTarget(tweets_train, targets_train)
+        targetInTweetDev = extractFeaturesCrossTweetTarget(tweets_dev, targets_dev)
+
+    # combine features
+    for i, featvec in enumerate(features_train):#features_train_auto)
+        if features.__contains__("auto_added") or features.__contains__("auto_true") or features.__contains__("auto_false"):
+            features_train[i] = np.append(features_train[i], features_train_auto[i])  # numpy append works as extend works for python lists
+        if features.__contains__("targetInTweet"):
+            features_train[i] = np.append(features_train[i], targetInTweetTrain[i])  # numpy append works as extend works for python lists
+    for i, featvec in enumerate(features_dev):#features_dev_auto):
+        if features.__contains__("auto_added") or features.__contains__("auto_true") or features.__contains__("auto_false"):
+            features_dev[i] = np.append(features_dev[i], features_dev_auto[i])
+        if features.__contains__("targetInTweet"):
+            features_dev[i] = np.append(features_dev[i], targetInTweetDev[i])
+
+    return features_train, labels_train, features_dev, labels_dev
+
+
 if __name__ == '__main__':
     #features_train, labels_train, features_dev, labels_dev = extractFeaturesAutoencoder("model.ckpt", "false")
-    features_train, labels_train, features_dev, labels_dev = extractFeaturesMulti("model.ckpt", ["auto_added", "bow", "targetInTweet"])
+    #features_train, labels_train, features_dev, labels_dev = extractFeaturesMulti(["auto_added", "bow", "targetInTweet"], "model.ckpt", )
+    features_train, labels_train, features_dev, labels_dev = extractFeaturesMulti(["auto_added", "bow", "targetInTweet"])
+
 
     #train_classifiers(features_train, labels_train, features_dev, labels_dev, "out_auto_added.txt") # train and predict two 2-way models
     train_classifier_3way(features_train, labels_train, features_dev, labels_dev, "out_auto_bow.txt", "false", "true") # train and predict one 3-way model
