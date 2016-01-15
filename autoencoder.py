@@ -143,22 +143,34 @@ def deep_test():
 def deep():
     sess = tf.Session()
 
-    start_dim = 50000  # the starting example was 5. full: 128530. Dimensionality of input. keep as big as possible, but throw singletons away.
+    #load and convert tweets
+    tokens,vects,norm_tweets = convertTweetsToVec('all')
+
+    start_dim = tokens.__sizeof__() #50000  # small: 1043536, full: 25166072 (?). Dimensionality of input. keep as big as possible, but throw singletons away.
     x = tf.placeholder("float", [None, start_dim])
-    autoencoder = create(x, [500])  # Dimensionality of the hidden layers. To start with, only use 1 hidden layer.
+    autoencoder = create(x, [100])  # Dimensionality of the hidden layers. To start with, only use 1 hidden layer.
     init = tf.initialize_all_variables()
     sess.run(init)
     train_step = tf.train.GradientDescentOptimizer(0.5).minimize(autoencoder['cost'])
 
-    tokens,vects,norm_tweets = convertTweetsToVec('all', start_dim) #load and convert unlabelled tweets
+
+    tweets_train, targets_train, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN)
+    tweets_trump, targets_trump, labels_trump = readTweetsOfficial(tokenize_tweets.FILETRUMP, 'utf-8', 1)
+    vects_train,norm_tweets_train = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_train)
+    vects_trump,norm_tweets_trump = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_trump)
+    for v in vects_train:
+        vects.append(v)
+    for v in vects_trump:
+        vects_train.append(v)
 
     tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV)
-
     vects_dev,norm_tweets_dev = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_dev)
     devbatch = []
     for v in vects_dev:
         devbatch.append(v)
 
+
+    # start training
     sampnr = 12  # which ones of the dev samples to display for sanity check
     print "\noriginal", labels_dev[sampnr], norm_tweets_dev[sampnr]    # print "\noriginal", norm_tweets[2]
     print vects[sampnr]
@@ -191,7 +203,7 @@ def deep():
             print i, " decoded", decoded[sampnr]
             print i, " decoded bow", dec_tweet
 
-            save_path = saver.save(sess, "model.ckpt")
+            save_path = saver.save(sess, "model2.ckpt")
             print("Model saved in file: %s" % save_path)
 
 
@@ -286,7 +298,7 @@ def deep_test():
 
 
 if __name__ == '__main__':
-    #deep()
-    deep_test()
+    deep()
+    #deep_test()
 
 

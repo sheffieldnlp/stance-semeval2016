@@ -7,6 +7,14 @@ If downloaded, save them in main folder. A pre-trained autoencoder model is also
 
 Official stance data is available via https://www.dropbox.com/sh/o8789zsmpvy7bu3/AABRja7NDVPtbjSa-y3GH0jAa?dl=0  and collected unlabelled tweets are stored in https://www.dropbox.com/sh/7i2zdnet49yb1sh/AAA_AzN64JLuNlfU5pt69W8ia?dl=0
 
+Current data sizes:
+
+- Unlabelled tweets: 395212
+- Donald Trump tweets: 16692  
+- Official labelled tweets: 44389  
+- Overall 25166072 tokens
+
+
 bow_baseline.py runs a bow baseline, extracting 1-gram and 2-gram bow features, with end-to-end evaluation using the official eval script.
 
 The method deep() in autoencoder.py trains the autoencoder.

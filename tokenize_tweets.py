@@ -10,7 +10,7 @@ from tweet_pb2 import Tweet, Tweets
 
 #FILE = '/home/isabelle/additionalTweetsStanceDetection.json'
 FILE = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/additionalTweetsStanceDetection_small.json'
-#FILE = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/additionalTweetsStanceDetection.json'
+#FILE = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/stanceDetection.json'  # change to this file for later training
 #FILETRAIN = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trainingdata.txt'
 #FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata.txt'
 
@@ -81,11 +81,17 @@ def readTweetsOfficial(tweetfile, encoding='windows-1252', tab=2, topic="all"):
         if topic == "all":
             tweets.append(line.split("\t")[tab])
             targets.append(line.split("\t")[tab-1])
-            labels.append(line.split("\t")[tab+1].strip("\n"))
+            if tab > 1:
+                labels.append(line.split("\t")[tab+1].strip("\n"))
+            else:
+                labels.append("UNKNOWN")
         elif topic in line.split("\t")[tab-1].lower():
             tweets.append(line.split("\t")[tab])
             targets.append(line.split("\t")[tab-1])
-            labels.append(line.split("\t")[tab+1].strip("\n"))
+            if tab > 1:
+                labels.append(line.split("\t")[tab+1].strip("\n"))
+            else:
+                labels.append("UNKNOWN")
 
     return tweets,targets,labels
 
@@ -123,11 +129,15 @@ def getTokens(numtoks):
     tokens_sub = tokens[:numtoks]
     return tokens_sub
 
-def convertTweetsToVec(topic, numtoks):
+def convertTweetsToVec(topic, numtoks='all'):
 
     tokens,tweets_on_topic,tweets = readToks()
 
-    tokens_sub = tokens[:numtoks]
+    if numtoks != "all":
+        tokens_sub = tokens[:numtoks]
+    else:
+        tokens_sub = tokens
+        numtoks = tokens.__sizeof__()
 
     tokenized_tweets = Tweets()
     vects = []

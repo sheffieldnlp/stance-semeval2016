@@ -136,7 +136,7 @@ def extractFeaturesCrossTweetTarget(tweets, targets):
 
 if __name__ == '__main__':
     #features_train, labels_train, features_dev, labels_dev = extractFeaturesAutoencoder("model.ckpt", "false")
-    features_train, labels_train, features_dev, labels_dev = extractFeaturesMulti("model.ckpt")
+    features_train, labels_train, features_dev, labels_dev = extractFeaturesMulti("model.ckpt", ["auto_added", "bow", "targetInTweet"])
 
     #train_classifiers(features_train, labels_train, features_dev, labels_dev, "out_auto_added.txt") # train and predict two 2-way models
     train_classifier_3way(features_train, labels_train, features_dev, labels_dev, "out_auto_bow.txt", "false", "true") # train and predict one 3-way model
