@@ -8,18 +8,23 @@ from twokenize_wrapper import tokenize
 from token_pb2 import Token, Tokens
 from tweet_pb2 import Tweet, Tweets
 
-#FILE = '/home/isabelle/additionalTweetsStanceDetection.json'
+FILE = 'data/collected/stanceDetection.json'
 #FILE = 'stanceDetection.json'
+#FILE = 'data/collected/additionalTweetsStanceDetection_small.json'
 #FILE = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/additionalTweetsStanceDetection_small.json'
-FILE = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/stanceDetection.json'
 #FILETRAIN = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trainingdata.txt'
 #FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata.txt'
 
 # the ones with "_new" with Hillary Clinton for testing and all other topics for training to test how well our method works for unseen target scenario
-FILETRAIN = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trainingdata_new.txt'
-FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_new.txt'
-FILEDEV2 = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_dev2.txt'
-FILETRUMP = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/downloaded_Donald_Trump.txt'
+#FILETRAIN = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trainingdata_new.txt'
+#FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_new.txt'
+#FILEDEV2 = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_dev2.txt'
+#FILETRUMP = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/downloaded_Donald_Trump.txt'
+
+FILETRAIN = 'data/semeval/semeval2016-task6-trainingdata_new.txt'
+FILEDEV = 'data/semeval/semeval2016-task6-trialdata_new.txt'
+FILEDEV2 = 'data/semeval/semeval2016-task6-trialdata_dev2.txt'
+FILETRUMP = 'data/semeval/downloaded_Donald_Trump.txt'
 
 
 TOKENS = './tokensFinal'
@@ -49,13 +54,13 @@ def readToks():
     for line in open(FILE, 'r'):
         tweets.append(json.loads(line))
 
-    tweets_on_topic = defaultdict(list)
-    for topic in TOPICS:
-        for index, tweet in enumerate(tweets):
-            for keyword in KEYWORDS[topic]:
-                if keyword in tweet['text'].lower():
-                    tweets_on_topic[topic].append(index)
-                    break
+    #tweets_on_topic = defaultdict(list)
+    #for topic in TOPICS:
+    #    for index, tweet in enumerate(tweets):
+    #        for keyword in KEYWORDS[topic]:
+    #            if keyword in tweet['text'].lower():
+    #                tweets_on_topic[topic].append(index)
+    #                break
 
     tokens_pb = Tokens()
     with open(TOKENS, "rb") as f:
@@ -68,7 +73,7 @@ def readToks():
         tokens.append(token_pb.token)
 
     print "Reading counts for ", str(len(tokens)), "tokens"
-    return tokens,tweets_on_topic,tweets
+    return tokens,tweets,tweets
 
 
 # read tweets from official files. Change later for unlabelled tweets. Topic=="all" is for all topics
@@ -130,8 +135,9 @@ def getTokens(numtoks):
     tokens_sub = tokens[:numtoks]
     return tokens_sub
 
-def convertTweetsToVec(topic, numtoks='all'):
+def convertTweetsToVec(topic="all", numtoks='all'):
 
+    print "Reading tokens"
     tokens,tweets_on_topic,tweets = readToks()
 
     if numtoks != "all":
@@ -144,30 +150,30 @@ def convertTweetsToVec(topic, numtoks='all'):
     vects = []
     norm_tweets = []
 
+    print "Converting JSON tweets"
     if topic=='all':
-        for topic in TOPICS:
-            for index in tweets_on_topic[topic]:
+        #for topic in TOPICS:
+        for tweet in tweets:
 
-                tweet = tweets[index]
-                vect = np.zeros(numtoks)  # dimensionality. the most frequent tokens have a low index, then we can do a cutoff. original: 93988
-                norm_tweet = []
+            vect = np.zeros(numtoks, dtype=bool)  # dimensionality. the most frequent tokens have a low index, then we can do a cutoff. original: 93988
+            norm_tweet = []
 
-                tokenized = tokenized_tweets.tweets.add()
-                tokenized.tweet = tweet['text']
-                for token in tokenize(tweet['text']):
-                    try:
-                        index = tokens_sub.index(token)
-                    except ValueError:
-                        index = -1
-                    if index > -1:
-                        vect[index] = 1
-                        norm_tweet.append(token)
-                    else:
-                        norm_tweet.append('NULL')
+            tokenized = tokenized_tweets.tweets.add()
+            tokenized.tweet = tweet['text']
+            for token in tokenize(tweet['text']):
+                try:
+                    index = tokens_sub.index(token)
+                except ValueError:
+                    index = -1
+                if index > -1:
+                    vect[index] = 1
+                    norm_tweet.append(token)
+                else:
+                    norm_tweet.append('NULL')
 
-                #print(norm_tweet)
-                norm_tweets.append(norm_tweet)
-                vects.append(vect)
+            #print(norm_tweet)
+            norm_tweets.append(norm_tweet)
+            vects.append(vect)
     else:
         for index in tweets_on_topic[topic]:
 
@@ -192,6 +198,7 @@ def convertTweetsToVec(topic, numtoks='all'):
             norm_tweets.append(norm_tweet)
             vects.append(vect)
 
+    print "Finished converting JSON tweets"
     return tokens_sub,vects,norm_tweets
 
 

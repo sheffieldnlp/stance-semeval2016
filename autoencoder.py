@@ -148,17 +148,20 @@ def deep(modelname, layers):
     sess = tf.Session()
 
     #load and convert tweets
-    tokens,vects,norm_tweets = convertTweetsToVec('all')
+    tokens,vects,norm_tweets = convertTweetsToVec('all', 50000)
 
-    start_dim = tokens.__sizeof__() # 129887 tokens without singletons. Dimensionality of input. keep as big as possible, but throw singletons away.
+    start_dim = 50000 #tokens.__sizeof__() # 129887 tokens without singletons. Dimensionality of input. keep as big as possible, but throw singletons away.
     x = tf.placeholder("float", [None, start_dim])
+    print "Creating autoencoder"
     autoencoder = create(x, layers)  # Dimensionality of the hidden layers. To start with, only use 1 hidden layer.
+    print "Creating Adam"
     train_step = tf.train.AdamOptimizer(0.1).minimize(autoencoder['cost'])
 
+    print "Initialising all variables"
     init = tf.initialize_all_variables()
     sess.run(init)
 
-
+    print "Converting official training data to vectors"
     tweets_train, targets_train, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN)
     tweets_trump, targets_trump, labels_trump = readTweetsOfficial(tokenize_tweets.FILETRUMP, 'utf-8', 1)
     vects_train,norm_tweets_train = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_train)
@@ -183,8 +186,11 @@ def deep(modelname, layers):
     # Add ops to save and restore all the variables.
     saver = tf.train.Saver()
 
+    cost = 1.0
     # do 1000 training steps
-    for i in range(2000):
+    #for i in range(2000):
+    i = 0
+    while cost > 0.01:
         # make a batch of 100:
         batch = []
         for j in range(100):
@@ -195,21 +201,23 @@ def deep(modelname, layers):
             decoded = sess.run(autoencoder['decoded'], feed_dict={x: devbatch})  # apply to dev
             encoded = sess.run(autoencoder['encoded'], feed_dict={x: devbatch})  # apply to dev
 
-            dec_tweet = []
-            n = 0
-            for r in decoded[sampnr]:  # display first result
-                if r > 0.1:
-                    dec_tweet.append(tokens[n])
-                n+=1
+            #dec_tweet = []
+            #n = 0
+            #for r in decoded[sampnr]:  # display first result
+            #    if r > 0.1:
+            #        dec_tweet.append(tokens[n])
+            #    n+=1
 
-            print i, " cost", sess.run(autoencoder['cost'], feed_dict={x: devbatch})
+            cost = sess.run(autoencoder['cost'], feed_dict={x: devbatch})
+            print i, " cost", cost
             #print i, " original", batch[0]
             #print i, " encoded", encoded[sampnr] # latent representation of input, feed this to SVM(s)
             print i, " decoded", decoded[sampnr]
-            print i, " decoded bow", dec_tweet
+            #print i, " decoded bow", dec_tweet
 
             save_path = saver.save(sess, modelname)
             print("Model saved in file: %s" % save_path)
+        i += 1
 
 
 def deep_test():
@@ -303,7 +311,7 @@ def deep_test():
 
 
 if __name__ == '__main__':
-    deep("model2.ckpt", [100])
+    deep("model2.ckpt", [1000, 300, 100])
     #deep_test()
 
 

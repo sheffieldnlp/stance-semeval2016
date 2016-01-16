@@ -255,10 +255,10 @@ def optimiseThresh(labels_dev, preds_prob, howmany):
             if macro_f1 > best_f1:
                 best_f1 = macro_f1
                 best_thres = perm
-                print "\n--------\nConfusion matrix for dev 1 and thresh ", best_thres, "\n--------\n\t\t\t\t\t  Predicted label\n\t\t\t\t\tNeutral\tagainst\tfor"
-                print "True label\tNeutral\t", n_as_n, "     ", n_as_a, "     ", n_as_f
+                print "\n--------\nConfusion matrix for dev 1 and thresh ", best_thres, "\n--------\n\t\t\t\t\t  Predicted label\n\t\t\t\t\tNon\tagainst\tfavour"
+                print "True label\tNon\t", n_as_n, "     ", n_as_a, "     ", n_as_f
                 print "True label\tAgainst\t", a_as_n, "     ", a_tp, "     ", a_as_f
-                print "True label\tFor\t\t", f_as_n, "     ", f_as_a, "     ", f_tp, "\n--------\n"
+                print "True label\tFavour\t\t", f_as_n, "     ", f_as_a, "     ", f_tp, "\n--------\n"
 
 
     print "Best thresh", best_thres
@@ -269,10 +269,10 @@ def optimiseThresh(labels_dev, preds_prob, howmany):
     retlabels, for_p, for_r, for_f1, against_p, against_r, against_f1, macro_f1, a_all, a_tp, a_as_f, a_as_n, f_all, f_tp, f_as_a, f_as_n, n_as_n, n_as_f, n_as_a = computeF1ForThresh(labels_dev[howmany:], preds_prob[howmany:], [0.0, 0.0, 0.0])
     print "F1 on dev 2", for_f1, against_f1, macro_f1
 
-    print "\n--------\nConfusion matrix for dev 2 without threshold tuning\n--------\n\t\t\t\t\t  Predicted label\n\t\t\t\t\tNeutral\tagainst\tfor"
-    print "True label\tNeutral\t", n_as_n, "     ", n_as_a, "     ", n_as_f
+    print "\n--------\nConfusion matrix for dev 2 without threshold tuning\n--------\n\t\t\t\t\t  Predicted label\n\t\t\t\t\tNon\tagainst\tfavour"
+    print "True label\tNon\t", n_as_n, "     ", n_as_a, "     ", n_as_f
     print "True label\tAgainst\t", a_as_n, "     ", a_tp, "     ", a_as_f
-    print "True label\tFor\t\t", f_as_n, "     ", f_as_a, "     ", f_tp, "\n--------\n"
+    print "True label\tFavour\t\t", f_as_n, "     ", f_as_a, "     ", f_tp, "\n--------\n"
 
 
     print "\nApplying final threshold"
@@ -280,10 +280,10 @@ def optimiseThresh(labels_dev, preds_prob, howmany):
     retlabels, for_p, for_r, for_f1, against_p, against_r, against_f1, macro_f1, a_all, a_tp, a_as_f, a_as_n, f_all, f_tp, f_as_a, f_as_n, n_as_n, n_as_f, n_as_a = computeF1ForThresh(labels_dev[howmany:], preds_prob[howmany:], best_thres)
     print "F1 on dev 2", for_f1, against_f1, macro_f1
 
-    print "\n--------\nConfusion matrix for dev 2 with best thresh\n--------\n\t\t\t\t\t  Predicted label\n\t\t\t\t\tNeutral\tagainst\tfor"
-    print "True label\tNeutral\t", n_as_n, "     ", n_as_a, "     ", n_as_f
+    print "\n--------\nConfusion matrix for dev 2 with best thresh\n--------\n\t\t\t\t\t  Predicted label\n\t\t\t\t\tNon\tagainst\tfavour"
+    print "True label\tNon\t", n_as_n, "     ", n_as_a, "     ", n_as_f
     print "True label\tAgainst\t", a_as_n, "     ", a_tp, "     ", a_as_f
-    print "True label\tFor\t\t", f_as_n, "     ", f_as_a, "     ", f_tp, "\n--------"
+    print "True label\tFavour\t\t", f_as_n, "     ", f_as_a, "     ", f_tp, "\n--------"
 
     return retlabels
 
@@ -465,8 +465,8 @@ if __name__ == '__main__':
     #features_train, labels_train, features_dev, labels_dev = extractFeaturesMulti(["bow"])#, "targetInTweet"])
 
     #train_classifiers_TopicVOpinion(features_train, labels_train, features_dev, labels_dev, "out.txt")
-    train_classifier_3way(features_train, labels_train, features_dev, labels_dev, "out_bow_3way.txt", "false", "true")
+    train_classifier_3way(features_train, labels_train, features_dev, labels_dev, "out_bow_3way.txt", "false", "false")
     #train_classifiers_PosVNeg(features_train, labels_train, features_dev, labels_dev, "out.txt")
 
 
-    eval(tokenize_tweets.FILEDEV2, "out_bow_3way.txt")
+    eval(tokenize_tweets.FILEDEV, "out_bow_3way.txt")
