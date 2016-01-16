@@ -6,6 +6,7 @@ import sys
 import itertools
 import io
 import tokenize_tweets
+from tokenize_tweets import readTweetsOfficial
 
 
 # train two classifiers, one for on topic/off topic, one for pos/neg
@@ -143,11 +144,11 @@ def train_classifier_3way(feats_train, labels_train, feats_dev, labels_dev, outf
     print("Training classifier...")
 
     model = LogisticRegression(penalty='l2')#, class_weight='balanced') #svm.SVC(class_weight={1: weight})
-    print "Label options", labels
     model.fit(feats_train, labels)
     preds = model.predict(feats_dev)
     preds_prob = model.predict_proba(feats_dev)
     coef = model.coef_
+    print "Label options", model.classes_
 
     print("Labels", labels_dev_tr)
     print("Predictions", preds)
@@ -167,10 +168,22 @@ def train_classifier_3way(feats_train, labels_train, feats_dev, labels_dev, outf
         printPredsToFileOneModel(tokenize_tweets.FILEDEV, outfilepath, preds)
 
     if debug == "true":
+
+        tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
+
     #    printProbsToFileOneModel(tokenize_tweets.FILEDEV, outfilepath.replace(".txt", ".debug.txt"), preds_prob, preds)
-        print "\nFeature analysis\nFeature\tAgainst\tFor\tNeutral"
+        print "\nFeature analysis\nFeature\tNone\tAgainst\tFavor"
         for i, feat in enumerate(feature_vocab):
             print feat, "\t", coef[0][i], "\t", coef[1][i], "\t", coef[2][i]
+
+        print "\nActive features on dev (Hillary Clinton) per instance, coef for None/Against/Favour"
+        for i, featvect in enumerate(feats_dev):
+            featprint = []
+            for ii, feat in enumerate(featvect):
+                featname = feature_vocab[ii]
+                if feat == 1.0:
+                    featprint.append("[" + featname + " " + str(coef[0][ii]) + " / " + str(coef[1][ii]) + " / " + str(coef[2][ii]) + "]")
+            print labels_dev[i], "\t", tweets_dev[i], "\tFeatures:\t" , "\t".join(featprint)
 
 
 
