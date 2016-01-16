@@ -95,3 +95,27 @@ FAVOR     precision: 0.0000 recall: 0.0000 f-score: 0.0000
 AGAINST   precision: 0.5712 recall: 1.0000 f-score: 0.7271
 ------------
 Macro F: 0.3636
+
+
+
+BOW 3-way + targetInTweet + emoticons
+
+============
+Results
+============
+FAVOR     precision: 0.3014 recall: 0.1880 f-score: 0.2316
+AGAINST   precision: 0.6246 recall: 0.4911 f-score: 0.5499
+------------
+Macro F: 0.3907
+
+
+
+BOW 3-way + targetInTwet + emoticons + affect
+
+============
+Results
+============
+FAVOR     precision: 0.3056 recall: 0.1880 f-score: 0.2328
+AGAINST   precision: 0.6238 recall: 0.4936 f-score: 0.5511
+------------
+Macro F: 0.3920

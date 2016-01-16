@@ -19,6 +19,7 @@ def getAffect(tweets):
 
     files = ["affect_fear.lst"]#["affect_anger.lst"]#, "affect_bad.lst", "affect_disgust.lst", "affect_fear.lst", "affect_joy.lst", "affect_sadness.lst",
              #"affect_surprise.lst", "swear_bad.lst", ]
+    vocab = ["fear"]
     vects = []
     gaz = []
 
@@ -40,4 +41,4 @@ def getAffect(tweets):
             vect[i] = affect
         vects.append(vect)
 
-    return vects
+    return vects, vocab

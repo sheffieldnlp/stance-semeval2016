@@ -8,23 +8,23 @@ from twokenize_wrapper import tokenize
 from token_pb2 import Token, Tokens
 from tweet_pb2 import Tweet, Tweets
 
-FILE = 'data/collected/stanceDetection.json'
+#FILE = 'data/collected/stanceDetection.json'
 #FILE = 'stanceDetection.json'
-#FILE = 'data/collected/additionalTweetsStanceDetection_small.json'
+FILE = 'data/collected/additionalTweetsStanceDetection_small.json'
 #FILE = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/additionalTweetsStanceDetection_small.json'
 #FILETRAIN = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trainingdata.txt'
 #FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata.txt'
 
 # the ones with "_new" with Hillary Clinton for testing and all other topics for training to test how well our method works for unseen target scenario
-#FILETRAIN = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trainingdata_new.txt'
-#FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_new.txt'
-#FILEDEV2 = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_dev2.txt'
-#FILETRUMP = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/downloaded_Donald_Trump.txt'
+FILETRAIN = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trainingdata_new.txt'
+FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_new.txt'
+FILEDEV2 = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_dev2.txt'
+FILETRUMP = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/downloaded_Donald_Trump.txt'
 
-FILETRAIN = 'data/semeval/semeval2016-task6-trainingdata_new.txt'
-FILEDEV = 'data/semeval/semeval2016-task6-trialdata_new.txt'
-FILEDEV2 = 'data/semeval/semeval2016-task6-trialdata_dev2.txt'
-FILETRUMP = 'data/semeval/downloaded_Donald_Trump.txt'
+#FILETRAIN = 'data/semeval/semeval2016-task6-trainingdata_new.txt'
+#FILEDEV = 'data/semeval/semeval2016-task6-trialdata_new.txt'
+#FILEDEV2 = 'data/semeval/semeval2016-task6-trialdata_dev2.txt'
+#FILETRUMP = 'data/semeval/downloaded_Donald_Trump.txt'
 
 
 TOKENS = './tokensFinal'
