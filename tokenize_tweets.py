@@ -9,22 +9,23 @@ from token_pb2 import Token, Tokens
 from tweet_pb2 import Tweet, Tweets
 
 #FILE = 'data/collected/stanceDetection.json'
-#FILE = 'stanceDetection.json'
-FILE = 'data/collected/additionalTweetsStanceDetection_small.json'
+FILE = 'stanceDetection.json'
+#FILE = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/stanceDetection.json'
+#FILE = 'data/collected/additionalTweetsStanceDetection_small.json'
 #FILE = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/additionalTweetsStanceDetection_small.json'
 #FILETRAIN = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trainingdata.txt'
 #FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata.txt'
 
 # the ones with "_new" with Hillary Clinton for testing and all other topics for training to test how well our method works for unseen target scenario
-FILETRAIN = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trainingdata_new.txt'
-FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_new.txt'
-FILEDEV2 = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_dev2.txt'
-FILETRUMP = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/downloaded_Donald_Trump.txt'
+#FILETRAIN = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trainingdata_new.txt'
+#FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_new.txt'
+#FILEDEV2 = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_dev2.txt'
+#FILETRUMP = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/downloaded_Donald_Trump.txt'
 
-#FILETRAIN = 'data/semeval/semeval2016-task6-trainingdata_new.txt'
-#FILEDEV = 'data/semeval/semeval2016-task6-trialdata_new.txt'
-#FILEDEV2 = 'data/semeval/semeval2016-task6-trialdata_dev2.txt'
-#FILETRUMP = 'data/semeval/downloaded_Donald_Trump.txt'
+FILETRAIN = 'data/semeval/semeval2016-task6-trainingdata_new.txt'
+FILEDEV = 'data/semeval/semeval2016-task6-trialdata_new.txt'
+FILEDEV2 = 'data/semeval/semeval2016-task6-trialdata_dev2.txt'
+FILETRUMP = 'data/semeval/downloaded_Donald_Trump.txt'
 
 
 TOKENS = './tokensFinal'
@@ -47,6 +48,14 @@ TOPICS_LONG = {'clinton': 'Hillary Clinton',
 
 
 TOPICS = KEYWORDS.keys()
+
+# read tweets from json, get numbers corresponding to tokens from file
+def readTweets():
+    tweets = []
+    for line in open(FILE, 'r'):
+        tweets.append(json.loads(line)['text'])
+    return tweets
+
 
 # read tweets from json, get numbers corresponding to tokens from file
 def readToks():
@@ -74,6 +83,23 @@ def readToks():
 
     print "Reading counts for ", str(len(tokens)), "tokens"
     return tokens,tweets,tweets
+
+
+# read tweets from json, get numbers corresponding to tokens from file
+def readToks2(dimension):
+
+    tokens_pb = Tokens()
+    with open(TOKENS, "rb") as f:
+        tokens_pb.ParseFromString(f.read())
+
+    tokens = []
+    for token_pb in tokens_pb.tokens:
+        if token_pb.count == 1:
+            break
+        tokens.append(token_pb.token)
+
+    print "Reading counts for ", str(len(tokens)), "tokens, taking most frequent ", dimension
+    return tokens[:dimension]
 
 
 # read tweets from official files. Change later for unlabelled tweets. Topic=="all" is for all topics

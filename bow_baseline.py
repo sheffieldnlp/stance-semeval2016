@@ -158,12 +158,12 @@ def extractFeaturesMulti(features=["auto_false", "bow", "targetInTweet", "emotic
 
 if __name__ == '__main__':
 
-    #features_train, labels_train, features_dev, labels_dev = extractFeaturesMulti(["auto_added", "bow", "targetInTweet"], "model.ckpt", )
-    features_train, labels_train, features_dev, labels_dev, feature_vocab = extractFeaturesMulti(["bow", "affect", "targetInTweet", "emoticons"])
+    # Options: "auto_false", "bow", "targetInTweet", "emoticons", "affect"
+    features_train, labels_train, features_dev, labels_dev, feature_vocab = extractFeaturesMulti(["auto_false", "targetInTweet", "bow"], "model_100_samp500.ckpt")
 
     #train_classifiers_TopicVOpinion(features_train, labels_train, features_dev, labels_dev, "out.txt")
-    train_classifier_3way(features_train, labels_train, features_dev, labels_dev, "out_bow_3way.txt", feature_vocab, "true", "false")
+    train_classifier_3way(features_train, labels_train, features_dev, labels_dev, "out_bate-af_3way.txt", feature_vocab, "false", "false")
     #train_classifiers_PosVNeg(features_train, labels_train, features_dev, labels_dev, "out.txt")
 
 
-    eval(tokenize_tweets.FILEDEV, "out_bow_3way.txt")
+    eval(tokenize_tweets.FILEDEV, "out_bate-af_3way.txt")

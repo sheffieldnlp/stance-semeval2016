@@ -6,7 +6,7 @@ import tensorflow as tf
 import numpy as np
 from training_eval import train_classifier_3way, eval
 import tokenize_tweets
-from tokenize_tweets import readTweetsOfficial, getTokens
+from tokenize_tweets import readTweetsOfficial, readToks2
 from autoencoder import create
 from twokenize_wrapper import tokenize
 
@@ -18,9 +18,9 @@ def extractFeaturesAutoencoder(autoencodermodel, cross_features='false'):
     start_dim = 50000
 
     x = tf.placeholder("float", [None, start_dim])
-    autoencoder = create(x, [500])  # Dimensionality of the hidden layers. To start with, only use 1 hidden layer.
+    autoencoder = create(x, [100])  # Dimensionality of the hidden layers. To start with, only use 1 hidden layer.
 
-    tokens = getTokens(start_dim)
+    tokens = readToks2(start_dim)
 
     # read dev data and convert to vectors
     tweets_train, targets_train, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN, 'windows-1252', 2)
