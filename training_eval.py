@@ -183,7 +183,7 @@ def train_classifier_3way(feats_train, labels_train, feats_dev, labels_dev, outf
                 featname = feature_vocab[ii]
                 if feat == 1.0:
                     featprint.append("[" + featname + " " + str(coef[0][ii]) + " / " + str(coef[1][ii]) + " / " + str(coef[2][ii]) + "]")
-            print labels_dev[i], "\t", tweets_dev[i], "\tFeatures:\t" , "\t".join(featprint)
+            #print labels_dev[i], "\t", tweets_dev[i], "\tFeatures:\t" , "\t".join(featprint)
 
 
 
