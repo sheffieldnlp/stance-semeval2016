@@ -13,18 +13,22 @@ from tokenize_tweets import readTweets
 import re
 from tokenize_tweets import KEYWORDS_LONG, KEYWORDS_NEUT, KEYWORDS_NEG, KEYWORDS_POS
 
-# prep data for word2vec
-def prepData(stopfilter, multiword):
-    print "Preparing data..."
 
-    ret = [] # list of lists
+def filterStopwords(tokenised_tweet):
     stops = stopwords.words("english")
     # extended with string.punctuation and rt and #semst, removing links further down
     stops.extend(["!", "\"", "#", "$", "%", "&", "\\", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":",
                   ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"])
     stops.extend(["rt", "#semst", "thats", "im", "'s", "...", "via"])
     stops = set(stops)
+    return [w for w in tokenised_tweet if (not w in stops and not w.startswith("http"))]
 
+
+# prep data for word2vec
+def prepData(stopfilter, multiword):
+    print "Preparing data..."
+
+    ret = [] # list of lists
 
     print "Reading data..."
     tweets = readTweets()
@@ -41,7 +45,7 @@ def prepData(stopfilter, multiword):
     for tweet in tweets:
         tokenised_tweet = tokenize(tweet.lower())
         if stopfilter:
-            words = [w for w in tokenised_tweet if (not w in stops and not w.startswith("http"))]
+            words = filterStopwords(tokenised_tweet)
             ret.append(words)
         else:
             ret.append(tokenised_tweet)
@@ -113,13 +117,6 @@ def extractW2VHashFeatures(w2vmodel, phrasemodel, mode, tweets, targets, labels)
 
     inv_topics = {v: k for k, v in tokenize_tweets.TOPICS_LONG.items()}
 
-    stops = stopwords.words("english")
-    # extended with string.punctuation and rt and #semst, removing links further down
-    stops.extend(["!", "\"", "#", "$", "%", "&", "\\", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":",
-                  ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"])
-    stops.extend(["rt", "#semst", "thats", "im", "'s", "...", "via"])
-    stops = set(stops)
-
 
 
     for i, tweet in enumerate(tweets):
@@ -134,7 +131,7 @@ def extractW2VHashFeatures(w2vmodel, phrasemodel, mode, tweets, targets, labels)
         negsim = w2vmodel.most_similar(neg, topn=60)
 
         tokenised_tweet = tokenize(tweet.lower())
-        words = [w for w in tokenised_tweet if (not w in stops and not w.startswith("http"))]
+        words = filterStopwords(tokenised_tweet)
 
         neutcnt, poscnt, negcnt, neutsimp, possimp, negsimp = 0, 0, 0, 0, 0, 0
 
@@ -187,12 +184,6 @@ def extractW2VFeaturesSim(w2vmodelfile, phrasemodel, tweets, targets, labels):
 
     inv_topics = {v: k for k, v in tokenize_tweets.TOPICS_LONG.items()}
 
-    stops = stopwords.words("english")
-    # extended with string.punctuation and rt and #semst, removing links further down
-    stops.extend(["!", "\"", "#", "$", "%", "&", "\\", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":",
-                  ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"])
-    stops.extend(["rt", "#semst", "thats", "im", "'s", "...", "via"])
-    stops = set(stops)
 
     for i, tweet in enumerate(tweets):
 
@@ -202,7 +193,7 @@ def extractW2VFeaturesSim(w2vmodelfile, phrasemodel, tweets, targets, labels):
         neg = KEYWORDS_NEG[inv_topics[targets[i]]]
 
         tokenised_tweet = tokenize(tweet.lower())
-        words = [w for w in tokenised_tweet if (not w in stops and not w.startswith("http"))]
+        words = filterStopwords(tokenised_tweet)
 
         neutcnt, poscnt, negcnt = 0, 0, 0
         neutsc, possc, negsc = 0.0, 0.0, 0.0

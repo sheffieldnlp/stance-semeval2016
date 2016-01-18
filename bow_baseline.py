@@ -14,11 +14,14 @@ from autoencoder_eval import extractFeaturesCrossTweetTarget, extractFeaturesAut
 from emoticons import analyze_tweet
 from word2vec_integration import extractW2VHashFeatures
 from gensim.models import word2vec, Phrases
+from word2vec_integration import filterStopwords
+
 
 # select features, compile feature vocab
-def extractFeatureVocab(tweets, keyword="all"):
-    tokens = Counter()
+def extractFeatureVocab(tweets, keyword="all", usephrasemodel=True, phrasemodel="phrase.model", anon_targets=False):
+    tokencounts = Counter()
     features_final = []
+    bigram = Phrases(phrasemodel)
     #tokens_topic = []
 
     #if keyword == "all":
@@ -30,39 +33,94 @@ def extractFeatureVocab(tweets, keyword="all"):
     #    tokens_topic = tokenize(tokenize_tweets.TOPICS_LONG[keyword])
 
     for tweet in tweets:
-        tokenised_tweet = tokenize(tweet)
-        for token in tokenised_tweet:  #unigram features
-            tokens[token] += 1
-            #for toktopic in tokens_topic:
-            #    tokens[toktopic + '|' + token] += 1
-        for l in zip(*[tokenised_tweet[i:] for i in range(2)]): #bigram features
-            tokens["_".join(l)] += 1
-            #for ltop in zip(*[tokens_topic[i:] for i in range(2)]):
-            #    tokens["_".join(ltop) + '|' + "_".join(l)] += 1
+        if usephrasemodel == False:
+            tokenised_tweet = tokenize(tweet)
+            for token in tokenised_tweet:  #unigram features
+                tokencounts[token] += 1
+                #for toktopic in tokens_topic:
+                #    tokencounts[toktopic + '|' + token] += 1
+            for l in zip(*[tokenised_tweet[i:] for i in range(2)]): #bigram features
+                tokencounts["_".join(l)] += 1
+                #for ltop in zip(*[tokens_topic[i:] for i in range(2)]):
+                #    tokencounts["_".join(ltop) + '|' + "_".join(l)] += 1
+        else:
+            # this includes unigrams and frequent bigrams
+            tokens = filterStopwords(tokenize(tweet.lower()))  #For Trump it's [1]
+            phrasetoks = bigram[tokens]
+            target_keywords = []
+            if anon_targets==True:
+                for top in tokenize_tweets.TOPICS:
+                    if top == "climate": # hack, this is the only non-list value
+                        target_keywords.append("climate")
+                    else:
+                        #for keyw in tokenize_tweets.KEYWORDS[top]:
+                        target_keywords.extend(tokenize_tweets.KEYWORDS[top])
 
-    for token, count in tokens.most_common():
+                phrasetoks_new = []
+                for token in phrasetoks:
+                    for keyw in target_keywords:
+                        if keyw in token:
+                            token = token.replace(keyw, "TARGET")
+                    phrasetoks_new.append(token)
+                phrasetoks = phrasetoks_new
+
+            for token in phrasetoks:
+                tokencounts[token] += 1
+            for l in zip(*[phrasetoks[i:] for i in range(2)]):
+                tokencounts["_".join(l)] += 1
+
+    for token, count in tokencounts.most_common():
         if count > 1:
             features_final.append(token)
-            # print token, count
+            #print token, count
 
     return features_final
 
 
 # extract BOW n-gram features, returns matrix of features
-def extractFeaturesBOW(tweets, features_final):
+def extractFeaturesBOW(tweets, targets, features_final, anon_targets=False, usephrasemodel=False, phrasemodel="phrase.model"):
+
+    bigram = Phrases(phrasemodel)
+
     matrix = [] # np.zeros((len(features_final), len(tweets)))
 
     for i, tweet in enumerate(tweets):
         vect = np.zeros((len(features_final)))
-        tokenised_tweet = tokenize(tweet)
-        for token in tokenised_tweet:
-            insertIntoVect(features_final, vect, token)
-            #for toktopic in tokens_topic:
-            #    insertIntoVect(features_final, vect, toktopic + '|' + token)
-        for l in zip(*[tokenised_tweet[i:] for i in range(2)]):
-            insertIntoVect(features_final, vect, "_".join(l))
-            #for ltop in zip(*[tokens_topic[i:] for i in range(2)]):
-            #    insertIntoVect(features_final, vect, "_".join(ltop) + '|' + "_".join(l))
+        if usephrasemodel == False:
+            tokenised_tweet = tokenize(tweet)
+            for token in tokenised_tweet:
+                insertIntoVect(features_final, vect, token)
+                #for toktopic in tokens_topic:
+                #    insertIntoVect(features_final, vect, toktopic + '|' + token)
+            for l in zip(*[tokenised_tweet[i:] for i in range(2)]):
+                insertIntoVect(features_final, vect, "_".join(l))
+                #for ltop in zip(*[tokens_topic[i:] for i in range(2)]):
+                #    insertIntoVect(features_final, vect, "_".join(ltop) + '|' + "_".join(l))
+        else:
+            inv_topics = {v: k for k, v in tokenize_tweets.TOPICS_LONG.items()}
+            target_keywords = tokenize_tweets.KEYWORDS.get(inv_topics.get(targets[i]))
+
+            tokens = filterStopwords(tokenize(tweet.lower()))  #For Trump it's [1]
+            phrasetoks = bigram[tokens]
+
+
+            if anon_targets==True:
+                phrasetoks_new = []
+                for token in phrasetoks:
+                    if target_keywords == "climate":
+                        if target_keywords in token:
+                            token = token.replace(keyw, "TARGET")
+                    else:
+                        for keyw in target_keywords:
+                            if keyw in token:
+                                token = token.replace(keyw, "TARGET")
+                    phrasetoks_new.append(token)
+                phrasetoks = phrasetoks_new
+
+            for token in phrasetoks:
+                insertIntoVect(features_final, vect, token)
+            for l in zip(*[phrasetoks[i:] for i in range(2)]):
+                insertIntoVect(features_final, vect, "_".join(l))
 
         matrix.append(vect)
         #print " ".join(str(v) for v in vect), "\n"
@@ -100,7 +158,7 @@ def extractEmoticons(tweets):
 
 
 # extract features autoencoder plus n-gram bow
-def extractFeaturesMulti(features=["auto_false", "bow", "targetInTweet", "emoticons", "affect", "w2v"]
+def extractFeaturesMulti(features=["auto_false", "bow", "targetInTweet", "emoticons", "affect", "w2v", "bow_phrase"]
         , automodel="model.ckpt", w2vmodel="skip_nostop_multi_300features_10minwords_10context", phrasemodel="phrase.model"):
     tweets_train, targets_train, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN, 'windows-1252', 2)
     tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
@@ -108,12 +166,23 @@ def extractFeaturesMulti(features=["auto_false", "bow", "targetInTweet", "emotic
 
     if features.__contains__("bow"):
         features_final = extractFeatureVocab(tweets_train)
-        features_train = extractFeaturesBOW(tweets_train, features_final)
-        features_dev = extractFeaturesBOW(tweets_dev, features_final)
+        features_train = extractFeaturesBOW(tweets_train, targets_train, features_final)
+        features_dev = extractFeaturesBOW(tweets_dev, targets_dev, features_final)
     elif features.__contains__("targetInTweet"):
         features_train = extractFeaturesCrossTweetTarget(tweets_train, targets_train)
         features_dev = extractFeaturesCrossTweetTarget(tweets_dev, targets_dev)
         features_final.append("targetInTweet")
+
+    if features.__contains__("bow_phrase") or features.__contains__("bow_phrase_anon"):
+        if features.__contains__("bow_phrase"):
+            features_vocab = extractFeatureVocab(tweets_train, usephrasemodel=True)
+            features_train_phrbow = extractFeaturesBOW(tweets_train, targets_train, features_vocab, usephrasemodel=True)
+            features_dev_phrbow = extractFeaturesBOW(tweets_dev, targets_dev, features_vocab, usephrasemodel=True)
+        elif features.__contains__("bow_phrase_anon"):
+            features_vocab = extractFeatureVocab(tweets_train, usephrasemodel=True, anon_targets=True)
+            features_train_phrbow = extractFeaturesBOW(tweets_train, targets_train, features_vocab, usephrasemodel=True, anon_targets=True)
+            features_dev_phrbow = extractFeaturesBOW(tweets_dev, targets_dev, features_vocab, usephrasemodel=True, anon_targets=True)
+        features_final.extend(features_vocab)
 
     if features.__contains__("auto_added"):
         features_train_auto, labels_train, features_dev_auto, labels_dev = extractFeaturesAutoencoder(automodel, "added")
@@ -156,6 +225,8 @@ def extractFeaturesMulti(features=["auto_false", "bow", "targetInTweet", "emotic
             features_train[i] = np.append(features_train[i], features_train_auto[i])  # numpy append works as extend works for python lists
         if features.__contains__("targetInTweet") and not features.__contains__("bow"):
             features_train[i] = np.append(features_train[i], targetInTweetTrain[i])
+        if features.__contains__("bow_phrase") or features.__contains__("bow_phrase_anon"):
+            features_train[i] = np.append(features_train[i], features_train_phrbow[i])
         if features.__contains__("emoticons"):
             features_train[i] = np.append(features_train[i], emoticons_train[i])
         if features.__contains__("affect"):
@@ -167,6 +238,8 @@ def extractFeaturesMulti(features=["auto_false", "bow", "targetInTweet", "emotic
             features_dev[i] = np.append(features_dev[i], features_dev_auto[i])
         if features.__contains__("targetInTweet") and not features.__contains__("bow"):
             features_dev[i] = np.append(features_dev[i], targetInTweetDev[i])
+        if features.__contains__("bow_phrase") or features.__contains__("bow_phrase_anon"):
+            features_dev[i] = np.append(features_dev[i], features_dev_phrbow[i])
         if features.__contains__("emoticons"):
             features_dev[i] = np.append(features_dev[i], emoticons_dev[i])
         if features.__contains__("affect"):
@@ -183,7 +256,7 @@ def extractFeaturesMulti(features=["auto_false", "bow", "targetInTweet", "emotic
 if __name__ == '__main__':
 
     # Options: "auto_false", "bow", "targetInTweet", "emoticons", "affect"
-    features_train, labels_train, features_dev, labels_dev, feature_vocab = extractFeaturesMulti(["auto_false", "targetInTweet", "hash"],
+    features_train, labels_train, features_dev, labels_dev, feature_vocab = extractFeaturesMulti(["targetInTweet", "bow_phrase_anon", "hash", "emoticons"],
         "model_100_samp500.ckpt")
 
     #train_classifiers_TopicVOpinion(features_train, labels_train, features_dev, labels_dev, "out.txt")
