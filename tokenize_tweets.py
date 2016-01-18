@@ -9,23 +9,23 @@ from token_pb2 import Token, Tokens
 from tweet_pb2 import Tweet, Tweets
 
 #FILE = 'data/collected/stanceDetection.json'
-FILE = 'stanceDetection.json'
-#FILE = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/stanceDetection.json'
+#FILE = 'stanceDetection.json'
+FILE = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/stanceDetection.json'
 #FILE = 'data/collected/additionalTweetsStanceDetection_small.json'
 #FILE = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/additionalTweetsStanceDetection_small.json'
 #FILETRAIN = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trainingdata.txt'
 #FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata.txt'
 
 # the ones with "_new" with Hillary Clinton for testing and all other topics for training to test how well our method works for unseen target scenario
-#FILETRAIN = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trainingdata_new.txt'
-#FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_new.txt'
-#FILEDEV2 = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_dev2.txt'
-#FILETRUMP = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/downloaded_Donald_Trump.txt'
+FILETRAIN = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trainingdata_new.txt'
+FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_new.txt'
+FILEDEV2 = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_dev2.txt'
+FILETRUMP = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/downloaded_Donald_Trump.txt'
 
-FILETRAIN = 'data/semeval/semeval2016-task6-trainingdata_new.txt'
-FILEDEV = 'data/semeval/semeval2016-task6-trialdata_new.txt'
-FILEDEV2 = 'data/semeval/semeval2016-task6-trialdata_dev2.txt'
-FILETRUMP = 'data/semeval/downloaded_Donald_Trump.txt'
+#FILETRAIN = 'data/semeval/semeval2016-task6-trainingdata_new.txt'
+#FILEDEV = 'data/semeval/semeval2016-task6-trialdata_new.txt'
+#FILEDEV2 = 'data/semeval/semeval2016-task6-trialdata_dev2.txt'
+#FILETRUMP = 'data/semeval/downloaded_Donald_Trump.txt'
 
 
 TOKENS = './tokensFinal'
@@ -45,6 +45,36 @@ TOPICS_LONG = {'clinton': 'Hillary Clinton',
             'abortion': 'Legalization of Abortion',
             'atheism': 'Atheism'
 }
+
+KEYWORDS_LONG = {'clinton': ['clinton', '#clinton', 'hillary_clinton', '#hillaryclinton', '#clinton2016', '#hillyes', '#readyforhillary', '#imwithher', '#imwithher_#hillary2016', '#hillno', '#makeamericagreatagain', '#trumpisdisqualifiedparty'],
+                'trump' : ['trump', '#trump', 'donald_trump', '#donald_trump', '#donaldtrump', '#trump2016', '@realdonaldtrump', '#trumpfacts', '#trumpisdisqualifiedparty', '#makeamericagreatagain'],
+                            'abortion' : ['abortion', '#abortion', '#prolife', '#prochoice', '#shoutyourabortion', '#plannedparenthood'],
+                'climate' : ['#climatechange', '#climate', '#climateaction', '#climatejustice', '#sustainability', 'global_warming', '#globalwarming', '#fraud', '#liberty'],
+                'feminism': ['#feminism', '#feminist', '#antifeminism', '#gamergate', '#feminazi', '#yesallwomen', '#womenempowerment'],
+                'atheism': ['atheism', '#atheism', "#atheist", '#christian', '#god', '#islam', '#teamjesus', '#freethinker', '#religionistheproblem', '#humanrights']}
+
+KEYWORDS_NEUT = {'clinton': '#hillaryclinton',
+                'trump' : '#donaldtrump',
+                'abortion' : '#abortion',
+                'climate': '#climatechange',
+                'feminism': '#feminism',
+                'atheism': '#atheism'}
+
+KEYWORDS_POS = {'clinton': '#hillyes',
+                'trump' : '#makeamericagreatagain',
+                'abortion' : '#prochoice',
+                'climate': '#climateaction',
+                'feminism': '#yesallwomen',
+                'atheism': '#religionistheproblem'}
+
+KEYWORDS_NEG = {'clinton': '#hillno',
+                'trump' : '#trumpisdisqualifiedparty',
+                'abortion' : '#prolife',
+                'climate': '#fraud',
+                'feminism': '#antifeminism',
+                'atheism': '#christian'}
+
+
 
 
 TOPICS = KEYWORDS.keys()

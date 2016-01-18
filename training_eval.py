@@ -1,6 +1,6 @@
 __author__ = 'Isabelle Augenstein'
 
-from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LogisticRegression, SGDClassifier
 import subprocess
 import sys
 import itertools
@@ -115,6 +115,51 @@ def train_classifiers_PosVNeg(feats_train, labels_train, feats_dev, labels_dev, 
     print("Predictions prob", preds_2_prob)
 
     printPredsToFile_TopicVOpinion(tokenize_tweets.FILEDEV, outfilepath, preds_1, preds_2)
+
+
+
+
+# train one three-way classifier with SGD. Allows to specify log loss and elastic net regularisation.
+def train_classifier_3waySGD(feats_train, labels_train, feats_dev, labels_dev, outfilepath, feature_vocab=[], debug='false', auto_thresh='false'):
+    labels = []  # -1 for NONE, 0 for AGAINST, 1 for FAVOR
+    labels_dev_tr = [] #transformed from "NONE" etc to -1,0,1
+
+    for i, lab in enumerate(labels_train):
+        if lab == 'NONE':
+            labels.append(-1)
+        elif lab == 'FAVOR':
+            labels.append(1)
+        elif lab == 'AGAINST':
+            labels.append(0)
+
+    for i, lab in enumerate(labels_dev):
+        if lab == 'NONE':
+            labels_dev_tr.append(-1)
+        elif lab == 'FAVOR':
+            labels_dev_tr.append(1)
+        elif lab == 'AGAINST':
+            labels_dev_tr.append(0)
+
+
+    print("Training classifier...")
+
+    model = SGDClassifier(loss='log', penalty='elasticnet')  # unfortunately this one doesn't have predict_proba() method debug/tuning
+    model.fit(feats_train, labels)
+    preds = model.predict(feats_dev)
+    coef = model.coef_
+    print "Label options", model.classes_
+
+    print("Labels", labels_dev_tr)
+    print("Predictions", preds)
+    print "Feat length ", feats_train[0].__len__()
+    #print "Features ", feature_vocab.__len__(), "\t", feature_vocab
+    #print "Weights "
+    #for co in coef:
+    #    print co.__len__(), "\t", co
+
+
+
+    printPredsToFileOneModel(tokenize_tweets.FILEDEV, outfilepath, preds)
 
 
 
