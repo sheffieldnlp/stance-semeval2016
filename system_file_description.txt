@@ -13,31 +13,39 @@ Kalina Bontcheva, k.bontcheva@sheffield.ac.uk
 
 
 4. System specifications:
+System for Task B
 
 4.1 Supervised or unsupervised
 Semi-supervised
 
 4.2 A description of the core approach (a few sentences is sufficient)
 
-- Preprocess the data (see 4.6), train a bag-of-word autoencoder with TensorFlow on all task data and unlabelled collected tweets (see 4.4). Apply the autoencoder to all labelled training tweets to get a fixed-length vector of higher-dimensional features. Add a few other features (see 4.3), such as “does target appear in tweet”. Use those features as input for a logistic regression model. Train the logistic regression model and apply it to the Task B (Donald Trump) tweets.
+- Preprocess the data (see 4.6)
+- Train a bag-of-word autoencoder with TensorFlow on all task data and unlabelled collected tweets (see 4.4) 
+- Apply the autoencoder to all labelled training tweets to get a fixed-length vector of higher-dimensional features
+- Add “does target appear in tweet” feature (see 4.3). Use features as input for a logistic regression model
+- Train the logistic regression model and apply it to the Task B test tweets
 
 
 4.3 Features used (e.g., n-grams, sentiment features, any kind of tweet meta-information, etc.). Please be specific, for example, the exact meta-information used.
 
--  Input layers, hidden layers, target in tweet, regularisation etc.
+- Autoencoder: the dimensionality of the input is 50000, it has one hidden layer of dimensionality 100, the output layer has the dimensionality 100. Dropout is added to the hidden layer. The autoencoder is trained with Adam, using the learning rate 0.1, for 2600 iterations. In each iteration, 500 training examples are selected randomly. The autoencoder is applied to the labelled tweets to get an 100-dimensional feature vector.
+- Logistic Regression: default scikit-learn model with L2 regularisation
+- targetInTweet binary feature: is the name of the target contained in the tweet.
 
 
 4.4 Resources used (e.g., manually or automatically created lexicons, labeled or unlabeled data, any additional set of tweets used (even if it is unlabeled), etc.). Please be specific, for example, if you used an additional set of tweets, you can specify the date range of the tweets, whether you used a resource publicly available or a resource that you created, and what search criteria were used to collect the tweets. 
 
-- Task data: all labelled task data and unlabelled task data
-- Additional tweets: 1 million tweets, collected between 25 November and 10 January using two keywords per target (list those)
+- Task data: all Task A labelled train + dev data and Task B unlabelled train + dev data
+- Additional tweets: 395212 tweets, tweeted between 18 November and 13 January, collected with Twitter Keyword Search API using two keywords per target (list those)
 - nltk stopword gazetteer
-- Manually created: Twitter-specific stopword gazetteer: "rt", "#semst", "thats", "im", "'s", "...", "via”, “http”
-- Manually created: one neutral, positive, negative hashtag per target
+- Manually created: Twitter-specific stopword gazetteer: "rt", "#semst", "thats", "im", "'s", "...", "via”, “http”, the first seven one have to be an exact token match, the last one has to match the beginning of a token
+- Manually created: For the targetInTweet feature, the following alternate keywords for targets are used in addition to the full target names: Hillary Clinton -> ’hillary', 'clinton’; Donald Trump -> ‘trump’; 'Climate Change is a Real Concern' -> ‘climate’; 'Feminist Movement' -> ‘feminist’, 'feminism’; 'Legalization of Abortion' -> ‘abortion’, ‘aborting’
 
 
 4.5 Tools used
 
+- twitter4j
 - TensorFlow
 - scikit-learn
 - gensim
