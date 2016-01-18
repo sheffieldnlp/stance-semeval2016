@@ -31,12 +31,37 @@ After training, model(s) can be trained with:
 The folder "output" contains output of different methods, _results.txt contains a summary of the results with explanation.
 
 
-Best results (with phrase autoencoder and targetInTweet, saved in out/out_best.txt) currently:
 
 ============
-Results				 
+Best results (with phrase autoencoder and targetInTweet, saved in out/out_best.txt) currently:				 
 ============
-FAVOR     precision: 0.3250 recall: 0.1111 f-score: 0.1656
-AGAINST   precision: 0.5709 recall: 0.8499 f-score: 0.6830
-------------
-Macro F: 0.4243
+
+- FAVOR     precision: 0.3250 recall: 0.1111 f-score: 0.1656
+- AGAINST   precision: 0.5709 recall: 0.8499 f-score: 0.6830
+- Macro F: 0.4243
+
+
+
+============
+Best results with bow (bow_phrase_anon + targetInTweet + hash + emoticons)			 
+============
+
+- FAVOR     precision: 0.2373 recall: 0.1197 f-score: 0.1591
+- AGAINST   precision: 0.6348 recall: 0.5573 f-score: 0.5935
+- Macro F: 0.3763)
+
+
+Feature options:
+
+- "auto_false": autoencoder, encode target
+- "auto_added": autoencoder, encode target + tweet
+- "auto_true" autoencoder, encode target + tweet, outer product between target and tweet vector
+- "bow": standard bow features
+- "bow_phrase": bow features, stopwords removed, preprocessed with phrase model
+- "targetInTweet": is target contained in tweet
+- "emoticons": emoticon classification
+- "affect": use affect gazetteer
+- "hash": neut/pos/neg hashtag detection, one hashtag per target
+- "w2v": start with neut/pos/neg hashtags for targets, find similar words/phrases with w2v. 
+
+W2V model and best autoencoder model are trained on all tweets, stopwords removed, preprocessed with phrase recognition model
