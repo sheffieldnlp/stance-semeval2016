@@ -4,24 +4,15 @@ __author__ = 'Isabelle Augenstein'
 
 from gensim.models import word2vec, Phrases
 #import pandas as pd
-from nltk.corpus import stopwords
 from tokenize_tweets import readTweetsOfficial
 from twokenize_wrapper import tokenize
 import tokenize_tweets
 import logging
 from tokenize_tweets import readTweets
-import re
-from tokenize_tweets import KEYWORDS_LONG, KEYWORDS_NEUT, KEYWORDS_NEG, KEYWORDS_POS
+from tokenize_tweets import KEYWORDS_LONG, KEYWORDS_NEUT, KEYWORDS_NEG, KEYWORDS_POS, filterStopwords
 
 
-def filterStopwords(tokenised_tweet):
-    stops = stopwords.words("english")
-    # extended with string.punctuation and rt and #semst, removing links further down
-    stops.extend(["!", "\"", "#", "$", "%", "&", "\\", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":",
-                  ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"])
-    stops.extend(["rt", "#semst", "thats", "im", "'s", "...", "via"])
-    stops = set(stops)
-    return [w for w in tokenised_tweet if (not w in stops and not w.startswith("http"))]
+
 
 
 # prep data for word2vec

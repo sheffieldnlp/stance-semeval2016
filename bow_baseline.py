@@ -14,7 +14,7 @@ from autoencoder_eval import extractFeaturesCrossTweetTarget, extractFeaturesAut
 from emoticons import analyze_tweet
 from word2vec_integration import extractW2VHashFeatures
 from gensim.models import word2vec, Phrases
-from word2vec_integration import filterStopwords
+from tokenize_tweets import filterStopwords
 
 
 # select features, compile feature vocab
@@ -185,11 +185,20 @@ def extractFeaturesMulti(features=["auto_false", "bow", "targetInTweet", "emotic
         features_final.extend(features_vocab)
 
     if features.__contains__("auto_added"):
-        features_train_auto, labels_train, features_dev_auto, labels_dev = extractFeaturesAutoencoder(automodel, "added")
+        useph=False
+        if "phrase" in automodel:
+            useph=True
+        features_train_auto, labels_train, features_dev_auto, labels_dev = extractFeaturesAutoencoder(automodel, "added", usephrasemodel=useph)
     elif features.__contains__("auto_true"):
-        features_train_auto, labels_train, features_dev_auto, labels_dev = extractFeaturesAutoencoder(automodel, "true")
+        useph=False
+        if "phrase" in automodel:
+            useph=True
+        features_train_auto, labels_train, features_dev_auto, labels_dev = extractFeaturesAutoencoder(automodel, "true", usephrasemodel=useph)
     elif features.__contains__("auto_false"):
-        features_train_auto, labels_train, features_dev_auto, labels_dev = extractFeaturesAutoencoder(automodel, "false")
+        useph=False
+        if "phrase" in automodel:
+            useph=True
+        features_train_auto, labels_train, features_dev_auto, labels_dev = extractFeaturesAutoencoder(automodel, "false", usephrasemodel=useph)
 
     targetInTweetTrain = []
     targetInTweetDev = []
@@ -255,15 +264,15 @@ def extractFeaturesMulti(features=["auto_false", "bow", "targetInTweet", "emotic
 
 if __name__ == '__main__':
 
-    # Options: "auto_false", "bow", "targetInTweet", "emoticons", "affect"
-    features_train, labels_train, features_dev, labels_dev, feature_vocab = extractFeaturesMulti(["targetInTweet", "bow_phrase_anon", "hash", "emoticons"],
-        "model_100_samp500.ckpt")
+    # Options: "auto_false", "bow", "targetInTweet", "emoticons", "affect", "w2v", "hash", "bow_phrase"
+    features_train, labels_train, features_dev, labels_dev, feature_vocab = extractFeaturesMulti(["targetInTweet", "auto_false"],
+        "model_phrase2_100_samp500_it2600.ckpt")#model_phrase_100_samp500_it2000.ckpt")#"model_100_samp500.ckpt")
 
     #train_classifiers_TopicVOpinion(features_train, labels_train, features_dev, labels_dev, "out.txt")
 
     # train_classifier_3waySGD is another option, for testing elastic net regularisation, doesn't work as well as just l2 though
-    train_classifier_3way(features_train, labels_train, features_dev, labels_dev, "out.txt", feature_vocab, "false", "false")
+    train_classifier_3way(features_train, labels_train, features_dev, labels_dev, "out_phraseauto2_target.txt", feature_vocab, "false", "false")
     #train_classifiers_PosVNeg(features_train, labels_train, features_dev, labels_dev, "out.txt")
 
 
-    eval(tokenize_tweets.FILEDEV, "out.txt")
+    eval(tokenize_tweets.FILEDEV, "out_phraseauto2_target.txt")

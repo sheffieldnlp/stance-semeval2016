@@ -12,7 +12,7 @@ from twokenize_wrapper import tokenize
 
 
 # extract autoencoder features based on trained autoencoder model
-def extractFeaturesAutoencoder(autoencodermodel, cross_features='false'):
+def extractFeaturesAutoencoder(autoencodermodel, cross_features='false', usephrasemodel=False):
     sess = tf.Session()
 
     start_dim = 50000
@@ -20,16 +20,16 @@ def extractFeaturesAutoencoder(autoencodermodel, cross_features='false'):
     x = tf.placeholder("float", [None, start_dim])
     autoencoder = create(x, [100])  # Dimensionality of the hidden layers. To start with, only use 1 hidden layer.
 
-    tokens = readToks2(start_dim)
+    tokens = readToks2(start_dim, usephrasemodel)
 
     # read dev data and convert to vectors
     tweets_train, targets_train, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN, 'windows-1252', 2)
-    vects_train,norm_tweets_train = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_train)
+    vects_train,norm_tweets_train = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_train, filtering=True)
     vects_train_targets, norm_train_targets = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, targets_train) # optimise runtime with more code later
 
     # read dev data and convert to vectors
     tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
-    vects_dev,norm_tweets_dev = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_dev)
+    vects_dev,norm_tweets_dev = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_dev, filtering=True)
     vects_dev_targets, norm_dev_targets = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, targets_dev)
 
 

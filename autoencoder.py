@@ -23,7 +23,7 @@ import numpy as np
 import math
 import random
 import tokenize_tweets
-from tokenize_tweets import convertTweetsToVec, readTweetsOfficial, getTokens
+from tokenize_tweets import convertTweetsToVec, readTweetsOfficial
 
 
 def create(x, layer_sizes):
@@ -144,11 +144,11 @@ def deep_test():
 
 
 # train autoencoder, save model
-def deep(modelname, layers):
+def deep(modelname, layers, phrasem=True):
     sess = tf.Session()
 
     #load and convert tweets
-    tokens,vects,norm_tweets = convertTweetsToVec('all', 50000)
+    tokens,vects,norm_tweets = convertTweetsToVec('all', 50000, phrasemodel=phrasem)
 
     start_dim = 50000 #tokens.__sizeof__() # 129887 tokens without singletons. Dimensionality of input. keep as big as possible, but throw singletons away.
     x = tf.placeholder("float", [None, start_dim])
@@ -164,15 +164,15 @@ def deep(modelname, layers):
     print "Converting official training data to vectors"
     tweets_train, targets_train, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN)
     tweets_trump, targets_trump, labels_trump = readTweetsOfficial(tokenize_tweets.FILETRUMP, 'utf-8', 1)
-    vects_train,norm_tweets_train = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_train)
-    vects_trump,norm_tweets_trump = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_trump)
+    vects_train,norm_tweets_train = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_train, filtering=True)
+    vects_trump,norm_tweets_trump = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_trump, filtering=True)
     for v in vects_train:
         vects.append(v)
     for v in vects_trump:
         vects.append(v)
 
     tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV)
-    vects_dev,norm_tweets_dev = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_dev)
+    vects_dev,norm_tweets_dev = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_dev, filtering=True)
     devbatch = []
     for v in vects_dev:
         devbatch.append(v)
@@ -268,7 +268,7 @@ def deep_test():
 
 
 if __name__ == '__main__':
-    deep("model2.ckpt", [1000, 300, 100])
+    deep("model2.ckpt", [100])
     #deep_test()
 
 

@@ -29,3 +29,14 @@ After training, model(s) can be trained with:
 - train_classifier() in bow_baseline.py for training one 3-way classifier (neutral vs. pos vs. neg). If parameter "debug" is set to "true", an additional file with probabilities is printed.
 
 The folder "output" contains output of different methods, _results.txt contains a summary of the results with explanation.
+
+
+Best results (with phrase autoencoder and targetInTweet, saved in out/out_best.txt) currently:
+
+============
+Results				 
+============
+FAVOR     precision: 0.3250 recall: 0.1111 f-score: 0.1656
+AGAINST   precision: 0.5709 recall: 0.8499 f-score: 0.6830
+------------
+Macro F: 0.4243

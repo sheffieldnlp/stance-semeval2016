@@ -143,7 +143,7 @@ def train_classifier_3waySGD(feats_train, labels_train, feats_dev, labels_dev, o
 
     print("Training classifier...")
 
-    model = SGDClassifier(loss='log', penalty='elasticnet')  # unfortunately this one doesn't have predict_proba() method debug/tuning
+    model = SGDClassifier(loss='log', penalty='l2')  # unfortunately this one doesn't have predict_proba() method debug/tuning
     model.fit(feats_train, labels)
     preds = model.predict(feats_dev)
     coef = model.coef_

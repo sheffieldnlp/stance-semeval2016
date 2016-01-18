@@ -1,0 +1,57 @@
+1. Team ID
+USFD
+
+
+2. Team affiliation
+Department of Computer Science, The University of Sheffield
+
+
+3. Contact information
+Isabelle Augenstein, i.augenstein@sheffield.ac.uk (corresponding author)
+Andreas Vlachos, a.vlachos@sheffield.ac.uk
+Kalina Bontcheva, k.bontcheva@sheffield.ac.uk
+
+
+4. System specifications:
+
+4.1 Supervised or unsupervised
+Semi-supervised
+
+4.2 A description of the core approach (a few sentences is sufficient)
+
+- Preprocess the data (see 4.6), train a bag-of-word autoencoder with TensorFlow on all task data and unlabelled collected tweets (see 4.4). Apply the autoencoder to all labelled training tweets to get a fixed-length vector of higher-dimensional features. Add a few other features (see 4.3), such as “does target appear in tweet”. Use those features as input for a logistic regression model. Train the logistic regression model and apply it to the Task B (Donald Trump) tweets.
+
+
+4.3 Features used (e.g., n-grams, sentiment features, any kind of tweet meta-information, etc.). Please be specific, for example, the exact meta-information used.
+
+-  Input layers, hidden layers, target in tweet, regularisation etc.
+
+
+4.4 Resources used (e.g., manually or automatically created lexicons, labeled or unlabeled data, any additional set of tweets used (even if it is unlabeled), etc.). Please be specific, for example, if you used an additional set of tweets, you can specify the date range of the tweets, whether you used a resource publicly available or a resource that you created, and what search criteria were used to collect the tweets. 
+
+- Task data: all labelled task data and unlabelled task data
+- Additional tweets: 1 million tweets, collected between 25 November and 10 January using two keywords per target (list those)
+- nltk stopword gazetteer
+- Manually created: Twitter-specific stopword gazetteer: "rt", "#semst", "thats", "im", "'s", "...", "via”, “http”
+- Manually created: one neutral, positive, negative hashtag per target
+
+
+4.5 Tools used
+
+- TensorFlow
+- scikit-learn
+- gensim
+- nltk
+- twokenize
+
+
+4.6 Significant data pre/post-processing
+
+- Twitter-based tokenisation with twokenize: https://github.com/leondz/twokenize
+- Normalise all tokens to lower case
+- Stopword filtering (nltk stopwords, Twitter stopwords)
+- Phrase detection with gensim: https://radimrehurek.com/gensim/models/phrases.html#module-gensim.models.phrases
+
+
+5. References (if applicable)
+- Phrase detection: Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg Corrado, and Jeffrey Dean. Distributed Representations of Words and Phrases and their Compositionality. In Proceedings of NIPS, 2013.

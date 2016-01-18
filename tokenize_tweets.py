@@ -7,9 +7,13 @@ import numpy as np
 from twokenize_wrapper import tokenize
 from token_pb2 import Token, Tokens
 from tweet_pb2 import Tweet, Tweets
+from gensim.models import Phrases
+from nltk.corpus import stopwords
+
 
 #FILE = 'data/collected/stanceDetection.json'
 #FILE = 'stanceDetection.json'
+
 FILE = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/stanceDetection.json'
 #FILE = 'data/collected/additionalTweetsStanceDetection_small.json'
 #FILE = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/additionalTweetsStanceDetection_small.json'
@@ -29,6 +33,7 @@ FILETRUMP = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-Stan
 
 
 TOKENS = './tokensFinal'
+TOKENSPHRASE = './tokensPhrases'
 
 KEYWORDS = {'clinton': ['hillary', 'clinton'],
             'trump' : ['donald trump', 'trump'],
@@ -72,7 +77,7 @@ KEYWORDS_NEG = {'clinton': '#hillno',
                 'abortion' : '#prolife',
                 'climate': '#fraud',
                 'feminism': '#antifeminism',
-                'atheism': '#christian'}
+                'atheism': '#teamjesus'} #christian
 
 
 
@@ -87,8 +92,18 @@ def readTweets():
     return tweets
 
 
+def filterStopwords(tokenised_tweet):
+    stops = stopwords.words("english")
+    # extended with string.punctuation and rt and #semst, removing links further down
+    stops.extend(["!", "\"", "#", "$", "%", "&", "\\", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":",
+                  ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"])
+    stops.extend(["rt", "#semst", "thats", "im", "'s", "...", "via"])
+    stops = set(stops)
+    return [w for w in tokenised_tweet if (not w in stops and not w.startswith("http"))]
+
+
 # read tweets from json, get numbers corresponding to tokens from file
-def readToks():
+def readToks(phrasemodel=False):
     tweets = []
     for line in open(FILE, 'r'):
         tweets.append(json.loads(line))
@@ -102,8 +117,12 @@ def readToks():
     #                break
 
     tokens_pb = Tokens()
-    with open(TOKENS, "rb") as f:
-        tokens_pb.ParseFromString(f.read())
+    if phrasemodel==False:
+        with open(TOKENS, "rb") as f:
+            tokens_pb.ParseFromString(f.read())
+    else:
+        with open(TOKENSPHRASE, "rb") as f:
+            tokens_pb.ParseFromString(f.read())
 
     tokens = []
     for token_pb in tokens_pb.tokens:
@@ -116,11 +135,15 @@ def readToks():
 
 
 # read tweets from json, get numbers corresponding to tokens from file
-def readToks2(dimension):
+def readToks2(dimension, usephrasemodel=False):
 
     tokens_pb = Tokens()
-    with open(TOKENS, "rb") as f:
-        tokens_pb.ParseFromString(f.read())
+    if usephrasemodel == False:
+        with open(TOKENS, "rb") as f:
+            tokens_pb.ParseFromString(f.read())
+    else:
+        with open(TOKENSPHRASE, "rb") as f:
+            tokens_pb.ParseFromString(f.read())
 
     tokens = []
     for token_pb in tokens_pb.tokens:
@@ -191,10 +214,13 @@ def getTokens(numtoks):
     tokens_sub = tokens[:numtoks]
     return tokens_sub
 
-def convertTweetsToVec(topic="all", numtoks='all'):
+def convertTweetsToVec(topic="all", numtoks='all', phrasemodel=False, phrasemodelpath="phrase.model"):
 
     print "Reading tokens"
-    tokens,tweets_on_topic,tweets = readToks()
+    tokens,tweets_on_topic,tweets = readToks(phrasemodel)
+
+    if phrasemodel==True:
+        bigram = Phrases(phrasemodelpath)
 
     if numtoks != "all":
         tokens_sub = tokens[:numtoks]
@@ -216,7 +242,12 @@ def convertTweetsToVec(topic="all", numtoks='all'):
 
             tokenized = tokenized_tweets.tweets.add()
             tokenized.tweet = tweet['text']
-            for token in tokenize(tweet['text']):
+            if phrasemodel == False:
+                tokenised_tweet = tokenize(tweet['text'])
+            else:
+                tokens = filterStopwords(tokenize(tweet['text'].lower()))
+                tokenised_tweet = bigram[tokens]
+            for token in tokenised_tweet:
                 try:
                     index = tokens_sub.index(token)
                 except ValueError:
@@ -230,7 +261,7 @@ def convertTweetsToVec(topic="all", numtoks='all'):
             #print(norm_tweet)
             norm_tweets.append(norm_tweet)
             vects.append(vect)
-    else:
+    else:  # discouraged, needs to be updated
         for index in tweets_on_topic[topic]:
 
             tweet = tweets[index]
@@ -259,12 +290,15 @@ def convertTweetsToVec(topic="all", numtoks='all'):
 
 
 
-def convertTweetsOfficialToVec(numtoks, tokens, tweets):
+def convertTweetsOfficialToVec(numtoks, tokens, tweets, filtering=False, phrasemodelpath="phrase.model"):
 
     tokens_sub = tokens[:numtoks]
     tokenized_tweets = Tweets()
     vects = []
     norm_tweets = []
+
+    if filtering==True:
+        bigram = Phrases(phrasemodelpath)
 
     for tweet in tweets:
 
@@ -273,7 +307,12 @@ def convertTweetsOfficialToVec(numtoks, tokens, tweets):
 
         tokenized = tokenized_tweets.tweets.add()
         tokenized.tweet = tweet
-        for token in tokenize(tweet):
+        if filtering == False:
+            tokenised_tweet = tokenize(tokenized.tweet)
+        else:
+            tokens = filterStopwords(tokenize(tokenized.tweet.lower()))
+            tokenised_tweet = bigram[tokens]
+        for token in tokenised_tweet:
             try:
                 index = tokens_sub.index(token)
             except ValueError:
