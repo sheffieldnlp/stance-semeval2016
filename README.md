@@ -30,29 +30,17 @@ After training, model(s) can be trained with:
 
 The folder "output" contains output of different methods, _results.txt contains a summary of the results with explanation.
 
-
-
-============
-Best results (with phrase autoencoder and targetInTweet, saved in out/out_best.txt) currently:				 
-============
-
+Best results for Hillary holdout (with phrase autoencoder and targetInTweet, saved in out/out_best.txt) currently:
 - FAVOR     precision: 0.3250 recall: 0.1111 f-score: 0.1656
 - AGAINST   precision: 0.5709 recall: 0.8499 f-score: 0.6830
 - Macro F: 0.4243
 
-
-
-============
-Best results with bow (bow_phrase_anon + targetInTweet + hash + emoticons)			 
-============
-
+Best results for Hillary holdout with bow (bow_phrase_anon + targetInTweet + hash + emoticons)
 - FAVOR     precision: 0.2373 recall: 0.1197 f-score: 0.1591
 - AGAINST   precision: 0.6348 recall: 0.5573 f-score: 0.5935
 - Macro F: 0.3763)
-
-
+ 
 Feature options:
-
 - "auto_false": autoencoder, encode target
 - "auto_added": autoencoder, encode target + tweet
 - "auto_true" autoencoder, encode target + tweet, outer product between target and tweet vector
