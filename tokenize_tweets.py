@@ -25,11 +25,14 @@ FILETRAIN = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-Stan
 FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_new.txt'
 FILEDEV2 = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_dev2.txt'
 FILETRUMP = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/downloaded_Donald_Trump.txt'
+FILETEST = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/SemEval2016-Task6-testdata/SemEval2016-Task6-subtaskB-testdata.txt'
 
+#FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_new.txt'
 #FILETRAIN = 'data/semeval/semeval2016-task6-trainingdata_new.txt'
 #FILEDEV = 'data/semeval/semeval2016-task6-trialdata_new.txt'
 #FILEDEV2 = 'data/semeval/semeval2016-task6-trialdata_dev2.txt'
 #FILETRUMP = 'data/semeval/downloaded_Donald_Trump.txt'
+#FILETEST = 'data/semeval/SemEval2016-Task6-subtaskB-testdata.txt'
 
 
 TOKENS = './tokensFinal'
@@ -52,7 +55,7 @@ TOPICS_LONG = {'clinton': 'Hillary Clinton',
 }
 
 KEYWORDS_LONG = {'clinton': ['clinton', '#clinton', 'hillary_clinton', '#hillaryclinton', '#clinton2016', '#hillyes', '#readyforhillary', '#imwithher', '#imwithher_#hillary2016', '#hillno', '#makeamericagreatagain', '#trumpisdisqualifiedparty'],
-                'trump' : ['trump', '#trump', 'donald_trump', '#donald_trump', '#donaldtrump', '#trump2016', '@realdonaldtrump', '#trumpfacts', '#trumpisdisqualifiedparty', '#makeamericagreatagain'],
+                'trump' : ['#bantrump', 'trump', '#trump', 'donald_trump', '#donald_trump', '#donaldtrump', '#trump2016', '@realdonaldtrump', '#trumpfacts', '#trumpisdisqualifiedparty', '#makeamericagreatagain'],
                             'abortion' : ['abortion', '#abortion', '#prolife', '#prochoice', '#shoutyourabortion', '#plannedparenthood'],
                 'climate' : ['#climatechange', '#climate', '#climateaction', '#climatejustice', '#sustainability', 'global_warming', '#globalwarming', '#fraud', '#liberty'],
                 'feminism': ['#feminism', '#feminist', '#antifeminism', '#gamergate', '#feminazi', '#yesallwomen', '#womenempowerment'],

@@ -43,7 +43,7 @@ def findTokensJson():
 
 
 # tokenise the collected tweets, plus all the other ones, process with phrases model, for training autoencoder
-def findTokensPhrases(phrasemodel="phrase.model"):
+def findTokensPhrases(phrasemodel="phrase.model", useDev=False):
     tokencnt = Counter()
     bigram = Phrases(phrasemodel)
 
@@ -62,6 +62,15 @@ def findTokensPhrases(phrasemodel="phrase.model"):
     for line in io.open(tokenize_tweets.FILETRAIN, encoding='windows-1252', mode='r'): #for the Trump file it's utf-8
         if line.startswith('ID\t'):
             continue
+        tokens = filterStopwords(tokenize(line.split("\t")[2].lower()))  #For Trump it's [1]
+        for token in bigram[tokens]:
+            supercntr += 1
+            tokencnt[token] += 1
+
+    if useDev == True:
+        for line in io.open(tokenize_tweets.FILEDEV, encoding='windows-1252', mode='r'): #for the Trump file it's utf-8
+            if line.startswith('ID\t'):
+                continue
         tokens = filterStopwords(tokenize(line.split("\t")[2].lower()))  #For Trump it's [1]
         for token in bigram[tokens]:
             supercntr += 1
@@ -164,4 +173,4 @@ if __name__ == '__main__':
     #findTokensOfficial() #this is to tokenise the labelled tweets, needs to be run first. OUTPUT = './tokensOfficialDev, ./tokensOfficialTrain, ./tokensOfficialTrump
 
     #findTokensAll()
-    findTokensPhrases()
+    findTokensPhrases(useDev=True)

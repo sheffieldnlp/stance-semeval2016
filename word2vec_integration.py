@@ -16,7 +16,7 @@ from tokenize_tweets import KEYWORDS_LONG, KEYWORDS_NEUT, KEYWORDS_NEG, KEYWORDS
 
 
 # prep data for word2vec
-def prepData(stopfilter, multiword):
+def prepData(stopfilter, multiword, useDev=False):
     print "Preparing data..."
 
     ret = [] # list of lists
@@ -30,6 +30,10 @@ def prepData(stopfilter, multiword):
     print str(len(tweets_train)), "\t" , str(len(tweets))
     tweets.extend(tweets_trump)
     print str(len(tweets_trump)), "\t" , str(len(tweets))
+    if useDev == True:
+        tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
+        tweets.extend(tweets_dev)
+        print str(len(tweets_dev)), "\t" , str(len(tweets))
 
 
     print "Tokenising..."
@@ -50,7 +54,7 @@ def prepData(stopfilter, multiword):
 def learnMultiword(ret):
     print "Learning multiword expressions"
     bigram = Phrases(ret)
-    bigram.save("phrase.model")
+    bigram.save("phrase_all.model")
 
     print "Sanity checking multiword expressions"
     test = "i like donald trump and hate muslims , go hillary , i like jesus , jesus , against , abortion "
@@ -88,7 +92,7 @@ def trainWord2VecModel(stopfilter, multiword, modelname):
 # some code for testing
 def applyWord2VecModel(modelname):
     model = word2vec.Word2Vec.load(modelname)
-    for key in KEYWORDS_LONG["atheism"]:
+    for key in KEYWORDS_LONG['trump']:
         print "\n", key
         for res in model.most_similar(key, topn=60):
             print res
@@ -99,6 +103,7 @@ def applyWord2VecModel(modelname):
     #for v in model.vocab:
     #    if "trump" in v.encode('utf-8') or "trump" in v.encode('utf-8'):
     #        print v.encode('utf-8')
+
 
 
 
@@ -217,8 +222,42 @@ def extractW2VFeaturesSim(w2vmodelfile, phrasemodel, tweets, targets, labels):
         print targets[i], "\t", labels[i], "\t", neutsc_tweet, "\t", possc_tweet, "\t", negsc_tweet
 
 
+
+# find most similar n words to given word
+def applyWord2VecMostSimilar(modelname, word="#abortion", top=20):
+    model = word2vec.Word2Vec.load(modelname)
+    print "Find ", top, " terms most similar to ", word, "..."
+    for res in model.most_similar(word, topn=top):
+        print res
+    print "\n"
+
+
+# determine similarity between words
+def applyWord2VecSimilarityBetweenWords(modelname, w1="trump", w2="muslims"):
+    model = word2vec.Word2Vec.load(modelname)
+    print "Computing similarity between ", w1, " and ", w2, "..."
+    print model.similarity(w1, w2), "\n"
+
+
+# search which words/phrases the model knows which contain a searchterm
+def applyWord2VecFindWord(modelname, searchterm="trump"):
+    model = word2vec.Word2Vec.load(modelname)
+    print "Finding terms containing ", searchterm, "..."
+    for v in model.vocab:
+        if searchterm in v.encode('utf-8'):
+            print v.encode('utf-8')
+    print "\n"
+
+
 if __name__ == '__main__':
-    tweets = prepData(True, True)
+    #tweets = prepData(True, True, True)
     #trainWord2VecModel(True, True, "skip_nostop_multi_300features_20minwords_10context")#("300features_40minwords_10context")
     #applyWord2VecModel("skip_nostop_multi_300features_10minwords_10context")
+
+
+    # Below: simple word2vec test for a trained model with phrases recognised as part of preprocessing
+
+    applyWord2VecMostSimilar("skip_nostop_multi_300features_10minwords_10context", "#abortion", 20)
+    applyWord2VecSimilarityBetweenWords("skip_nostop_multi_300features_10minwords_10context", "trump", "muslims")
+    applyWord2VecFindWord("skip_nostop_multi_300features_10minwords_10context", "trump")
 

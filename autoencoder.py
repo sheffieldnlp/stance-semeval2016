@@ -144,7 +144,7 @@ def deep_test():
 
 
 # train autoencoder, save model
-def deep(modelname, layers, phrasem=True):
+def deep(modelname, layers, phrasem=True, useDev=True):
     sess = tf.Session()
 
     #load and convert tweets
@@ -173,9 +173,19 @@ def deep(modelname, layers, phrasem=True):
 
     tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV)
     vects_dev,norm_tweets_dev = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_dev, filtering=True)
+
     devbatch = []
-    for v in vects_dev:
-        devbatch.append(v)
+    if useDev == False:
+        for v in vects_dev:
+            devbatch.append(v)
+
+    else:
+        for v in vects_dev:
+            vects.append(v)
+        tweets_test, targets_test, labels_test = readTweetsOfficial(tokenize_tweets.FILETEST)
+        vects_test,norm_tweets_test = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_test, filtering=True)
+        for v in vects_test:
+            devbatch.append(v)
 
 
     # start training

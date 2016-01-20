@@ -165,7 +165,7 @@ def train_classifier_3waySGD(feats_train, labels_train, feats_dev, labels_dev, o
 
 
 # train one three-way classifier
-def train_classifier_3way(feats_train, labels_train, feats_dev, labels_dev, outfilepath, feature_vocab=[], debug='false', auto_thresh='false'):
+def train_classifier_3way(feats_train, labels_train, feats_dev, labels_dev, outfilepath, feature_vocab=[], debug='false', auto_thresh='false', useDev=True):
     labels = []  # -1 for NONE, 0 for AGAINST, 1 for FAVOR
     labels_dev_tr = [] #transformed from "NONE" etc to -1,0,1
 
@@ -178,7 +178,7 @@ def train_classifier_3way(feats_train, labels_train, feats_dev, labels_dev, outf
             labels.append(0)
 
     for i, lab in enumerate(labels_dev):
-        if lab == 'NONE':
+        if lab == 'NONE' or lab == 'UNKNOWN':
             labels_dev_tr.append(-1)
         elif lab == 'FAVOR':
             labels_dev_tr.append(1)
@@ -208,9 +208,15 @@ def train_classifier_3way(feats_train, labels_train, feats_dev, labels_dev, outf
     if auto_thresh == "true":
         print "Number dev samples:\t", len(labels_dev_tr)
         optlabels = optimiseThresh(labels_dev_tr, preds_prob, len(labels_dev_tr)/2)
-        printPredsToFileOneModel(tokenize_tweets.FILEDEV, outfilepath, optlabels, len(labels_dev_tr)/2)
+        if useDev == False:
+            printPredsToFileOneModel(tokenize_tweets.FILEDEV, outfilepath, optlabels, len(labels_dev_tr)/2)
+        else:
+            printPredsToFileOneModel(tokenize_tweets.FILETEST, outfilepath, optlabels, len(labels_dev_tr)/2)
     else:
-        printPredsToFileOneModel(tokenize_tweets.FILEDEV, outfilepath, preds)
+        if useDev == False:
+            printPredsToFileOneModel(tokenize_tweets.FILEDEV, outfilepath, preds)
+        else:
+            printPredsToFileOneModel(tokenize_tweets.FILETEST, outfilepath, preds)
 
     if debug == "true":
 

@@ -159,9 +159,19 @@ def extractEmoticons(tweets):
 
 # extract features autoencoder plus n-gram bow
 def extractFeaturesMulti(features=["auto_false", "bow", "targetInTweet", "emoticons", "affect", "w2v", "bow_phrase"]
-        , automodel="model.ckpt", w2vmodel="skip_nostop_multi_300features_10minwords_10context", phrasemodel="phrase.model"):
-    tweets_train, targets_train, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN, 'windows-1252', 2)
-    tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
+        , automodel="model.ckpt", w2vmodel="skip_nostop_multi_300features_10minwords_10context", phrasemodel="phrase.model",
+        useDev=True):
+    if useDev==False:
+        tweets_train, targets_train, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN, 'windows-1252', 2)
+        tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
+    else:
+        tweets_train, targets_train, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN, 'windows-1252', 2)
+        tweets_origdev, targets_origdev, labels_origdev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
+        tweets_train.extend(tweets_origdev)
+        targets_train.extend(targets_origdev)
+        labels_train.extend(labels_origdev)
+        tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILETEST, 'windows-1252', 2)
+
     features_final = []
 
     if features.__contains__("bow"):
@@ -188,21 +198,21 @@ def extractFeaturesMulti(features=["auto_false", "bow", "targetInTweet", "emotic
         useph=False
         if "phrase" in automodel:
             useph=True
-        features_train_auto, labels_train, features_dev_auto, labels_dev = extractFeaturesAutoencoder(automodel, "added", usephrasemodel=useph)
+        features_train_auto, labels_train, features_dev_auto, labels_dev = extractFeaturesAutoencoder(automodel, tweets_train, targets_train, labels_train, tweets_dev, targets_dev, labels_dev, "added", usephrasemodel=useph)
     elif features.__contains__("auto_true"):
         useph=False
         if "phrase" in automodel:
             useph=True
-        features_train_auto, labels_train, features_dev_auto, labels_dev = extractFeaturesAutoencoder(automodel, "true", usephrasemodel=useph)
+        features_train_auto, labels_train, features_dev_auto, labels_dev = extractFeaturesAutoencoder(automodel, tweets_train, targets_train, labels_train, tweets_dev, targets_dev, labels_dev, "true", usephrasemodel=useph)
     elif features.__contains__("auto_false"):
         useph=False
         if "phrase" in automodel:
             useph=True
-        features_train_auto, labels_train, features_dev_auto, labels_dev = extractFeaturesAutoencoder(automodel, "false", usephrasemodel=useph)
+        features_train_auto, labels_train, features_dev_auto, labels_dev = extractFeaturesAutoencoder(automodel, tweets_train, targets_train, labels_train, tweets_dev, targets_dev, labels_dev, "false", usephrasemodel=useph)
 
     targetInTweetTrain = []
     targetInTweetDev = []
-    if features.__contains__("targetInTweet") and not features.__contains__("bow"):
+    if features.__contains__("targetInTweet") and features.__contains__("bow"):
         targetInTweetTrain = extractFeaturesCrossTweetTarget(tweets_train, targets_train)
         targetInTweetDev = extractFeaturesCrossTweetTarget(tweets_dev, targets_dev)
         features_final.append("targetInTweet")
@@ -232,7 +242,7 @@ def extractFeaturesMulti(features=["auto_false", "bow", "targetInTweet", "emotic
     for i, featvec in enumerate(features_train):#features_train_auto)
         if features.__contains__("auto_added") or features.__contains__("auto_true") or features.__contains__("auto_false"):
             features_train[i] = np.append(features_train[i], features_train_auto[i])  # numpy append works as extend works for python lists
-        if features.__contains__("targetInTweet") and not features.__contains__("bow"):
+        if features.__contains__("targetInTweet") and features.__contains__("bow"):
             features_train[i] = np.append(features_train[i], targetInTweetTrain[i])
         if features.__contains__("bow_phrase") or features.__contains__("bow_phrase_anon"):
             features_train[i] = np.append(features_train[i], features_train_phrbow[i])
@@ -245,7 +255,7 @@ def extractFeaturesMulti(features=["auto_false", "bow", "targetInTweet", "emotic
     for i, featvec in enumerate(features_dev):#features_dev_auto):
         if features.__contains__("auto_added") or features.__contains__("auto_true") or features.__contains__("auto_false"):
             features_dev[i] = np.append(features_dev[i], features_dev_auto[i])
-        if features.__contains__("targetInTweet") and not features.__contains__("bow"):
+        if features.__contains__("targetInTweet") and features.__contains__("bow"):
             features_dev[i] = np.append(features_dev[i], targetInTweetDev[i])
         if features.__contains__("bow_phrase") or features.__contains__("bow_phrase_anon"):
             features_dev[i] = np.append(features_dev[i], features_dev_phrbow[i])
@@ -265,14 +275,14 @@ def extractFeaturesMulti(features=["auto_false", "bow", "targetInTweet", "emotic
 if __name__ == '__main__':
 
     # Options: "auto_false", "bow", "targetInTweet", "emoticons", "affect", "w2v", "hash", "bow_phrase"
-    features_train, labels_train, features_dev, labels_dev, feature_vocab = extractFeaturesMulti(["targetInTweet", "auto_added"],
-        "model_phrase2_100_samp500_it2600.ckpt")#model_phrase_100_samp500_it2000.ckpt")#"model_100_samp500.ckpt")
+    features_train, labels_train, features_dev, labels_dev, feature_vocab = extractFeaturesMulti(["auto_false", "targetInTweet"],
+        "model_trump_phrase_100_samp500_it2600.ckpt")#model_phrase_100_samp500_it2000.ckpt")#"model_100_samp500.ckpt")
 
     #train_classifiers_TopicVOpinion(features_train, labels_train, features_dev, labels_dev, "out.txt")
 
     # train_classifier_3waySGD is another option, for testing elastic net regularisation, doesn't work as well as just l2 though
-    train_classifier_3way(features_train, labels_train, features_dev, labels_dev, "out_phraseauto2_target.txt", feature_vocab, "false", "false")
+    train_classifier_3way(features_train, labels_train, features_dev, labels_dev, "out_trump_test6.txt", feature_vocab, "false", "false")
     #train_classifiers_PosVNeg(features_train, labels_train, features_dev, labels_dev, "out.txt")
 
 
-    eval(tokenize_tweets.FILEDEV, "out_phraseauto2_target.txt")
+    eval(tokenize_tweets.FILETEST, "out_trump_test6.txt")
