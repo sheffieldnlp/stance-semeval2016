@@ -147,11 +147,11 @@ def train_classifier_3waySGD(feats_train, labels_train, feats_dev, labels_dev, o
     model.fit(feats_train, labels)
     preds = model.predict(feats_dev)
     coef = model.coef_
-    print "Label options", model.classes_
+    print("Label options", model.classes_)
 
     print("Labels", labels_dev_tr)
     print("Predictions", preds)
-    print "Feat length ", feats_train[0].__len__()
+    print("Feat length ", feats_train[0].__len__())
     #print "Features ", feature_vocab.__len__(), "\t", feature_vocab
     #print "Weights "
     #for co in coef:
@@ -193,12 +193,12 @@ def train_classifier_3way(feats_train, labels_train, feats_dev, labels_dev, outf
     preds = model.predict(feats_dev)
     preds_prob = model.predict_proba(feats_dev)
     coef = model.coef_
-    print "Label options", model.classes_
+    print("Label options", model.classes_)
 
     print("Labels", labels_dev_tr)
     print("Predictions", preds)
     print("Predictions prob", preds_prob)
-    print "Feat length ", feats_train[0].__len__()
+    print("Feat length ", feats_train[0].__len__())
     #print "Features ", feature_vocab.__len__(), "\t", feature_vocab
     #print "Weights "
     #for co in coef:
@@ -206,7 +206,7 @@ def train_classifier_3way(feats_train, labels_train, feats_dev, labels_dev, outf
 
 
     if auto_thresh == "true":
-        print "Number dev samples:\t", len(labels_dev_tr)
+        print("Number dev samples:\t", len(labels_dev_tr))
         optlabels = optimiseThresh(labels_dev_tr, preds_prob, len(labels_dev_tr)/2)
         if useDev == False:
             printPredsToFileOneModel(tokenize_tweets.FILEDEV, outfilepath, optlabels, len(labels_dev_tr)/2)
@@ -223,11 +223,11 @@ def train_classifier_3way(feats_train, labels_train, feats_dev, labels_dev, outf
         tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
 
     #    printProbsToFileOneModel(tokenize_tweets.FILEDEV, outfilepath.replace(".txt", ".debug.txt"), preds_prob, preds)
-        print "\nFeature analysis\nFeature\tNone\tAgainst\tFavor"
+        print("\nFeature analysis\nFeature\tNone\tAgainst\tFavor")
         for i, feat in enumerate(feature_vocab):
-            print feat, "\t", coef[0][i], "\t", coef[1][i], "\t", coef[2][i]
+            print(feat, "\t", coef[0][i], "\t", coef[1][i], "\t", coef[2][i])
 
-        print "\nActive features on dev (Hillary Clinton) per instance, coef for None/Against/Favour"
+        print("\nActive features on dev (Hillary Clinton) per instance, coef for None/Against/Favour")
         for i, featvect in enumerate(feats_dev):
             featprint = []
             for ii, feat in enumerate(featvect):
@@ -284,7 +284,7 @@ def printPredsToFile_PosVNeg(infile, outfile, res_1, res_2):
 
 # print predictions to file in SemEval format so the official eval script can be applied
 def printPredsToFileOneModel(infile, outfile, res, skip=0):
-    outf = open(outfile, 'wb')
+    outf = open(outfile, 'w')
     cntr = 0
     for line in io.open(infile, encoding='windows-1252', mode='r'): #for the Trump file it's utf-8
         if line.strip("\n").startswith('ID\t'):
@@ -340,7 +340,7 @@ def getRange(x, y, stepsize):
 # optimise threshold for classes on dev set for highest F1.
 def optimiseThresh(labels_dev, preds_prob, howmany):
 
-    print "Optimising threshold"
+    print("Optimising threshold")
 
     best_f1 = 0.0
     best_thres = [0.0, 0.0, 0.0]
@@ -355,35 +355,35 @@ def optimiseThresh(labels_dev, preds_prob, howmany):
             if macro_f1 > best_f1:
                 best_f1 = macro_f1
                 best_thres = perm
-                print "\n--------\nConfusion matrix for dev 1 and thresh ", best_thres, "\n--------\n\t\t\t\t\t  Predicted label\n\t\t\t\t\tNon\tagainst\tfavour"
-                print "True label\tNon\t", n_as_n, "     ", n_as_a, "     ", n_as_f
-                print "True label\tAgainst\t", a_as_n, "     ", a_tp, "     ", a_as_f
-                print "True label\tFavour\t\t", f_as_n, "     ", f_as_a, "     ", f_tp, "\n--------\n"
+                print("\n--------\nConfusion matrix for dev 1 and thresh ", best_thres, "\n--------\n\t\t\t\t\t  Predicted label\n\t\t\t\t\tNon\tagainst\tfavour")
+                print("True label\tNon\t", n_as_n, "     ", n_as_a, "     ", n_as_f)
+                print("True label\tAgainst\t", a_as_n, "     ", a_tp, "     ", a_as_f)
+                print("True label\tFavour\t\t", f_as_n, "     ", f_as_a, "     ", f_tp, "\n--------\n")
 
 
-    print "Best thresh", best_thres
-    print "Best F1 on dev 1", best_f1
+    print("Best thresh", best_thres)
+    print("Best F1 on dev 1", best_f1)
 
-    print "\nResults on dev 2 without threshold tuning"
+    print("\nResults on dev 2 without threshold tuning")
 
     retlabels, for_p, for_r, for_f1, against_p, against_r, against_f1, macro_f1, a_all, a_tp, a_as_f, a_as_n, f_all, f_tp, f_as_a, f_as_n, n_as_n, n_as_f, n_as_a = computeF1ForThresh(labels_dev[howmany:], preds_prob[howmany:], [0.0, 0.0, 0.0])
-    print "F1 on dev 2", for_f1, against_f1, macro_f1
+    print("F1 on dev 2", for_f1, against_f1, macro_f1)
 
-    print "\n--------\nConfusion matrix for dev 2 without threshold tuning\n--------\n\t\t\t\t\t  Predicted label\n\t\t\t\t\tNon\tagainst\tfavour"
-    print "True label\tNon\t", n_as_n, "     ", n_as_a, "     ", n_as_f
-    print "True label\tAgainst\t", a_as_n, "     ", a_tp, "     ", a_as_f
-    print "True label\tFavour\t\t", f_as_n, "     ", f_as_a, "     ", f_tp, "\n--------\n"
+    print("\n--------\nConfusion matrix for dev 2 without threshold tuning\n--------\n\t\t\t\t\t  Predicted label\n\t\t\t\t\tNon\tagainst\tfavour")
+    print("True label\tNon\t", n_as_n, "     ", n_as_a, "     ", n_as_f)
+    print("True label\tAgainst\t", a_as_n, "     ", a_tp, "     ", a_as_f)
+    print("True label\tFavour\t\t", f_as_n, "     ", f_as_a, "     ", f_tp, "\n--------\n")
 
 
-    print "\nApplying final threshold"
+    print("\nApplying final threshold")
 
     retlabels, for_p, for_r, for_f1, against_p, against_r, against_f1, macro_f1, a_all, a_tp, a_as_f, a_as_n, f_all, f_tp, f_as_a, f_as_n, n_as_n, n_as_f, n_as_a = computeF1ForThresh(labels_dev[howmany:], preds_prob[howmany:], best_thres)
-    print "F1 on dev 2", for_f1, against_f1, macro_f1
+    print("F1 on dev 2", for_f1, against_f1, macro_f1)
 
-    print "\n--------\nConfusion matrix for dev 2 with best thresh\n--------\n\t\t\t\t\t  Predicted label\n\t\t\t\t\tNon\tagainst\tfavour"
-    print "True label\tNon\t", n_as_n, "     ", n_as_a, "     ", n_as_f
-    print "True label\tAgainst\t", a_as_n, "     ", a_tp, "     ", a_as_f
-    print "True label\tFavour\t\t", f_as_n, "     ", f_as_a, "     ", f_tp, "\n--------"
+    print("\n--------\nConfusion matrix for dev 2 with best thresh\n--------\n\t\t\t\t\t  Predicted label\n\t\t\t\t\tNon\tagainst\tfavour")
+    print("True label\tNon\t", n_as_n, "     ", n_as_a, "     ", n_as_f)
+    print("True label\tAgainst\t", a_as_n, "     ", a_tp, "     ", a_as_f)
+    print("True label\tFavour\t\t", f_as_n, "     ", f_as_a, "     ", f_tp, "\n--------")
 
     return retlabels
 
@@ -450,7 +450,7 @@ def computeF1ForThresh(devsample, preds_prob, thresh):
     against_r = a_tp / (a_all + 0.000001)
     against_f1 = 2 * ((against_p * against_r)/(against_p + against_r + 0.000001))
     macro_f1 = (for_f1 + against_f1) / 2.0
-    print thresh, "\t", macro_f1
+    print(thresh, "\t", macro_f1)
     return retlabels, for_p, for_r, for_f1, against_p, against_r, against_f1, macro_f1, a_all, a_tp, a_as_f, a_as_n, f_all, f_tp, f_as_a, f_as_n, n_as_n, n_as_f, n_as_a
 
 

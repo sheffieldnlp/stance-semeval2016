@@ -52,11 +52,11 @@ def extractFeaturesAutoencoder(autoencodermodel, tweets_train, targets_train, la
     #decoded_dev = sess.run(autoencoder['decoded'], feed_dict={x: vects_dev})  # apply to tweets
     #decoded_dev_target = sess.run(autoencoder['decoded'], feed_dict={x: vects_dev_targets})  # apply to target
 
-    print "cost train tweets", sess.run(autoencoder['cost'], feed_dict={x: vects_train})
-    print "cost train target", sess.run(autoencoder['cost'], feed_dict={x: vects_train_targets})
+    print("cost train tweets", sess.run(autoencoder['cost'], feed_dict={x: vects_train}))
+    print("cost train target", sess.run(autoencoder['cost'], feed_dict={x: vects_train_targets}))
 
-    print "cost dev tweets", sess.run(autoencoder['cost'], feed_dict={x: vects_dev})
-    print "cost dev target", sess.run(autoencoder['cost'], feed_dict={x: vects_dev_targets})
+    print("cost dev tweets", sess.run(autoencoder['cost'], feed_dict={x: vects_dev}))
+    print("cost dev target", sess.run(autoencoder['cost'], feed_dict={x: vects_dev_targets}))
 
     features_train = []
     features_dev = []
@@ -115,11 +115,25 @@ def extractFeaturesCrossTweetTarget(tweets, targets):
 
 
 if __name__ == '__main__':
-    features_train, labels_train, features_dev, labels_dev = extractFeaturesAutoencoder("model.ckpt", "false")
+    useDev = False
+    if useDev == False:
+        tweets_train, targets_train, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN, 'windows-1252', 2)
+        tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
+    else:
+        tweets_train, targets_train, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN, 'windows-1252', 2)
+        tweets_origdev, targets_origdev, labels_origdev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
+        tweets_train.extend(tweets_origdev)
+        targets_train.extend(targets_origdev)
+        labels_train.extend(labels_origdev)
+        tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILETEST, 'windows-1252', 2)
+
+     #"model_trump_phrase_100_samp500_it2600.ckpt"
+    features_train, labels_train, features_dev, labels_dev = extractFeaturesAutoencoder("model_phrase_100_samp500_it2000.ckpt",
+            tweets_train, targets_train, labels_train, tweets_dev, targets_dev, labels_dev, "true", True)
 
     #train_classifiers(features_train, labels_train, features_dev, labels_dev, "out_auto_added.txt") # train and predict two 2-way models
-    train_classifier_3way(features_train, labels_train, features_dev, labels_dev, "out_auto_bow.txt", [], "false", "false") # train and predict one 3-way model
+    train_classifier_3way(features_train, labels_train, features_dev, labels_dev, "out_hillary_auto_cross.txt", [], "false", "false", useDev=False)
     #train_classifiers_PosVNeg(features_train, labels_train, features_dev, labels_dev, "out_auto.txt")
 
 
-    eval(tokenize_tweets.FILEDEV, "out_auto_bow.txt") # evaluate with official script
+    eval(tokenize_tweets.FILEDEV, "out_hillary_auto_cross.txt")

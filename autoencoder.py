@@ -102,7 +102,7 @@ def simple_test():
             batch.append(np.random.normal(vec, 0.1))
         sess.run(train_step, feed_dict={x: np.array(batch)})
         if i % 100 == 0:
-            print i, " cost", sess.run(autoencoder['cost'], feed_dict={x: batch})
+            print(i, " cost", sess.run(autoencoder['cost'], feed_dict={x: batch}))
 
 
 def deep_test():
@@ -119,7 +119,7 @@ def deep_test():
     c1 = np.zeros(start_dim)
     c1[0] = 1
 
-    print c1
+    print(c1)
 
     c2 = np.zeros(start_dim)
     c2[1] = 1
@@ -137,10 +137,10 @@ def deep_test():
             batch.append(np.random.normal(vec, 0.1))
         sess.run(train_step, feed_dict={x: np.array(batch)})
         if i % 100 == 0:
-            print i, " cost", sess.run(autoencoder['cost'], feed_dict={x: batch})
-            print i, " original", batch[0] # input
-            print i, " encoded", sess.run(autoencoder['encoded'], feed_dict={x: batch}) # encoding of last layer
-            print i, " decoded", sess.run(autoencoder['decoded'], feed_dict={x: batch}) # decoded input
+            print(i, " cost", sess.run(autoencoder['cost'], feed_dict={x: batch}))
+            print(i, " original", batch[0]) # input
+            print(i, " encoded", sess.run(autoencoder['encoded'], feed_dict={x: batch})) # encoding of last layer
+            print(i, " decoded", sess.run(autoencoder['decoded'], feed_dict={x: batch})) # decoded input
 
 
 # train autoencoder, save model
@@ -152,16 +152,16 @@ def deep(modelname, layers, phrasem=True, useDev=True):
 
     start_dim = 50000 #tokens.__sizeof__() # 129887 tokens without singletons. Dimensionality of input. keep as big as possible, but throw singletons away.
     x = tf.placeholder("float", [None, start_dim])
-    print "Creating autoencoder"
+    print ("Creating autoencoder")
     autoencoder = create(x, layers)  # Dimensionality of the hidden layers. To start with, only use 1 hidden layer.
-    print "Creating Adam"
+    print("Creating Adam")
     train_step = tf.train.AdamOptimizer(0.1).minimize(autoencoder['cost'])
 
-    print "Initialising all variables"
+    print("Initialising all variables")
     init = tf.initialize_all_variables()
     sess.run(init)
 
-    print "Converting official training data to vectors"
+    print("Converting official training data to vectors")
     tweets_train, targets_train, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN)
     tweets_trump, targets_trump, labels_trump = readTweetsOfficial(tokenize_tweets.FILETRUMP, 'utf-8', 1)
     vects_train,norm_tweets_train = tokenize_tweets.convertTweetsOfficialToVec(start_dim, tokens, tweets_train, filtering=True)
@@ -190,8 +190,8 @@ def deep(modelname, layers, phrasem=True, useDev=True):
 
     # start training
     sampnr = 12  # which ones of the dev samples to display for sanity check
-    print "\noriginal", labels_dev[sampnr], norm_tweets_dev[sampnr]    # print "\noriginal", norm_tweets[2]
-    print vects[sampnr]
+    print("\noriginal", labels_dev[sampnr], norm_tweets_dev[sampnr])    # print "\noriginal", norm_tweets[2]
+    print(vects[sampnr])
 
     # Add ops to save and restore all the variables.
     saver = tf.train.Saver()
@@ -219,10 +219,10 @@ def deep(modelname, layers, phrasem=True, useDev=True):
             #    n+=1
 
             cost = sess.run(autoencoder['cost'], feed_dict={x: devbatch})
-            print i, " cost", cost
+            print(i, " cost", cost)
             #print i, " original", batch[0]
             #print i, " encoded", encoded[sampnr] # latent representation of input, feed this to SVM(s)
-            print i, " decoded", decoded[sampnr]
+            print(i, " decoded", decoded[sampnr])
             #print i, " decoded bow", dec_tweet
 
             save_path = saver.save(sess, modelname.replace(".ckpt", "_it" + str(i) + ".ckpt"))
@@ -258,8 +258,8 @@ def deep_test():
     encoded = sess.run(autoencoder['encoded'], feed_dict={x: devbatch})  # apply to dev
 
     sampnr = 12  # which ones of the dev samples to display for sanity check
-    print "\noriginal", labels_dev[sampnr], norm_tweets_dev[sampnr]    # print "\noriginal", norm_tweets[2]
-    print vects_dev[sampnr]
+    print("\noriginal", labels_dev[sampnr], norm_tweets_dev[sampnr])    # print "\noriginal", norm_tweets[2]
+    print(vects_dev[sampnr])
 
     dec_tweet = []
     n = 0
@@ -268,11 +268,11 @@ def deep_test():
             dec_tweet.append(tokens[n])
         n+=1
 
-    print " cost", sess.run(autoencoder['cost'], feed_dict={x: devbatch})
+    print(" cost", sess.run(autoencoder['cost'], feed_dict={x: devbatch}))
     #print i, " original", batch[0]
-    print " encoded", encoded[sampnr] # latent representation of input, feed this to SVM(s)
-    print " decoded", decoded[sampnr]
-    print " decoded bow", dec_tweet
+    print(" encoded", encoded[sampnr]) # latent representation of input, feed this to SVM(s)
+    print(" decoded", decoded[sampnr])
+    print(" decoded bow", dec_tweet)
 
 
 

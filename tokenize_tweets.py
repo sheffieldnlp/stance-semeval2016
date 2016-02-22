@@ -2,11 +2,10 @@
 
 import json
 import io
-from collections import defaultdict
 import numpy as np
 from twokenize_wrapper import tokenize
-from token_pb2 import Token, Tokens
-from tweet_pb2 import Tweet, Tweets
+from token_pb2 import Tokens
+from tweet_pb2 import Tweets
 from gensim.models import Phrases
 from nltk.corpus import stopwords
 
@@ -25,7 +24,7 @@ FILETRAIN = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-Stan
 FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_new.txt'
 FILEDEV2 = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_dev2.txt'
 FILETRUMP = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/downloaded_Donald_Trump.txt'
-FILETEST = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/SemEval2016-Task6-testdata/SemEval2016-Task6-subtaskB-testdata.txt'
+FILETEST = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/SemEval2016-Task6-subtaskB-testdata-gold.txt'
 
 #FILEDEV = '/Users/Isabelle/Documents/TextualEntailment/SemEvalStance/USFD-StanceDetection/data/semeval/semeval2016-task6-trialdata_new.txt'
 #FILETRAIN = 'data/semeval/semeval2016-task6-trainingdata_new.txt'
@@ -133,7 +132,7 @@ def readToks(phrasemodel=False):
             break
         tokens.append(token_pb.token)
 
-    print "Reading counts for ", str(len(tokens)), "tokens"
+    print("Reading counts for ", str(len(tokens)), "tokens")
     return tokens,tweets,tweets
 
 
@@ -154,7 +153,7 @@ def readToks2(dimension, usephrasemodel=False):
             break
         tokens.append(token_pb.token)
 
-    print "Reading counts for ", str(len(tokens)), "tokens, taking most frequent ", dimension
+    print("Reading counts for ", str(len(tokens)), "tokens, taking most frequent ", dimension)
     return tokens[:dimension]
 
 
@@ -219,7 +218,7 @@ def getTokens(numtoks):
 
 def convertTweetsToVec(topic="all", numtoks='all', phrasemodel=False, phrasemodelpath="phrase.model"):
 
-    print "Reading tokens"
+    print("Reading tokens")
     tokens,tweets_on_topic,tweets = readToks(phrasemodel)
 
     if phrasemodel==True:
@@ -235,7 +234,7 @@ def convertTweetsToVec(topic="all", numtoks='all', phrasemodel=False, phrasemode
     vects = []
     norm_tweets = []
 
-    print "Converting JSON tweets"
+    print("Converting JSON tweets")
     if topic=='all':
         #for topic in TOPICS:
         for tweet in tweets:
@@ -288,7 +287,7 @@ def convertTweetsToVec(topic="all", numtoks='all', phrasemodel=False, phrasemode
             norm_tweets.append(norm_tweet)
             vects.append(vect)
 
-    print "Finished converting JSON tweets"
+    print("Finished converting JSON tweets")
     return tokens_sub,vects,norm_tweets
 
 

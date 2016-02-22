@@ -15,23 +15,23 @@ def getAffect(tweets):
     # affect_joy.lst -
     # affect_sadness.lst o
     # affect_surprise.lst o
-    # swear_bad.lst o
+    # swear_bad.lst o      <- this is not part of WN affect, I think, something Diana created
 
-    files = ["affect_fear.lst"]#["affect_anger.lst"]#, "affect_bad.lst", "affect_disgust.lst", "affect_fear.lst", "affect_joy.lst", "affect_sadness.lst",
-             #"affect_surprise.lst", "swear_bad.lst", ]
-    vocab = ["fear"]
+    files = ["affect_anger.lst", "affect_bad.lst", "affect_disgust.lst", "affect_fear.lst", "affect_joy.lst", "affect_sadness.lst",
+             "affect_surprise.lst"]
+    vocab = ["anger", "bad", "disgust", "fear", "joy", "sadness", "surprise"]
     vects = []
     gaz = []
 
     for f in files:
-        print f
+        print(f)
         ga = []
         for line in open("wn_affect/" + f, 'r'):
             ga.append(line.split("&")[0])
         gaz.append(ga)
 
     for tweet in tweets:
-        vect = np.zeros(1)
+        vect = np.zeros(len(vocab))
         for i, g in enumerate(gaz):
             affect = 0
             for entry in g:
