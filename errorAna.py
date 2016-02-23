@@ -11,7 +11,7 @@ def selectTrainData(tweets, targets):
         target_keywords = tokenize_tweets.KEYWORDS.get(inv_topics.get(targets[i]))
         target_in_tweet = 0
         for key in target_keywords:
-            if tweet.__contains__(key):
+            if key.lower() in tweet.lower():
                 target_in_tweet = 1
                 break
         if target_in_tweet == 1:
@@ -49,6 +49,8 @@ if __name__ == '__main__':
     printInOutFiles(inlist, "out_hillary_auto_false_targetInTweet.txt", "out_hillary_inTwe.txt", "out_hillary_outTwe.txt")
     printInOutFiles(inlist, tokenize_tweets.FILEDEV, "_gold_hillary_inTwe.txt", "_gold_hillary_outTwe.txt")
 
+    print("Inlist")
     eval("_gold_hillary_inTwe.txt", "out_hillary_inTwe.txt")
 
+    print("Outlist")
     eval("_gold_hillary_outTwe.txt", "out_hillary_outTwe.txt")
