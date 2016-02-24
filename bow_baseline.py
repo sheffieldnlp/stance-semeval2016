@@ -275,7 +275,7 @@ def extractFeaturesMulti(features=["auto_false", "bow", "targetInTweet", "emotic
 if __name__ == '__main__':
 
     # Options: "auto_false", "bow", "targetInTweet", "emoticons", "affect", "w2v", "hash", "bow_phrase"
-    features_train, labels_train, features_dev, labels_dev, feature_vocab = extractFeaturesMulti(["bow", "targetInTweet"],
+    features_train, labels_train, features_dev, labels_dev, feature_vocab = extractFeaturesMulti(["auto_false", "targetInTweet"],
         "model_phrase_100_samp500_it2000.ckpt", useDev=False)#  "model_trump_phrase_100_samp500_it2600.ckpt")#"model_100_samp500.ckpt")
 
     #train_classifiers_TopicVOpinion(features_train, labels_train, features_dev, labels_dev, "out.txt")

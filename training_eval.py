@@ -165,7 +165,7 @@ def train_classifier_3waySGD(feats_train, labels_train, feats_dev, labels_dev, o
 
 
 # train one three-way classifier
-def train_classifier_3way(feats_train, labels_train, feats_dev, labels_dev, outfilepath, feature_vocab=[], debug='false', auto_thresh='false', useDev=True):
+def train_classifier_3way(feats_train, labels_train, feats_dev, labels_dev, outfilepath, feature_vocab=[], debug='false', auto_thresh='false', useDev=True, postprocess=True):
     labels = []  # -1 for NONE, 0 for AGAINST, 1 for FAVOR
     labels_dev_tr = [] #transformed from "NONE" etc to -1,0,1
 
@@ -204,19 +204,48 @@ def train_classifier_3way(feats_train, labels_train, feats_dev, labels_dev, outf
     #for co in coef:
     #    print co.__len__(), "\t", co
 
+    if useDev == False:
+        tweets_test_file = tokenize_tweets.FILEDEV
+        target_short = "clinton"
+    else:
+        tweets_test_file = tokenize_tweets.FILETEST
+        target_short = "trump"
 
     if auto_thresh == "true":
         print("Number dev samples:\t", len(labels_dev_tr))
         optlabels = optimiseThresh(labels_dev_tr, preds_prob, len(labels_dev_tr)/2)
-        if useDev == False:
-            printPredsToFileOneModel(tokenize_tweets.FILEDEV, outfilepath, optlabels, len(labels_dev_tr)/2)
-        else:
-            printPredsToFileOneModel(tokenize_tweets.FILETEST, outfilepath, optlabels, len(labels_dev_tr)/2)
+        printPredsToFileOneModel(tweets_test_file, outfilepath, optlabels, len(labels_dev_tr)/2)
     else:
-        if useDev == False:
-            printPredsToFileOneModel(tokenize_tweets.FILEDEV, outfilepath, preds)
-        else:
-            printPredsToFileOneModel(tokenize_tweets.FILETEST, outfilepath, preds)
+        printPredsToFileOneModel(tweets_test_file, outfilepath, preds)
+
+
+    if postprocess == True:
+        tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tweets_test_file, 'windows-1252', 2)
+        targetInTweet = {}#istargetInTweet(tweets_dev, targets_dev)
+        for i, tweet in enumerate(tweets_dev):
+            target_keywords = tokenize_tweets.KEYWORDS.get(target_short)
+            target_in_tweet = False
+            for key in target_keywords:
+                if key.lower() in tweet.lower():
+                    target_in_tweet = True
+                    break
+            targetInTweet[i] = target_in_tweet
+
+        predictions_new = []
+        for i, pred_prob in enumerate(preds_prob):
+            inTwe = targetInTweet[i]
+            if inTwe == True:  # NONE/AGAINST/FAVOUR
+                pred = 0
+                if pred_prob[2] > pred_prob[1]:
+                    pred = 1
+                predictions_new.append(pred)
+            else:
+                plist = pred_prob.tolist()
+                pred = plist.index(max(plist))-1
+                predictions_new.append(pred)
+        printPredsToFileOneModel(tweets_test_file, outfilepath, predictions_new)
+
+
 
     if debug == "true":
 

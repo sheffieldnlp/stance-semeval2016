@@ -115,7 +115,7 @@ def extractFeaturesCrossTweetTarget(tweets, targets):
 
 
 if __name__ == '__main__':
-    useDev = False
+    useDev = True
     if useDev == False:
         tweets_train, targets_train, labels_train = readTweetsOfficial(tokenize_tweets.FILETRAIN, 'windows-1252', 2)
         tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILEDEV, 'windows-1252', 2)
@@ -127,13 +127,13 @@ if __name__ == '__main__':
         labels_train.extend(labels_origdev)
         tweets_dev, targets_dev, labels_dev = readTweetsOfficial(tokenize_tweets.FILETEST, 'windows-1252', 2)
 
-     #"model_trump_phrase_100_samp500_it2600.ckpt"
-    features_train, labels_train, features_dev, labels_dev = extractFeaturesAutoencoder("model_phrase_100_samp500_it2000.ckpt",
-            tweets_train, targets_train, labels_train, tweets_dev, targets_dev, labels_dev, "true", True)
+     # "model_phrase_100_samp500_it2000.ckpt"
+    features_train, labels_train, features_dev, labels_dev = extractFeaturesAutoencoder("model_trump_phrase_100_samp500_it2600.ckpt",
+            tweets_train, targets_train, labels_train, tweets_dev, targets_dev, labels_dev, "false", True)
 
     #train_classifiers(features_train, labels_train, features_dev, labels_dev, "out_auto_added.txt") # train and predict two 2-way models
-    train_classifier_3way(features_train, labels_train, features_dev, labels_dev, "out_hillary_auto_cross.txt", [], "false", "false", useDev=False)
+    train_classifier_3way(features_train, labels_train, features_dev, labels_dev, "out_trump_postprocess.txt", [], "false", "false", useDev=useDev)
     #train_classifiers_PosVNeg(features_train, labels_train, features_dev, labels_dev, "out_auto.txt")
 
 
-    eval(tokenize_tweets.FILEDEV, "out_hillary_auto_cross.txt")
+    eval(tokenize_tweets.FILETEST, "out_trump_postprocess.txt")
